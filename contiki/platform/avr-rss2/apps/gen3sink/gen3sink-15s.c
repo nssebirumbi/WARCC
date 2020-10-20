@@ -82,60 +82,65 @@ broadcast_recv(struct broadcast_conn *c, const linkaddr_t *from)
 	msg = packetbuf_dataptr();
 	rssi = packetbuf_attr(PACKETBUF_ATTR_RSSI);
 	lqi = packetbuf_attr(PACKETBUF_ATTR_LINK_QUALITY);
+	
+	if(!strncmp(msg->buf, "FB", 2)) {
+		printf("%s\n", msg->buf);
+	}
+	else {
+		ds3231_get_datetime(&datetime);
 
-	ds3231_get_datetime(&datetime);
+		len+=sprintf(report, "RTC_T=20%d-%02d-%02d,%02d:%02d:%02d %s [ADDR=%-d.%-d SEQ=%-d TTL=%-u RSSI=%-u LQI=%-u]\n",
+		datetime.year, datetime.month, datetime.day, datetime.hours, datetime.mins, datetime.secs, msg->buf,
+		from->u8[0], from->u8[1], msg->seqno, msg->head & 0xF, rssi, lqi);
 
-	len+=sprintf(report, "RTC_T=20%d-%02d-%02d,%02d:%02d:%02d %s [ADDR=%-d.%-d SEQ=%-d TTL=%-u RSSI=%-u LQI=%-u]\n",
-	datetime.year, datetime.month, datetime.day, datetime.hours, datetime.mins, datetime.secs, msg->buf,
-	from->u8[0], from->u8[1], msg->seqno, msg->head & 0xF, rssi, lqi);
-
-	report[len++] = '\0';
-	pwr_pin_on();
-	timer_set(&t, CLOCK_SECOND/100); //5ms pulse to wake up electron from sleep
-	while(!timer_expired(&t));
-	pwr_pin_off();
-
-	leds_on(LEDS_RED);
-	printf("%s", report);
-	leds_off(LEDS_RED);
-	++rep_count;
-
-	if(rep_count%10 == 0) {
-
-		// Get the sink node name
-		uint8_t node_name[NAME_LENGTH];
-		cli();
-		eeprom_read_block((void*)&node_name, (const void*)&eemem_node_name, NAME_LENGTH);
-		sei();
-
-		len=0;
-		len += sprintf(&sinkrep[len],"RTC_T=20%d-%02d-%02d,%02d:%02d:%02d Station=%s",
-		datetime.year,datetime.month, datetime.day, datetime.hours,datetime.mins,secs,node_name);
-
-		v_in = adc_read_v_in();
-		len += sprintf(&sinkrep[len]," V_IN=%-4.2f", v_in);
-
-		SENSORS_ACTIVATE(temp_sensor);
-		len += sprintf(&sinkrep[len]," T=%-5.2f", (double)(temp_sensor.value(0)*1.0/100));
-		SENSORS_DEACTIVATE(temp_sensor);
-
-		if(v_in < SYS_VLOW){
-			len += sprintf(&sinkrep[len],"V_LOW=1");
-		}
-		v_mcu = adc_read_v_mcu();
-
-		len += sprintf(&sinkrep[len]," V_MCU=%-4.2f REPS=%ld UP_TIME=%.2f\n",v_mcu,rep_count,up_time);
-
-		sinkrep[len++] = '\0';
+		report[len++] = '\0';
 		pwr_pin_on();
-	    timer_set(&t, CLOCK_SECOND/100); //5ms pulse to wake up electron from sleep
-	    while(!timer_expired(&t));
-	    pwr_pin_off();
+		timer_set(&t, CLOCK_SECOND/100); //5ms pulse to wake up electron from sleep
+		while(!timer_expired(&t));
+		pwr_pin_off();
 
-		leds_on(LEDS_YELLOW);
-		printf("%s", sinkrep);
-		leds_off(LEDS_YELLOW);
+		leds_on(LEDS_RED);
+		printf("%s", report);
+		leds_off(LEDS_RED);
 		++rep_count;
+
+		if(rep_count%10 == 0) {
+
+			// Get the sink node name
+			uint8_t node_name[NAME_LENGTH];
+			cli();
+			eeprom_read_block((void*)&node_name, (const void*)&eemem_node_name, NAME_LENGTH);
+			sei();
+
+			len=0;
+			len += sprintf(&sinkrep[len],"RTC_T=20%d-%02d-%02d,%02d:%02d:%02d Station=%s",
+			datetime.year,datetime.month, datetime.day, datetime.hours,datetime.mins,secs,node_name);
+
+			v_in = adc_read_v_in();
+			len += sprintf(&sinkrep[len]," V_IN=%-4.2f", v_in);
+
+			SENSORS_ACTIVATE(temp_sensor);
+			len += sprintf(&sinkrep[len]," T=%-5.2f", (double)(temp_sensor.value(0)*1.0/100));
+			SENSORS_DEACTIVATE(temp_sensor);
+
+			if(v_in < SYS_VLOW){
+				len += sprintf(&sinkrep[len],"V_LOW=1");
+			}
+			v_mcu = adc_read_v_mcu();
+
+			len += sprintf(&sinkrep[len]," V_MCU=%-4.2f REPS=%ld UP_TIME=%.2f\n",v_mcu,rep_count,up_time);
+
+			sinkrep[len++] = '\0';
+			pwr_pin_on();
+			timer_set(&t, CLOCK_SECOND/100); //5ms pulse to wake up electron from sleep
+			while(!timer_expired(&t));
+			pwr_pin_off();
+
+			leds_on(LEDS_YELLOW);
+			printf("%s", sinkrep);
+			leds_off(LEDS_YELLOW);
+			++rep_count;
+		}
 	}
 }
 
