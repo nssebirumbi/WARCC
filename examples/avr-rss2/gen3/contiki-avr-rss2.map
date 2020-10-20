@@ -1,0 +1,2849 @@
+Archive member included to satisfy reference by file (symbol)
+
+contiki-avr-rss2.a(contiki-main.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/crtatmega256rfr2.o (main)
+contiki-avr-rss2.a(params.o)  contiki-avr-rss2.a(contiki-main.o) (params_get_channel)
+contiki-avr-rss2.a(i2c.o)     contiki-avr-rss2.a(contiki-main.o) (i2c_init)
+contiki-avr-rss2.a(pwrpin.o)  gen3sink.co (pwr_pin_on)
+contiki-avr-rss2.a(leds.o)    gen3sink.co (leds_on)
+contiki-avr-rss2.a(adc.o)     gen3sink.co (adc_read_v_in)
+contiki-avr-rss2.a(temp-sensor.o)
+                              gen3sink.co (temp_sensor)
+contiki-avr-rss2.a(ds3231.o)  gen3sink.co (ds3231_init)
+contiki-avr-rss2.a(clock.o)   contiki-avr-rss2.a(contiki-main.o) (clock_init)
+contiki-avr-rss2.a(rs232.o)   contiki-avr-rss2.a(contiki-main.o) (rs232_init)
+contiki-avr-rss2.a(watchdog.o)
+                              contiki-avr-rss2.a(contiki-main.o) (watchdog_init)
+contiki-avr-rss2.a(random.o)  contiki-avr-rss2.a(contiki-main.o) (random_init)
+contiki-avr-rss2.a(rf230bb.o)
+                              contiki-avr-rss2.a(clock.o) (RF230_receive_on)
+contiki-avr-rss2.a(halbb.o)   contiki-avr-rss2.a(rf230bb.o) (hal_init)
+contiki-avr-rss2.a(autostart.o)
+                              contiki-avr-rss2.a(contiki-main.o) (autostart_start)
+contiki-avr-rss2.a(ctimer.o)  contiki-avr-rss2.a(contiki-main.o) (ctimer_init)
+contiki-avr-rss2.a(energest.o)
+                              contiki-avr-rss2.a(contiki-main.o) (energest_init)
+contiki-avr-rss2.a(etimer.o)  contiki-avr-rss2.a(clock.o) (etimer_request_poll)
+contiki-avr-rss2.a(process.o)
+                              gen3sink.co (process_current)
+contiki-avr-rss2.a(rtimer.o)  contiki-avr-rss2.a(contiki-main.o) (rtimer_init)
+contiki-avr-rss2.a(timer.o)   gen3sink.co (timer_set)
+contiki-avr-rss2.a(serial-line.o)
+                              contiki-avr-rss2.a(contiki-main.o) (serial_line_input_byte)
+contiki-avr-rss2.a(ringbuf.o)
+                              contiki-avr-rss2.a(serial-line.o) (ringbuf_init)
+contiki-avr-rss2.a(list.o)    contiki-avr-rss2.a(ctimer.o) (list_init)
+contiki-avr-rss2.a(broadcast.o)
+                              gen3sink.co (broadcast_open)
+contiki-avr-rss2.a(channel.o)
+                              contiki-avr-rss2.a(broadcast.o) (channel_set_attributes)
+contiki-avr-rss2.a(chameleon.o)
+                              contiki-avr-rss2.a(channel.o) (chameleon_hdrsize)
+contiki-avr-rss2.a(rime.o)    contiki-avr-rss2.a(contiki-main.o) (rime_driver)
+contiki-avr-rss2.a(abc.o)     contiki-avr-rss2.a(broadcast.o) (abc_open)
+contiki-avr-rss2.a(nullmac.o)
+                              contiki-avr-rss2.a(contiki-main.o) (nullmac_driver)
+contiki-avr-rss2.a(nullrdc.o)
+                              contiki-avr-rss2.a(contiki-main.o) (nullrdc_driver)
+contiki-avr-rss2.a(queuebuf.o)
+                              contiki-avr-rss2.a(contiki-main.o) (queuebuf_init)
+contiki-avr-rss2.a(packetbuf.o)
+                              contiki-avr-rss2.a(rf230bb.o) (packetbuf_set_datalen)
+contiki-avr-rss2.a(linkaddr.o)
+                              contiki-avr-rss2.a(broadcast.o) (linkaddr_copy)
+contiki-avr-rss2.a(nullsec.o)
+                              contiki-avr-rss2.a(rime.o) (nullsec_driver)
+contiki-avr-rss2.a(rtimer-arch.o)
+                              contiki-avr-rss2.a(rtimer.o) (rtimer_arch_init)
+contiki-avr-rss2.a(memb.o)    contiki-avr-rss2.a(queuebuf.o) (memb_init)
+contiki-avr-rss2.a(chameleon-bitop)
+                              contiki-avr-rss2.a(chameleon.o) (chameleon_bitopt)
+contiki-avr-rss2.a(broadcast-annou)
+                              contiki-avr-rss2.a(rime.o) (broadcast_announcement_init)
+contiki-avr-rss2.a(announcement.o)
+                              contiki-avr-rss2.a(rime.o) (announcement_init)
+contiki-avr-rss2.a(framer-802154.o)
+                              contiki-avr-rss2.a(nullrdc.o) (framer_802154)
+contiki-avr-rss2.a(frame802154.o)
+                              contiki-avr-rss2.a(framer-802154.o) (frame802154_get_pan_id)
+contiki-avr-rss2.a(mac.o)     contiki-avr-rss2.a(nullrdc.o) (mac_call_sent_callback)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o)
+                              (vfprintf)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(addsf3.o)
+                              gen3sink.co (__addsf3)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(addsf3x.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(addsf3.o) (__addsf3x)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(cmpsf2.o)
+                              gen3sink.co (__ltsf2)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(divsf3.o)
+                              gen3sink.co (__divsf3)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(divsf3x.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(divsf3.o) (__divsf3x)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fixsfsi.o)
+                              contiki-avr-rss2.a(temp-sensor.o) (__fixsfsi)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fixunssfsi.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fixsfsi.o) (__fixunssfsi)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(floatsisf.o)
+                              contiki-avr-rss2.a(adc.o) (__floatunsisf)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fp_cmp.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(cmpsf2.o) (__fp_cmp)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fp_inf.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(addsf3x.o) (__fp_inf)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fp_nan.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(addsf3x.o) (__fp_nan)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fp_pscA.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(addsf3x.o) (__fp_pscA)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fp_pscB.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(addsf3x.o) (__fp_pscB)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fp_round.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(addsf3.o) (__fp_round)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fp_split3.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(addsf3x.o) (__fp_split3)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fp_zero.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(addsf3x.o) (__fp_zero)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(mulsf3.o)
+                              contiki-avr-rss2.a(adc.o) (__mulsf3)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(mulsf3x.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(mulsf3.o) (__mulsf3x)
+/usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodqi4.o)
+                              contiki-avr-rss2.a(ds3231.o) (__udivmodqi4)
+/usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodhi4.o)
+                              contiki-avr-rss2.a(contiki-main.o) (__udivmodhi4)
+/usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodsi4.o)
+                              contiki-avr-rss2.a(i2c.o) (__udivmodsi4)
+/usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_divmodsi4.o)
+                              gen3sink.co (__divmodsi4)
+/usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_negsi2.o)
+                              /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_divmodsi4.o) (__negsi2)
+/usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_exit.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/crtatmega256rfr2.o (exit)
+/usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_tablejump2.o)
+                              contiki-avr-rss2.a(rf230bb.o) (__tablejump2__)
+/usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_copy_data.o)
+                              gen3sink.co (__do_copy_data)
+/usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_clear_bss.o)
+                              gen3sink.co (__do_clear_bss)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(rand.o)
+                              contiki-avr-rss2.a(random.o) (rand)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(ftoa_engine.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o) (__ftoa_engine)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(strnlen_P.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o) (strnlen_P)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(memcmp.o)
+                              contiki-avr-rss2.a(linkaddr.o) (memcmp)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(memcpy.o)
+                              contiki-avr-rss2.a(rf230bb.o) (memcpy)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(memset.o)
+                              contiki-avr-rss2.a(memb.o) (memset)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(strcpy.o)
+                              gen3sink.co (strcpy)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(strnlen.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o) (strnlen)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(fputc.o)
+                              contiki-avr-rss2.a(rf230bb.o) (fputc)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(iob.o)
+                              contiki-avr-rss2.a(rs232.o) (__iob)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(printf.o)
+                              gen3sink.co (printf)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(printf_p.o)
+                              contiki-avr-rss2.a(contiki-main.o) (printf_P)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(putchar.o)
+                              contiki-avr-rss2.a(rf230bb.o) (putchar)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(puts.o)
+                              contiki-avr-rss2.a(contiki-main.o) (puts)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(sprintf.o)
+                              gen3sink.co (sprintf)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(ultoa_invert.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o) (__ultoa_invert)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libatmega256rfr2.a(eerd_block.o)
+                              contiki-avr-rss2.a(params.o) (eeprom_read_block)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libatmega256rfr2.a(eerd_byte.o)
+                              contiki-avr-rss2.a(params.o) (eeprom_read_byte)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libatmega256rfr2.a(eerd_word.o)
+                              contiki-avr-rss2.a(params.o) (eeprom_read_word)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libatmega256rfr2.a(eewr_block.o)
+                              contiki-avr-rss2.a(params.o) (eeprom_write_block)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libatmega256rfr2.a(eewr_byte.o)
+                              contiki-avr-rss2.a(params.o) (eeprom_write_byte)
+/usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libatmega256rfr2.a(eewr_word.o)
+                              contiki-avr-rss2.a(params.o) (eeprom_write_word)
+/usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_muluhisi3.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(rand.o) (__muluhisi3)
+/usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_mulshisi3.o)
+                              /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(rand.o) (__mulohisi3)
+/usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_umulhisi3.o)
+                              /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_muluhisi3.o) (__umulhisi3)
+
+Allocating common symbols
+Common symbol       size              file
+
+energest_total_time
+                    0x30              contiki-avr-rss2.a(energest.o)
+rf230_last_correlation
+                    0x1               contiki-avr-rss2.a(rf230bb.o)
+rf230_last_rssi     0x1               contiki-avr-rss2.a(rf230bb.o)
+ledtimer_red        0x2               contiki-avr-rss2.a(contiki-main.o)
+RF230_receivefail   0x2               contiki-avr-rss2.a(rf230bb.o)
+energest_total_count
+                    0x2               contiki-avr-rss2.a(energest.o)
+input_handler_1     0x2               contiki-avr-rss2.a(rs232.o)
+energest_current_mode
+                    0xc               contiki-avr-rss2.a(energest.o)
+packetbuf_addrs     0x8               contiki-avr-rss2.a(packetbuf.o)
+node_id             0x2               contiki-avr-rss2.a(contiki-main.o)
+rf230_smallest_rssi
+                    0x1               contiki-avr-rss2.a(rf230bb.o)
+linkaddr_node_addr  0x2               contiki-avr-rss2.a(linkaddr.o)
+ledtimer_yellow     0x2               contiki-avr-rss2.a(contiki-main.o)
+rf230_pending       0x1               contiki-avr-rss2.a(rf230bb.o)
+rf230_ccawait       0x1               contiki-avr-rss2.a(rf230bb.o)
+RF230_receivepackets
+                    0x2               contiki-avr-rss2.a(rf230bb.o)
+datetime            0x7               gen3sink.co
+packetbuf_attrs     0x34              contiki-avr-rss2.a(packetbuf.o)
+rf230_txendwait     0x1               contiki-avr-rss2.a(rf230bb.o)
+radioontime         0x4               contiki-avr-rss2.a(clock.o)
+rxframe_tail        0x1               contiki-avr-rss2.a(rf230bb.o)
+rxframe_head        0x1               contiki-avr-rss2.a(rf230bb.o)
+rxframe             0x82              contiki-avr-rss2.a(rf230bb.o)
+rf230_wakewait      0x1               contiki-avr-rss2.a(rf230bb.o)
+sleepseconds        0x4               contiki-avr-rss2.a(clock.o)
+seconds             0x4               contiki-avr-rss2.a(clock.o)
+input_handler_0     0x2               contiki-avr-rss2.a(rs232.o)
+sinkrep             0x96              gen3sink.co
+RF230_sendpackets   0x2               contiki-avr-rss2.a(rf230bb.o)
+rssi                0x1               gen3sink.co
+RF230_sendfail      0x2               contiki-avr-rss2.a(rf230bb.o)
+report              0xc8              gen3sink.co
+energest_current_time
+                    0x18              contiki-avr-rss2.a(energest.o)
+clocktime           0x4               contiki-avr-rss2.a(contiki-main.o)
+serial_line_event_message
+                    0x1               contiki-avr-rss2.a(serial-line.o)
+RF230_receive_on    0x1               contiki-avr-rss2.a(rf230bb.o)
+lqi                 0x1               gen3sink.co
+i2c_probed          0x2               contiki-avr-rss2.a(contiki-main.o)
+__iob               0x6               /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(iob.o)
+
+Discarded input sections
+
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/crtatmega256rfr2.o
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/crtatmega256rfr2.o
+ .text          0x0000000000000000        0x0 gen3sink.co
+ .data          0x0000000000000000        0x0 gen3sink.co
+ .bss           0x0000000000000000        0x0 gen3sink.co
+ .data.v_low    0x0000000000000000        0x1 gen3sink.co
+ .bss.seqno     0x0000000000000000        0x1 gen3sink.co
+ .text          0x0000000000000000        0x0 contiki-avr-rss2.a(contiki-main.o)
+ .data          0x0000000000000000        0x0 contiki-avr-rss2.a(contiki-main.o)
+ .bss           0x0000000000000000        0x0 contiki-avr-rss2.a(contiki-main.o)
+ .text.log_message
+                0x0000000000000000       0x22 contiki-avr-rss2.a(contiki-main.o)
+ .progmem.data.__c.4509
+                0x0000000000000000        0x6 contiki-avr-rss2.a(contiki-main.o)
+ .text          0x0000000000000000        0x0 contiki-avr-rss2.a(params.o)
+ .data          0x0000000000000000        0x0 contiki-avr-rss2.a(params.o)
+ .bss           0x0000000000000000        0x0 contiki-avr-rss2.a(params.o)
+ .text.params_get_eui64
+                0x0000000000000000       0x14 contiki-avr-rss2.a(params.o)
+ .text          0x0000000000000000        0x0 contiki-avr-rss2.a(i2c.o)
+ .data          0x0000000000000000        0x0 contiki-avr-rss2.a(i2c.o)
+ .bss           0x0000000000000000        0x0 contiki-avr-rss2.a(i2c.o)
+ .text.i2c_start_wait
+                0x0000000000000000       0x4e contiki-avr-rss2.a(i2c.o)
+ .text.i2c_write1
+                0x0000000000000000       0x22 contiki-avr-rss2.a(i2c.o)
+ .text.i2c_send
+                0x0000000000000000       0x1a contiki-avr-rss2.a(i2c.o)
+ .text.i2c_write_mem
+                0x0000000000000000       0x20 contiki-avr-rss2.a(i2c.o)
+ .text          0x0000000000000000        0x0 contiki-avr-rss2.a(pwrpin.o)
+ .data          0x0000000000000000        0x0 contiki-avr-rss2.a(pwrpin.o)
+ .bss           0x0000000000000000        0x0 contiki-avr-rss2.a(pwrpin.o)
+ .text          0x0000000000000000        0x0 contiki-avr-rss2.a(leds.o)
+ .data          0x0000000000000000        0x0 contiki-avr-rss2.a(leds.o)
+ .bss           0x0000000000000000        0x0 contiki-avr-rss2.a(leds.o)
+ .text.leds_toggle
+                0x0000000000000000       0x1a contiki-avr-rss2.a(leds.o)
+ .text.leds_invert
+                0x0000000000000000        0x2 contiki-avr-rss2.a(leds.o)
+ .text.leds_get
+                0x0000000000000000        0x4 contiki-avr-rss2.a(leds.o)
+ .text          0x0000000000000000        0x0 contiki-avr-rss2.a(adc.o)
+ .data          0x0000000000000000        0x0 contiki-avr-rss2.a(adc.o)
+ .bss           0x0000000000000000        0x0 contiki-avr-rss2.a(adc.o)
+ .text.adc_read_a1
+                0x0000000000000000       0x1e contiki-avr-rss2.a(adc.o)
+ .text.adc_read_a2
+                0x0000000000000000       0x1e contiki-avr-rss2.a(adc.o)
+ .text          0x0000000000000000        0x0 contiki-avr-rss2.a(temp-sensor.o)
+ .data          0x0000000000000000        0x0 contiki-avr-rss2.a(temp-sensor.o)
+ .bss           0x0000000000000000        0x0 contiki-avr-rss2.a(temp-sensor.o)
+ .text          0x0000000000000000        0x0 contiki-avr-rss2.a(ds3231.o)
+ .data          0x0000000000000000        0x0 contiki-avr-rss2.a(ds3231.o)
+ .bss           0x0000000000000000        0x0 contiki-avr-rss2.a(ds3231.o)
+ .text.dec_to_bcd
+                0x0000000000000000       0x12 contiki-avr-rss2.a(ds3231.o)
+ .text.ds3231_set_datetime
+                0x0000000000000000       0x60 contiki-avr-rss2.a(ds3231.o)
+ .text.ds3231_get_temp
+                0x0000000000000000       0x7c contiki-avr-rss2.a(ds3231.o)
+ .text          0x0000000000000000        0x0 contiki-avr-rss2.a(clock.o)
+ .data          0x0000000000000000        0x0 contiki-avr-rss2.a(clock.o)
+ .bss           0x0000000000000000        0x0 contiki-avr-rss2.a(clock.o)
+ .text.clock_set_seconds
+                0x0000000000000000       0x12 contiki-avr-rss2.a(clock.o)
+ .text.clock_wait
+                0x0000000000000000       0x36 contiki-avr-rss2.a(clock.o)
+ .text.clock_adjust_ticks
+                0x0000000000000000      0x10a contiki-avr-rss2.a(clock.o)
+ .text          0x0000000000000000        0x0 contiki-avr-rss2.a(rs232.o)
+ .data          0x0000000000000000        0x0 contiki-avr-rss2.a(rs232.o)
+ .bss           0x0000000000000000        0x0 contiki-avr-rss2.a(rs232.o)
+ .text.rs232_print
+                0x0000000000000000       0x32 contiki-avr-rss2.a(rs232.o)
+ .text.slip_arch_writeb
+                0x0000000000000000        0x8 contiki-avr-rss2.a(rs232.o)
+ .text          0x0000000000000000        0x0 contiki-avr-rss2.a(watchdog.o)
+ .data          0x0000000000000000        0x0 contiki-avr-rss2.a(watchdog.o)
+ .bss           0x0000000000000000        0x0 contiki-avr-rss2.a(watchdog.o)
+ .text.watchdog_stop
+                0x0000000000000000       0x18 contiki-avr-rss2.a(watchdog.o)
+ .text.watchdog_reboot
+                0x0000000000000000       0x18 contiki-avr-rss2.a(watchdog.o)
+ .text          0x0000000000000000        0x0 contiki-avr-rss2.a(random.o)
+ .data          0x0000000000000000        0x0 contiki-avr-rss2.a(random.o)
+ .bss           0x0000000000000000        0x0 contiki-avr-rss2.a(random.o)
+ .text          0x0000000000000000        0x0 contiki-avr-rss2.a(rf230bb.o)
+ .data          0x0000000000000000        0x0 contiki-avr-rss2.a(rf230bb.o)
+ .bss           0x0000000000000000        0x0 contiki-avr-rss2.a(rf230bb.o)
+ .text.rf230_get_rpc
+                0x0000000000000000        0x6 contiki-avr-rss2.a(rf230bb.o)
+ .text.rf230_set_promiscuous_mode
+                0x0000000000000000       0x12 contiki-avr-rss2.a(rf230bb.o)
+ .text.rf230_is_ready_to_send
+                0x0000000000000000       0x14 contiki-avr-rss2.a(rf230bb.o)
+ .text.rf230_setpendingbit
+                0x0000000000000000        0xe contiki-avr-rss2.a(rf230bb.o)
+ .text.rf230_listen_channel
+                0x0000000000000000        0xa contiki-avr-rss2.a(rf230bb.o)
+ .text          0x0000000000000000        0x0 contiki-avr-rss2.a(halbb.o)
+ .data          0x0000000000000000        0x0 contiki-avr-rss2.a(halbb.o)
+ .bss           0x0000000000000000        0x0 contiki-avr-rss2.a(halbb.o)
+ .text          0x0000000000000000        0x0 contiki-avr-rss2.a(autostart.o)
+ .data          0x0000000000000000        0x0 contiki-avr-rss2.a(autostart.o)
+ .bss           0x0000000000000000        0x0 contiki-avr-rss2.a(autostart.o)
+ .text.autostart_exit
+                0x0000000000000000       0x1a contiki-avr-rss2.a(autostart.o)
+ .text          0x0000000000000000        0x0 contiki-avr-rss2.a(ctimer.o)
+ .data          0x0000000000000000        0x0 contiki-avr-rss2.a(ctimer.o)
+ .bss           0x0000000000000000        0x0 contiki-avr-rss2.a(ctimer.o)
+ .text.ctimer_reset
+                0x0000000000000000       0x48 contiki-avr-rss2.a(ctimer.o)
+ .text.ctimer_restart
+                0x0000000000000000       0x48 contiki-avr-rss2.a(ctimer.o)
+ .text.ctimer_stop
+                0x0000000000000000       0x2e contiki-avr-rss2.a(ctimer.o)
+ .text.ctimer_expired
+                0x0000000000000000       0x42 contiki-avr-rss2.a(ctimer.o)
+ .text          0x0000000000000000        0x0 contiki-avr-rss2.a(energest.o)
+ .data          0x0000000000000000        0x0 contiki-avr-rss2.a(energest.o)
+ .bss           0x0000000000000000        0x0 contiki-avr-rss2.a(energest.o)
+ .text.energest_type_time
+                0x0000000000000000       0x6c contiki-avr-rss2.a(energest.o)
+ .text.energest_leveldevice_leveltime
+                0x0000000000000000        0x8 contiki-avr-rss2.a(energest.o)
+ .text.energest_type_set
+                0x0000000000000000       0x18 contiki-avr-rss2.a(energest.o)
+ .text.energest_flush
+                0x0000000000000000       0x5c contiki-avr-rss2.a(energest.o)
+ .text          0x0000000000000000        0x0 contiki-avr-rss2.a(etimer.o)
+ .data          0x0000000000000000        0x0 contiki-avr-rss2.a(etimer.o)
+ .bss           0x0000000000000000        0x0 contiki-avr-rss2.a(etimer.o)
+ .text.etimer_reset_with_new_interval
+                0x0000000000000000       0x30 contiki-avr-rss2.a(etimer.o)
+ .text.etimer_restart
+                0x0000000000000000       0x14 contiki-avr-rss2.a(etimer.o)
+ .text.etimer_adjust
+                0x0000000000000000       0x26 contiki-avr-rss2.a(etimer.o)
+ .text.etimer_expiration_time
+                0x0000000000000000       0x2c contiki-avr-rss2.a(etimer.o)
+ .text.etimer_start_time
+                0x0000000000000000        0xc contiki-avr-rss2.a(etimer.o)
+ .text.etimer_next_expiration_time
+                0x0000000000000000       0x26 contiki-avr-rss2.a(etimer.o)
+ .text.etimer_stop
+                0x0000000000000000       0x4e contiki-avr-rss2.a(etimer.o)
+ .text          0x0000000000000000        0x0 contiki-avr-rss2.a(process.o)
+ .data          0x0000000000000000        0x0 contiki-avr-rss2.a(process.o)
+ .bss           0x0000000000000000        0x0 contiki-avr-rss2.a(process.o)
+ .text.process_exit
+                0x0000000000000000        0xc contiki-avr-rss2.a(process.o)
+ .text.process_nevents
+                0x0000000000000000       0x10 contiki-avr-rss2.a(process.o)
+ .text.process_is_running
+                0x0000000000000000       0x14 contiki-avr-rss2.a(process.o)
+ .text          0x0000000000000000        0x0 contiki-avr-rss2.a(rtimer.o)
+ .data          0x0000000000000000        0x0 contiki-avr-rss2.a(rtimer.o)
+ .bss           0x0000000000000000        0x0 contiki-avr-rss2.a(rtimer.o)
+ .text.rtimer_set
+                0x0000000000000000       0x36 contiki-avr-rss2.a(rtimer.o)
+ .text          0x0000000000000000        0x0 contiki-avr-rss2.a(timer.o)
+ .data          0x0000000000000000        0x0 contiki-avr-rss2.a(timer.o)
+ .bss           0x0000000000000000        0x0 contiki-avr-rss2.a(timer.o)
+ .text.timer_restart
+                0x0000000000000000       0x18 contiki-avr-rss2.a(timer.o)
+ .text.timer_remaining
+                0x0000000000000000       0x40 contiki-avr-rss2.a(timer.o)
+ .text          0x0000000000000000        0x0 contiki-avr-rss2.a(serial-line.o)
+ .data          0x0000000000000000        0x0 contiki-avr-rss2.a(serial-line.o)
+ .bss           0x0000000000000000        0x0 contiki-avr-rss2.a(serial-line.o)
+ .text          0x0000000000000000        0x0 contiki-avr-rss2.a(ringbuf.o)
+ .data          0x0000000000000000        0x0 contiki-avr-rss2.a(ringbuf.o)
+ .bss           0x0000000000000000        0x0 contiki-avr-rss2.a(ringbuf.o)
+ .text.ringbuf_size
+                0x0000000000000000        0xa contiki-avr-rss2.a(ringbuf.o)
+ .text.ringbuf_elements
+                0x0000000000000000       0x16 contiki-avr-rss2.a(ringbuf.o)
+ .text          0x0000000000000000        0x0 contiki-avr-rss2.a(list.o)
+ .data          0x0000000000000000        0x0 contiki-avr-rss2.a(list.o)
+ .bss           0x0000000000000000        0x0 contiki-avr-rss2.a(list.o)
+ .text.list_copy
+                0x0000000000000000        0xe contiki-avr-rss2.a(list.o)
+ .text.list_chop
+                0x0000000000000000       0x3c contiki-avr-rss2.a(list.o)
+ .text.list_pop
+                0x0000000000000000       0x18 contiki-avr-rss2.a(list.o)
+ .text.list_push
+                0x0000000000000000       0x28 contiki-avr-rss2.a(list.o)
+ .text.list_length
+                0x0000000000000000       0x1a contiki-avr-rss2.a(list.o)
+ .text.list_insert
+                0x0000000000000000       0x1c contiki-avr-rss2.a(list.o)
+ .text          0x0000000000000000        0x0 contiki-avr-rss2.a(broadcast.o)
+ .data          0x0000000000000000        0x0 contiki-avr-rss2.a(broadcast.o)
+ .bss           0x0000000000000000        0x0 contiki-avr-rss2.a(broadcast.o)
+ .text          0x0000000000000000        0x0 contiki-avr-rss2.a(channel.o)
+ .data          0x0000000000000000        0x0 contiki-avr-rss2.a(channel.o)
+ .bss           0x0000000000000000        0x0 contiki-avr-rss2.a(channel.o)
+ .text          0x0000000000000000        0x0 contiki-avr-rss2.a(chameleon.o)
+ .data          0x0000000000000000        0x0 contiki-avr-rss2.a(chameleon.o)
+ .bss           0x0000000000000000        0x0 contiki-avr-rss2.a(chameleon.o)
+ .text          0x0000000000000000        0x0 contiki-avr-rss2.a(rime.o)
+ .data          0x0000000000000000        0x0 contiki-avr-rss2.a(rime.o)
+ .bss           0x0000000000000000        0x0 contiki-avr-rss2.a(rime.o)
+ .text.rime_sniffer_add
+                0x0000000000000000        0xa contiki-avr-rss2.a(rime.o)
+ .text.rime_sniffer_remove
+                0x0000000000000000        0xa contiki-avr-rss2.a(rime.o)
+ .text          0x0000000000000000        0x0 contiki-avr-rss2.a(abc.o)
+ .data          0x0000000000000000        0x0 contiki-avr-rss2.a(abc.o)
+ .bss           0x0000000000000000        0x0 contiki-avr-rss2.a(abc.o)
+ .text          0x0000000000000000        0x0 contiki-avr-rss2.a(nullmac.o)
+ .data          0x0000000000000000        0x0 contiki-avr-rss2.a(nullmac.o)
+ .bss           0x0000000000000000        0x0 contiki-avr-rss2.a(nullmac.o)
+ .text          0x0000000000000000        0x0 contiki-avr-rss2.a(nullrdc.o)
+ .data          0x0000000000000000        0x0 contiki-avr-rss2.a(nullrdc.o)
+ .bss           0x0000000000000000        0x0 contiki-avr-rss2.a(nullrdc.o)
+ .text          0x0000000000000000        0x0 contiki-avr-rss2.a(queuebuf.o)
+ .data          0x0000000000000000        0x0 contiki-avr-rss2.a(queuebuf.o)
+ .bss           0x0000000000000000        0x0 contiki-avr-rss2.a(queuebuf.o)
+ .text.queuebuf_numfree
+                0x0000000000000000        0x8 contiki-avr-rss2.a(queuebuf.o)
+ .text.queuebuf_new_from_packetbuf
+                0x0000000000000000       0x66 contiki-avr-rss2.a(queuebuf.o)
+ .text.queuebuf_update_attr_from_packetbuf
+                0x0000000000000000       0x14 contiki-avr-rss2.a(queuebuf.o)
+ .text.queuebuf_update_from_packetbuf
+                0x0000000000000000       0x2e contiki-avr-rss2.a(queuebuf.o)
+ .text.queuebuf_free
+                0x0000000000000000       0x34 contiki-avr-rss2.a(queuebuf.o)
+ .text.queuebuf_dataptr
+                0x0000000000000000       0x24 contiki-avr-rss2.a(queuebuf.o)
+ .text.queuebuf_datalen
+                0x0000000000000000       0x10 contiki-avr-rss2.a(queuebuf.o)
+ .text.queuebuf_addr
+                0x0000000000000000       0x16 contiki-avr-rss2.a(queuebuf.o)
+ .text.queuebuf_attr
+                0x0000000000000000       0x1e contiki-avr-rss2.a(queuebuf.o)
+ .text.queuebuf_debug_print
+                0x0000000000000000        0x2 contiki-avr-rss2.a(queuebuf.o)
+ .text          0x0000000000000000        0x0 contiki-avr-rss2.a(packetbuf.o)
+ .data          0x0000000000000000        0x0 contiki-avr-rss2.a(packetbuf.o)
+ .bss           0x0000000000000000        0x0 contiki-avr-rss2.a(packetbuf.o)
+ .text.packetbuf_copyto
+                0x0000000000000000       0x64 contiki-avr-rss2.a(packetbuf.o)
+ .text.packetbuf_remaininglen
+                0x0000000000000000       0x12 contiki-avr-rss2.a(packetbuf.o)
+ .text.packetbuf_attr_copyto
+                0x0000000000000000       0x22 contiki-avr-rss2.a(packetbuf.o)
+ .text          0x0000000000000000        0x0 contiki-avr-rss2.a(linkaddr.o)
+ .data          0x0000000000000000        0x0 contiki-avr-rss2.a(linkaddr.o)
+ .bss           0x0000000000000000        0x0 contiki-avr-rss2.a(linkaddr.o)
+ .text          0x0000000000000000        0x0 contiki-avr-rss2.a(nullsec.o)
+ .data          0x0000000000000000        0x0 contiki-avr-rss2.a(nullsec.o)
+ .bss           0x0000000000000000        0x0 contiki-avr-rss2.a(nullsec.o)
+ .text          0x0000000000000000        0x0 contiki-avr-rss2.a(rtimer-arch.o)
+ .data          0x0000000000000000        0x0 contiki-avr-rss2.a(rtimer-arch.o)
+ .bss           0x0000000000000000        0x0 contiki-avr-rss2.a(rtimer-arch.o)
+ .text.rtimer_arch_sleep
+                0x0000000000000000      0x1a6 contiki-avr-rss2.a(rtimer-arch.o)
+ .text          0x0000000000000000        0x0 contiki-avr-rss2.a(memb.o)
+ .data          0x0000000000000000        0x0 contiki-avr-rss2.a(memb.o)
+ .bss           0x0000000000000000        0x0 contiki-avr-rss2.a(memb.o)
+ .text.memb_alloc
+                0x0000000000000000       0x4a contiki-avr-rss2.a(memb.o)
+ .text.memb_free
+                0x0000000000000000       0x4c contiki-avr-rss2.a(memb.o)
+ .text.memb_numfree
+                0x0000000000000000       0x34 contiki-avr-rss2.a(memb.o)
+ .text          0x0000000000000000        0x0 contiki-avr-rss2.a(chameleon-bitop)
+ .data          0x0000000000000000        0x0 contiki-avr-rss2.a(chameleon-bitop)
+ .bss           0x0000000000000000        0x0 contiki-avr-rss2.a(chameleon-bitop)
+ .text          0x0000000000000000        0x0 contiki-avr-rss2.a(broadcast-annou)
+ .data          0x0000000000000000        0x0 contiki-avr-rss2.a(broadcast-annou)
+ .bss           0x0000000000000000        0x0 contiki-avr-rss2.a(broadcast-annou)
+ .text.broadcast_announcement_stop
+                0x0000000000000000       0x18 contiki-avr-rss2.a(broadcast-annou)
+ .text.broadcast_announcement_beacon_interval
+                0x0000000000000000       0x12 contiki-avr-rss2.a(broadcast-annou)
+ .text          0x0000000000000000        0x0 contiki-avr-rss2.a(announcement.o)
+ .data          0x0000000000000000        0x0 contiki-avr-rss2.a(announcement.o)
+ .bss           0x0000000000000000        0x0 contiki-avr-rss2.a(announcement.o)
+ .text.announcement_register
+                0x0000000000000000       0x42 contiki-avr-rss2.a(announcement.o)
+ .text.announcement_remove
+                0x0000000000000000        0xa contiki-avr-rss2.a(announcement.o)
+ .text.announcement_remove_value
+                0x0000000000000000       0x2e contiki-avr-rss2.a(announcement.o)
+ .text.announcement_set_value
+                0x0000000000000000       0x3c contiki-avr-rss2.a(announcement.o)
+ .text.announcement_bump
+                0x0000000000000000       0x30 contiki-avr-rss2.a(announcement.o)
+ .text.announcement_listen
+                0x0000000000000000       0x10 contiki-avr-rss2.a(announcement.o)
+ .text.announcement_register_listen_callback
+                0x0000000000000000        0xa contiki-avr-rss2.a(announcement.o)
+ .bss.listen_callback
+                0x0000000000000000        0x2 contiki-avr-rss2.a(announcement.o)
+ .text          0x0000000000000000        0x0 contiki-avr-rss2.a(framer-802154.o)
+ .data          0x0000000000000000        0x0 contiki-avr-rss2.a(framer-802154.o)
+ .bss           0x0000000000000000        0x0 contiki-avr-rss2.a(framer-802154.o)
+ .text          0x0000000000000000        0x0 contiki-avr-rss2.a(frame802154.o)
+ .data          0x0000000000000000        0x0 contiki-avr-rss2.a(frame802154.o)
+ .bss           0x0000000000000000        0x0 contiki-avr-rss2.a(frame802154.o)
+ .text.frame802154_set_pan_id
+                0x0000000000000000        0xa contiki-avr-rss2.a(frame802154.o)
+ .text.frame802154_check_dest_panid
+                0x0000000000000000       0x66 contiki-avr-rss2.a(frame802154.o)
+ .text.frame802154_extract_linkaddr
+                0x0000000000000000       0xd0 contiki-avr-rss2.a(frame802154.o)
+ .text          0x0000000000000000        0x0 contiki-avr-rss2.a(mac.o)
+ .data          0x0000000000000000        0x0 contiki-avr-rss2.a(mac.o)
+ .bss           0x0000000000000000        0x0 contiki-avr-rss2.a(mac.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(addsf3.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(addsf3.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(addsf3.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(addsf3x.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(addsf3x.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(addsf3x.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(cmpsf2.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(cmpsf2.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(cmpsf2.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(divsf3.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(divsf3.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(divsf3.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(divsf3x.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(divsf3x.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(divsf3x.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fixsfsi.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fixsfsi.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fixsfsi.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fixunssfsi.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fixunssfsi.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fixunssfsi.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(floatsisf.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(floatsisf.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(floatsisf.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fp_cmp.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fp_cmp.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fp_cmp.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fp_inf.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fp_inf.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fp_inf.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fp_nan.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fp_nan.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fp_nan.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fp_pscA.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fp_pscA.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fp_pscA.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fp_pscB.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fp_pscB.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fp_pscB.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fp_round.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fp_round.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fp_round.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fp_split3.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fp_split3.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fp_split3.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fp_zero.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fp_zero.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fp_zero.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(mulsf3.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(mulsf3.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(mulsf3.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(mulsf3x.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(mulsf3x.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(mulsf3x.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodqi4.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodqi4.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodqi4.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodqi4.o)
+ .text.libgcc.div
+                0x0000000000000000       0x18 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodqi4.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodqi4.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodqi4.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodqi4.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodqi4.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodqi4.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodhi4.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodhi4.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodhi4.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodhi4.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodsi4.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodsi4.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodsi4.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodsi4.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_divmodsi4.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_divmodsi4.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_divmodsi4.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_divmodsi4.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_divmodsi4.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_divmodsi4.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_divmodsi4.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_divmodsi4.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_divmodsi4.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_negsi2.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_negsi2.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_negsi2.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_negsi2.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_negsi2.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_negsi2.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_negsi2.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_negsi2.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_negsi2.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_exit.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_exit.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_exit.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_exit.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_exit.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_exit.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_exit.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_exit.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_exit.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_exit.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_tablejump2.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_tablejump2.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_tablejump2.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_tablejump2.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_tablejump2.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_tablejump2.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_tablejump2.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_tablejump2.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_tablejump2.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_copy_data.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_copy_data.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_copy_data.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_copy_data.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_copy_data.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_copy_data.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_copy_data.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_copy_data.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_copy_data.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_copy_data.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_clear_bss.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_clear_bss.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_clear_bss.o)
+ .text.libgcc.mul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_clear_bss.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_clear_bss.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_clear_bss.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_clear_bss.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_clear_bss.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_clear_bss.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_clear_bss.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(rand.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(rand.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(ftoa_engine.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(ftoa_engine.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(ftoa_engine.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(strnlen_P.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(strnlen_P.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(strnlen_P.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(memcmp.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(memcmp.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(memcmp.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(memcpy.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(memcpy.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(memcpy.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(memset.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(memset.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(memset.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(strcpy.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(strcpy.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(strcpy.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(strnlen.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(strnlen.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(strnlen.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(fputc.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(fputc.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(fputc.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(iob.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(iob.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(iob.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(printf.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(printf.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(printf.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(printf_p.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(printf_p.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(printf_p.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(putchar.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(putchar.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(putchar.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(puts.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(puts.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(puts.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(sprintf.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(sprintf.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(sprintf.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(ultoa_invert.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(ultoa_invert.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(ultoa_invert.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libatmega256rfr2.a(eerd_block.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libatmega256rfr2.a(eerd_block.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libatmega256rfr2.a(eerd_block.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libatmega256rfr2.a(eerd_byte.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libatmega256rfr2.a(eerd_byte.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libatmega256rfr2.a(eerd_byte.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libatmega256rfr2.a(eerd_word.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libatmega256rfr2.a(eerd_word.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libatmega256rfr2.a(eerd_word.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libatmega256rfr2.a(eewr_block.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libatmega256rfr2.a(eewr_block.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libatmega256rfr2.a(eewr_block.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libatmega256rfr2.a(eewr_byte.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libatmega256rfr2.a(eewr_byte.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libatmega256rfr2.a(eewr_byte.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libatmega256rfr2.a(eewr_word.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libatmega256rfr2.a(eewr_word.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libatmega256rfr2.a(eewr_word.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_muluhisi3.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_muluhisi3.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_muluhisi3.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_muluhisi3.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_muluhisi3.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_muluhisi3.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_muluhisi3.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_muluhisi3.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_muluhisi3.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_mulshisi3.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_mulshisi3.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_mulshisi3.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_mulshisi3.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_mulshisi3.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_mulshisi3.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_mulshisi3.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_mulshisi3.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_mulshisi3.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_umulhisi3.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_umulhisi3.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_umulhisi3.o)
+ .text.libgcc.div
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_umulhisi3.o)
+ .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_umulhisi3.o)
+ .text.libgcc.prologue
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_umulhisi3.o)
+ .text.libgcc.builtins
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_umulhisi3.o)
+ .text.libgcc.fmul
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_umulhisi3.o)
+ .text.libgcc.fixed
+                0x0000000000000000        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_umulhisi3.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x0000000000000000 0x0000000000100000 xr
+data             0x0000000000800200 0x000000000000fe00 rw !x
+eeprom           0x0000000000810000 0x0000000000010000 rw !x
+fuse             0x0000000000820000 0x0000000000000003 rw !x
+lock             0x0000000000830000 0x0000000000000400 rw !x
+signature        0x0000000000840000 0x0000000000000400 rw !x
+user_signatures  0x0000000000850000 0x0000000000000400 rw !x
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800200
+LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/crtatmega256rfr2.o
+Address of section .bootloader set to 0x3e000
+LOAD gen3sink.co
+LOAD contiki-avr-rss2.a
+LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libprintf_flt.a
+LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a
+START GROUP
+LOAD /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a
+LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a
+LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a
+LOAD /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libatmega256rfr2.a
+END GROUP
+                0x0000000000100000                __TEXT_REGION_LENGTH__ = DEFINED (__TEXT_REGION_LENGTH__)?__TEXT_REGION_LENGTH__:0x100000
+                0x000000000000fe00                __DATA_REGION_LENGTH__ = DEFINED (__DATA_REGION_LENGTH__)?__DATA_REGION_LENGTH__:0xfe00
+                0x0000000000010000                __EEPROM_REGION_LENGTH__ = DEFINED (__EEPROM_REGION_LENGTH__)?__EEPROM_REGION_LENGTH__:0x10000
+                [0x0000000000000003]                __FUSE_REGION_LENGTH__ = DEFINED (__FUSE_REGION_LENGTH__)?__FUSE_REGION_LENGTH__:0x400
+                0x0000000000000400                __LOCK_REGION_LENGTH__ = DEFINED (__LOCK_REGION_LENGTH__)?__LOCK_REGION_LENGTH__:0x400
+                0x0000000000000400                __SIGNATURE_REGION_LENGTH__ = DEFINED (__SIGNATURE_REGION_LENGTH__)?__SIGNATURE_REGION_LENGTH__:0x400
+                0x0000000000000400                __USER_SIGNATURE_REGION_LENGTH__ = DEFINED (__USER_SIGNATURE_REGION_LENGTH__)?__USER_SIGNATURE_REGION_LENGTH__:0x400
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x0000000000000000     0x5e42
+ *(.vectors)
+ .vectors       0x0000000000000000      0x134 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/crtatmega256rfr2.o
+                0x0000000000000000                __vectors
+                0x0000000000000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ .progmem.gcc_sw_table.set_value
+                0x0000000000000134       0x10 contiki-avr-rss2.a(rf230bb.o)
+ .progmem.gcc_sw_table.get_value
+                0x0000000000000144       0x22 contiki-avr-rss2.a(rf230bb.o)
+                0x0000000000000166                . = ALIGN (0x2)
+                0x0000000000000166                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x0000000000000166      0x138 linker stubs
+ *(.trampolines*)
+                0x000000000000029e                __trampolines_end = .
+ *libprintf_flt.a:*(.progmem.data)
+ .progmem.data  0x000000000000029e        0x8 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o)
+ *libc.a:*(.progmem.data)
+ .progmem.data  0x00000000000002a6       0xfa /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(ftoa_engine.o)
+ *(.progmem*)
+ .progmem.data.__c.4499
+                0x00000000000003a0       0x1d contiki-avr-rss2.a(contiki-main.o)
+ .progmem.data.__c.4492
+                0x00000000000003bd        0x8 contiki-avr-rss2.a(contiki-main.o)
+ .progmem.data.__c.4490
+                0x00000000000003c5       0x11 contiki-avr-rss2.a(contiki-main.o)
+ .progmem.data.__c.4488
+                0x00000000000003d6       0x54 contiki-avr-rss2.a(contiki-main.o)
+ .progmem.data.__c.4486
+                0x000000000000042a        0x2 contiki-avr-rss2.a(contiki-main.o)
+ .progmem.data.__c.4481
+                0x000000000000042c        0x4 contiki-avr-rss2.a(contiki-main.o)
+ .progmem.data.__c.4478
+                0x0000000000000430        0xd contiki-avr-rss2.a(contiki-main.o)
+ .progmem.data.__c.4474
+                0x000000000000043d       0x3c contiki-avr-rss2.a(contiki-main.o)
+ .progmem.data.__c.4247
+                0x0000000000000479       0x2d contiki-avr-rss2.a(params.o)
+ .progmem.data.default_domain_name
+                0x00000000000004a6        0xa contiki-avr-rss2.a(params.o)
+                0x00000000000004a6                default_domain_name
+ .progmem.data.default_server_name
+                0x00000000000004b0        0xe contiki-avr-rss2.a(params.o)
+                0x00000000000004b0                default_server_name
+ .progmem.data.default_mac_address
+                0x00000000000004be        0x8 contiki-avr-rss2.a(params.o)
+                0x00000000000004be                default_mac_address
+                0x00000000000004c6                . = ALIGN (0x2)
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x00000000000004c6                __ctors_start = .
+ *(.ctors)
+                0x00000000000004c6                __ctors_end = .
+                0x00000000000004c6                __dtors_start = .
+ *(.dtors)
+                0x00000000000004c6                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x00000000000004c6        0x0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/crtatmega256rfr2.o
+                0x00000000000004c6                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x00000000000004c6       0x10 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/crtatmega256rfr2.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x00000000000004d6       0x1a /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_copy_data.o)
+                0x00000000000004d6                __do_copy_data
+ .init4         0x00000000000004f0       0x10 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_clear_bss.o)
+                0x00000000000004f0                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x0000000000000500        0x8 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/crtatmega256rfr2.o
+ *(.init9)
+ *(.text)
+ .text          0x0000000000000508        0x4 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/crtatmega256rfr2.o
+                0x0000000000000508                __vector_38
+                0x0000000000000508                __vector_22
+                0x0000000000000508                __vector_28
+                0x0000000000000508                __vector_67
+                0x0000000000000508                __vector_1
+                0x0000000000000508                __vector_75
+                0x0000000000000508                __vector_71
+                0x0000000000000508                __vector_34
+                0x0000000000000508                __vector_24
+                0x0000000000000508                __vector_12
+                0x0000000000000508                __vector_55
+                0x0000000000000508                __vector_69
+                0x0000000000000508                __vector_46
+                0x0000000000000508                __bad_interrupt
+                0x0000000000000508                __vector_72
+                0x0000000000000508                __vector_6
+                0x0000000000000508                __vector_31
+                0x0000000000000508                __vector_35
+                0x0000000000000508                __vector_74
+                0x0000000000000508                __vector_39
+                0x0000000000000508                __vector_3
+                0x0000000000000508                __vector_23
+                0x0000000000000508                __vector_68
+                0x0000000000000508                __vector_30
+                0x0000000000000508                __vector_73
+                0x0000000000000508                __vector_45
+                0x0000000000000508                __vector_11
+                0x0000000000000508                __vector_54
+                0x0000000000000508                __vector_17
+                0x0000000000000508                __vector_19
+                0x0000000000000508                __vector_56
+                0x0000000000000508                __vector_7
+                0x0000000000000508                __vector_49
+                0x0000000000000508                __vector_41
+                0x0000000000000508                __vector_43
+                0x0000000000000508                __vector_27
+                0x0000000000000508                __vector_5
+                0x0000000000000508                __vector_33
+                0x0000000000000508                __vector_76
+                0x0000000000000508                __vector_47
+                0x0000000000000508                __vector_52
+                0x0000000000000508                __vector_37
+                0x0000000000000508                __vector_4
+                0x0000000000000508                __vector_44
+                0x0000000000000508                __vector_51
+                0x0000000000000508                __vector_9
+                0x0000000000000508                __vector_2
+                0x0000000000000508                __vector_21
+                0x0000000000000508                __vector_15
+                0x0000000000000508                __vector_66
+                0x0000000000000508                __vector_70
+                0x0000000000000508                __vector_29
+                0x0000000000000508                __vector_40
+                0x0000000000000508                __vector_8
+                0x0000000000000508                __vector_26
+                0x0000000000000508                __vector_48
+                0x0000000000000508                __vector_14
+                0x0000000000000508                __vector_53
+                0x0000000000000508                __vector_10
+                0x0000000000000508                __vector_50
+                0x0000000000000508                __vector_16
+                0x0000000000000508                __vector_18
+                0x0000000000000508                __vector_20
+                0x0000000000000508                __vector_42
+                0x0000000000000508                __vector_65
+                0x000000000000050c                . = ALIGN (0x2)
+ *(.text.*)
+ .text.process_thread_radio_process
+                0x000000000000050c       0x9a gen3sink.co
+ .text.process_thread_init_process
+                0x00000000000005a6       0xd0 gen3sink.co
+ .text.broadcast_recv
+                0x0000000000000676      0x3c8 gen3sink.co
+ .text.process_thread_sleep_process
+                0x0000000000000a3e       0x7a gen3sink.co
+ .text.rng_get_uint8
+                0x0000000000000ab8       0x2c contiki-avr-rss2.a(contiki-main.o)
+                0x0000000000000ab8                rng_get_uint8
+ .text.print_mcusr
+                0x0000000000000ae4       0x56 contiki-avr-rss2.a(contiki-main.o)
+                0x0000000000000ae4                print_mcusr
+ .text.initialize
+                0x0000000000000b3a      0x2c2 contiki-avr-rss2.a(contiki-main.o)
+                0x0000000000000b3a                initialize
+ .text.startup.main
+                0x0000000000000dfc       0xd6 contiki-avr-rss2.a(contiki-main.o)
+                0x0000000000000dfc                main
+ .text.params_get_channel
+                0x0000000000000ed2      0x11c contiki-avr-rss2.a(params.o)
+                0x0000000000000ed2                params_get_channel
+ .text.params_get_panid
+                0x0000000000000fee        0x8 contiki-avr-rss2.a(params.o)
+                0x0000000000000fee                params_get_panid
+ .text.params_get_panaddr
+                0x0000000000000ff6        0x8 contiki-avr-rss2.a(params.o)
+                0x0000000000000ff6                params_get_panaddr
+ .text.params_get_txpower
+                0x0000000000000ffe        0x8 contiki-avr-rss2.a(params.o)
+                0x0000000000000ffe                params_get_txpower
+ .text.i2c_init
+                0x0000000000001006       0x2c contiki-avr-rss2.a(i2c.o)
+                0x0000000000001006                i2c_init
+ .text.i2c_start
+                0x0000000000001032       0x68 contiki-avr-rss2.a(i2c.o)
+                0x0000000000001032                i2c_start
+ .text.i2c_stop
+                0x000000000000109a       0x10 contiki-avr-rss2.a(i2c.o)
+                0x000000000000109a                i2c_stop
+ .text.i2c_write
+                0x00000000000010aa       0x14 contiki-avr-rss2.a(i2c.o)
+                0x00000000000010aa                i2c_write
+ .text.i2c_readAck
+                0x00000000000010be       0x14 contiki-avr-rss2.a(i2c.o)
+                0x00000000000010be                i2c_readAck
+ .text.i2c_readNak
+                0x00000000000010d2       0x14 contiki-avr-rss2.a(i2c.o)
+                0x00000000000010d2                i2c_readNak
+ .text.i2c_read_mem
+                0x00000000000010e6       0x74 contiki-avr-rss2.a(i2c.o)
+                0x00000000000010e6                i2c_read_mem
+ .text.i2c_at24mac_read
+                0x000000000000115a       0x16 contiki-avr-rss2.a(i2c.o)
+                0x000000000000115a                i2c_at24mac_read
+ .text.i2c_probe
+                0x0000000000001170       0x74 contiki-avr-rss2.a(i2c.o)
+                0x0000000000001170                i2c_probe
+ .text.pwr_pin_on
+                0x00000000000011e4        0x4 contiki-avr-rss2.a(pwrpin.o)
+                0x00000000000011e4                pwr_pin_on
+ .text.pwr_pin_off
+                0x00000000000011e8        0x4 contiki-avr-rss2.a(pwrpin.o)
+                0x00000000000011e8                pwr_pin_off
+ .text.pwr_pin_init
+                0x00000000000011ec        0x6 contiki-avr-rss2.a(pwrpin.o)
+                0x00000000000011ec                pwr_pin_init
+ .text.leds_on  0x00000000000011f2        0xa contiki-avr-rss2.a(leds.o)
+                0x00000000000011f2                leds_on
+ .text.leds_off
+                0x00000000000011fc        0xa contiki-avr-rss2.a(leds.o)
+                0x00000000000011fc                leds_off
+ .text.leds_init
+                0x0000000000001206        0xa contiki-avr-rss2.a(leds.o)
+                0x0000000000001206                leds_init
+ .text.adc_read
+                0x0000000000001210       0x96 contiki-avr-rss2.a(adc.o)
+                0x0000000000001210                adc_read
+ .text.adc_read_v_in
+                0x00000000000012a6       0x2a contiki-avr-rss2.a(adc.o)
+                0x00000000000012a6                adc_read_v_in
+ .text.adc_read_v_mcu
+                0x00000000000012d0       0x48 contiki-avr-rss2.a(adc.o)
+                0x00000000000012d0                adc_read_v_mcu
+ .text.status   0x0000000000001318        0x6 contiki-avr-rss2.a(temp-sensor.o)
+ .text.ds18b20_probe
+                0x000000000000131e       0x30 contiki-avr-rss2.a(temp-sensor.o)
+                0x000000000000131e                ds18b20_probe
+ .text.configure
+                0x000000000000134e        0xa contiki-avr-rss2.a(temp-sensor.o)
+ .text.write_bit
+                0x0000000000001358       0x2e contiki-avr-rss2.a(temp-sensor.o)
+                0x0000000000001358                write_bit
+ .text.read_bit
+                0x0000000000001386       0x3a contiki-avr-rss2.a(temp-sensor.o)
+                0x0000000000001386                read_bit
+ .text.read_byte
+                0x00000000000013c0       0x2e contiki-avr-rss2.a(temp-sensor.o)
+                0x00000000000013c0                read_byte
+ .text.write_byte
+                0x00000000000013ee       0x36 contiki-avr-rss2.a(temp-sensor.o)
+                0x00000000000013ee                write_byte
+ .text.crc8_ds18b20
+                0x0000000000001424       0x2e contiki-avr-rss2.a(temp-sensor.o)
+                0x0000000000001424                crc8_ds18b20
+ .text.ds18b20_get_temp
+                0x0000000000001452       0xe2 contiki-avr-rss2.a(temp-sensor.o)
+                0x0000000000001452                ds18b20_get_temp
+ .text.value    0x0000000000001534       0x46 contiki-avr-rss2.a(temp-sensor.o)
+ .text.ds3231_init
+                0x000000000000157a        0xc contiki-avr-rss2.a(ds3231.o)
+                0x000000000000157a                ds3231_init
+ .text.bcd_to_dec
+                0x0000000000001586       0x12 contiki-avr-rss2.a(ds3231.o)
+                0x0000000000001586                bcd_to_dec
+ .text.ds3231_get_datetime
+                0x0000000000001598       0x6a contiki-avr-rss2.a(ds3231.o)
+                0x0000000000001598                ds3231_get_datetime
+ .text.clock_init
+                0x0000000000001602       0x28 contiki-avr-rss2.a(clock.o)
+                0x0000000000001602                clock_init
+ .text.clock_time
+                0x000000000000162a       0x34 contiki-avr-rss2.a(clock.o)
+                0x000000000000162a                clock_time
+ .text.clock_seconds
+                0x000000000000165e       0x34 contiki-avr-rss2.a(clock.o)
+                0x000000000000165e                clock_seconds
+ .text.clock_delay_usec
+                0x0000000000001692       0x12 contiki-avr-rss2.a(clock.o)
+                0x0000000000001692                clock_delay_usec
+ .text.clock_delay_msec
+                0x00000000000016a4       0x12 contiki-avr-rss2.a(clock.o)
+                0x00000000000016a4                clock_delay_msec
+ .text.__vector_13
+                0x00000000000016b6      0x104 contiki-avr-rss2.a(clock.o)
+                0x00000000000016b6                __vector_13
+ .text.__vector_25
+                0x00000000000017ba       0x5e contiki-avr-rss2.a(rs232.o)
+                0x00000000000017ba                __vector_25
+ .text.__vector_36
+                0x0000000000001818       0x5e contiki-avr-rss2.a(rs232.o)
+                0x0000000000001818                __vector_36
+ .text.rs232_init
+                0x0000000000001876       0x40 contiki-avr-rss2.a(rs232.o)
+                0x0000000000001876                rs232_init
+ .text.rs232_send
+                0x00000000000018b6       0x24 contiki-avr-rss2.a(rs232.o)
+                0x00000000000018b6                rs232_send
+ .text.rs232_stdout_putchar
+                0x00000000000018da       0x2a contiki-avr-rss2.a(rs232.o)
+                0x00000000000018da                rs232_stdout_putchar
+ .text.rs232_set_input
+                0x0000000000001904       0x1c contiki-avr-rss2.a(rs232.o)
+                0x0000000000001904                rs232_set_input
+ .text.rs232_redirect_stdout
+                0x0000000000001920       0x12 contiki-avr-rss2.a(rs232.o)
+                0x0000000000001920                rs232_redirect_stdout
+ .text.watchdog_init
+                0x0000000000001932       0x1e contiki-avr-rss2.a(watchdog.o)
+                0x0000000000001932                watchdog_init
+ .text.watchdog_start
+                0x0000000000001950       0x16 contiki-avr-rss2.a(watchdog.o)
+                0x0000000000001950                watchdog_start
+ .text.watchdog_periodic
+                0x0000000000001966        0x4 contiki-avr-rss2.a(watchdog.o)
+                0x0000000000001966                watchdog_periodic
+ .text.random_init
+                0x000000000000196a        0x4 contiki-avr-rss2.a(random.o)
+                0x000000000000196a                random_init
+ .text.random_rand
+                0x000000000000196e        0x4 contiki-avr-rss2.a(random.o)
+                0x000000000000196e                random_rand
+ .text.set_object
+                0x0000000000001972        0x6 contiki-avr-rss2.a(rf230bb.o)
+ .text.rf230_pending_packet
+                0x0000000000001978        0x8 contiki-avr-rss2.a(rf230bb.o)
+ .text.radio_reset_state_machine
+                0x0000000000001980       0x32 contiki-avr-rss2.a(rf230bb.o)
+ .text.set_txpower
+                0x00000000000019b2       0x1e contiki-avr-rss2.a(rf230bb.o)
+ .text.get_object
+                0x00000000000019d0       0x30 contiki-avr-rss2.a(rf230bb.o)
+ .text.rf230_isidle
+                0x0000000000001a00       0x28 contiki-avr-rss2.a(rf230bb.o)
+ .text.rf230_waitidle
+                0x0000000000001a28       0x12 contiki-avr-rss2.a(rf230bb.o)
+ .text.radio_off
+                0x0000000000001a3a      0x124 contiki-avr-rss2.a(rf230bb.o)
+ .text.rf230_off
+                0x0000000000001b5e       0x16 contiki-avr-rss2.a(rf230bb.o)
+ .text.rf230_receiving_packet
+                0x0000000000001b74       0x26 contiki-avr-rss2.a(rf230bb.o)
+ .text.rf230_prepare
+                0x0000000000001b9a       0x32 contiki-avr-rss2.a(rf230bb.o)
+ .text.rf230_get_panid
+                0x0000000000001bcc       0x14 contiki-avr-rss2.a(rf230bb.o)
+                0x0000000000001bcc                rf230_get_panid
+ .text.radio_get_trx_state
+                0x0000000000001be0        0xc contiki-avr-rss2.a(rf230bb.o)
+                0x0000000000001be0                radio_get_trx_state
+ .text.radio_set_trx_state
+                0x0000000000001bec       0xd0 contiki-avr-rss2.a(rf230bb.o)
+ .text.radio_on
+                0x0000000000001cbc       0x68 contiki-avr-rss2.a(rf230bb.o)
+ .text.rf230_on
+                0x0000000000001d24       0x12 contiki-avr-rss2.a(rf230bb.o)
+ .text.rf230_cca
+                0x0000000000001d36      0x126 contiki-avr-rss2.a(rf230bb.o)
+ .text.rf230_set_rpc
+                0x0000000000001e5c        0x6 contiki-avr-rss2.a(rf230bb.o)
+                0x0000000000001e5c                rf230_set_rpc
+ .text.rf230_warm_reset
+                0x0000000000001e62       0x46 contiki-avr-rss2.a(rf230bb.o)
+                0x0000000000001e62                rf230_warm_reset
+ .text.rf230_init
+                0x0000000000001ea8       0x74 contiki-avr-rss2.a(rf230bb.o)
+                0x0000000000001ea8                rf230_init
+ .text.rf230_get_channel
+                0x0000000000001f1c        0x6 contiki-avr-rss2.a(rf230bb.o)
+                0x0000000000001f1c                rf230_get_channel
+ .text.rf230_set_channel
+                0x0000000000001f22       0x1c contiki-avr-rss2.a(rf230bb.o)
+                0x0000000000001f22                rf230_set_channel
+ .text.set_value
+                0x0000000000001f3e       0xe0 contiki-avr-rss2.a(rf230bb.o)
+ .text.rf230_set_pan_addr
+                0x000000000000201e       0x48 contiki-avr-rss2.a(rf230bb.o)
+                0x000000000000201e                rf230_set_pan_addr
+ .text.rf230_get_last_rx_packet_timestamp
+                0x0000000000002066       0x12 contiki-avr-rss2.a(rf230bb.o)
+                0x0000000000002066                rf230_get_last_rx_packet_timestamp
+ .text.rf230_interrupt
+                0x0000000000002078       0x26 contiki-avr-rss2.a(rf230bb.o)
+                0x0000000000002078                rf230_interrupt
+ .text.flushrx  0x000000000000209e       0x26 contiki-avr-rss2.a(rf230bb.o)
+ .text.rf230_read
+                0x00000000000020c4       0x92 contiki-avr-rss2.a(rf230bb.o)
+ .text.process_thread_rf230_process
+                0x0000000000002156      0x154 contiki-avr-rss2.a(rf230bb.o)
+ .text.rf230_set_txpower
+                0x00000000000022aa        0x4 contiki-avr-rss2.a(rf230bb.o)
+                0x00000000000022aa                rf230_set_txpower
+ .text.rf230_get_txpower
+                0x00000000000022ae       0x18 contiki-avr-rss2.a(rf230bb.o)
+                0x00000000000022ae                rf230_get_txpower
+ .text.rf230_transmit
+                0x00000000000022c6      0x254 contiki-avr-rss2.a(rf230bb.o)
+ .text.rf230_send
+                0x000000000000251a       0x32 contiki-avr-rss2.a(rf230bb.o)
+ .text.rf230_get_raw_rssi
+                0x000000000000254c       0x48 contiki-avr-rss2.a(rf230bb.o)
+                0x000000000000254c                rf230_get_raw_rssi
+ .text.get_value
+                0x0000000000002594       0xca contiki-avr-rss2.a(rf230bb.o)
+ .text.hal_init
+                0x000000000000265e        0x2 contiki-avr-rss2.a(halbb.o)
+                0x000000000000265e                hal_init
+ .text.hal_subregister_read
+                0x0000000000002660       0x16 contiki-avr-rss2.a(halbb.o)
+                0x0000000000002660                hal_subregister_read
+ .text.hal_subregister_write
+                0x0000000000002676       0x38 contiki-avr-rss2.a(halbb.o)
+                0x0000000000002676                hal_subregister_write
+ .text.hal_frame_read
+                0x00000000000026ae       0x54 contiki-avr-rss2.a(halbb.o)
+                0x00000000000026ae                hal_frame_read
+ .text.hal_frame_write
+                0x0000000000002702       0x1c contiki-avr-rss2.a(halbb.o)
+                0x0000000000002702                hal_frame_write
+ .text.__vector_60
+                0x000000000000271e       0x70 contiki-avr-rss2.a(halbb.o)
+                0x000000000000271e                __vector_60
+ .text.__vector_59
+                0x000000000000278e       0x50 contiki-avr-rss2.a(halbb.o)
+                0x000000000000278e                __vector_59
+ .text.__vector_64
+                0x00000000000027de       0x18 contiki-avr-rss2.a(halbb.o)
+                0x00000000000027de                __vector_64
+ .text.__vector_63
+                0x00000000000027f6       0x18 contiki-avr-rss2.a(halbb.o)
+                0x00000000000027f6                __vector_63
+ .text.__vector_62
+                0x000000000000280e       0x14 contiki-avr-rss2.a(halbb.o)
+                0x000000000000280e                __vector_62
+ .text.__vector_58
+                0x0000000000002822       0x14 contiki-avr-rss2.a(halbb.o)
+                0x0000000000002822                __vector_58
+ .text.__vector_57
+                0x0000000000002836       0x14 contiki-avr-rss2.a(halbb.o)
+                0x0000000000002836                __vector_57
+ .text.__vector_61
+                0x000000000000284a       0x18 contiki-avr-rss2.a(halbb.o)
+                0x000000000000284a                __vector_61
+ .text.autostart_start
+                0x0000000000002862       0x1e contiki-avr-rss2.a(autostart.o)
+                0x0000000000002862                autostart_start
+ .text.process_thread_ctimer_process
+                0x0000000000002880       0xcc contiki-avr-rss2.a(ctimer.o)
+ .text.ctimer_init
+                0x000000000000294c       0x18 contiki-avr-rss2.a(ctimer.o)
+                0x000000000000294c                ctimer_init
+ .text.ctimer_set_with_process
+                0x0000000000002964       0x66 contiki-avr-rss2.a(ctimer.o)
+                0x0000000000002964                ctimer_set_with_process
+ .text.ctimer_set
+                0x00000000000029ca       0x1e contiki-avr-rss2.a(ctimer.o)
+                0x00000000000029ca                ctimer_set
+ .text.energest_init
+                0x00000000000029e8       0x2c contiki-avr-rss2.a(energest.o)
+                0x00000000000029e8                energest_init
+ .text.update_time
+                0x0000000000002a14       0xba contiki-avr-rss2.a(etimer.o)
+ .text.etimer_request_poll
+                0x0000000000002ace        0x8 contiki-avr-rss2.a(etimer.o)
+                0x0000000000002ace                etimer_request_poll
+ .text.process_thread_etimer_process
+                0x0000000000002ad6      0x106 contiki-avr-rss2.a(etimer.o)
+ .text.add_timer
+                0x0000000000002bdc       0x5e contiki-avr-rss2.a(etimer.o)
+ .text.etimer_set
+                0x0000000000002c3a       0x14 contiki-avr-rss2.a(etimer.o)
+                0x0000000000002c3a                etimer_set
+ .text.etimer_reset
+                0x0000000000002c4e       0x14 contiki-avr-rss2.a(etimer.o)
+                0x0000000000002c4e                etimer_reset
+ .text.etimer_expired
+                0x0000000000002c62       0x16 contiki-avr-rss2.a(etimer.o)
+                0x0000000000002c62                etimer_expired
+ .text.etimer_pending
+                0x0000000000002c78       0x16 contiki-avr-rss2.a(etimer.o)
+                0x0000000000002c78                etimer_pending
+ .text.call_process.part.0
+                0x0000000000002c8e       0x54 contiki-avr-rss2.a(process.o)
+ .text.call_process
+                0x0000000000002ce2        0xc contiki-avr-rss2.a(process.o)
+ .text.exit_process
+                0x0000000000002cee       0xd6 contiki-avr-rss2.a(process.o)
+ .text.do_poll  0x0000000000002dc4       0x3e contiki-avr-rss2.a(process.o)
+ .text.process_alloc_event
+                0x0000000000002e02        0xe contiki-avr-rss2.a(process.o)
+                0x0000000000002e02                process_alloc_event
+ .text.process_init
+                0x0000000000002e10       0x20 contiki-avr-rss2.a(process.o)
+                0x0000000000002e10                process_init
+ .text.process_run
+                0x0000000000002e30       0xaa contiki-avr-rss2.a(process.o)
+                0x0000000000002e30                process_run
+ .text.process_post
+                0x0000000000002eda       0x3a contiki-avr-rss2.a(process.o)
+                0x0000000000002eda                process_post
+ .text.process_post_synch
+                0x0000000000002f14       0x1e contiki-avr-rss2.a(process.o)
+                0x0000000000002f14                process_post_synch
+ .text.process_start
+                0x0000000000002f32       0x42 contiki-avr-rss2.a(process.o)
+                0x0000000000002f32                process_start
+ .text.process_poll
+                0x0000000000002f74       0x18 contiki-avr-rss2.a(process.o)
+                0x0000000000002f74                process_poll
+ .text.rtimer_init
+                0x0000000000002f8c        0x4 contiki-avr-rss2.a(rtimer.o)
+                0x0000000000002f8c                rtimer_init
+ .text.rtimer_run_next
+                0x0000000000002f90       0x3e contiki-avr-rss2.a(rtimer.o)
+                0x0000000000002f90                rtimer_run_next
+ .text.timer_set
+                0x0000000000002fce       0x20 contiki-avr-rss2.a(timer.o)
+                0x0000000000002fce                timer_set
+ .text.timer_reset
+                0x0000000000002fee       0x24 contiki-avr-rss2.a(timer.o)
+                0x0000000000002fee                timer_reset
+ .text.timer_expired
+                0x0000000000003012       0x56 contiki-avr-rss2.a(timer.o)
+                0x0000000000003012                timer_expired
+ .text.process_thread_serial_line_process
+                0x0000000000003068       0xcc contiki-avr-rss2.a(serial-line.o)
+ .text.serial_line_input_byte
+                0x0000000000003134       0x4a contiki-avr-rss2.a(serial-line.o)
+                0x0000000000003134                serial_line_input_byte
+ .text.serial_line_init
+                0x000000000000317e       0x1a contiki-avr-rss2.a(serial-line.o)
+                0x000000000000317e                serial_line_init
+ .text.ringbuf_init
+                0x0000000000003198       0x10 contiki-avr-rss2.a(ringbuf.o)
+                0x0000000000003198                ringbuf_init
+ .text.ringbuf_put
+                0x00000000000031a8       0x40 contiki-avr-rss2.a(ringbuf.o)
+                0x00000000000031a8                ringbuf_put
+ .text.ringbuf_get
+                0x00000000000031e8       0x3a contiki-avr-rss2.a(ringbuf.o)
+                0x00000000000031e8                ringbuf_get
+ .text.list_init
+                0x0000000000003222        0x8 contiki-avr-rss2.a(list.o)
+                0x0000000000003222                list_init
+ .text.list_head
+                0x000000000000322a        0x8 contiki-avr-rss2.a(list.o)
+                0x000000000000322a                list_head
+ .text.list_tail
+                0x0000000000003232       0x20 contiki-avr-rss2.a(list.o)
+                0x0000000000003232                list_tail
+ .text.list_remove
+                0x0000000000003252       0x36 contiki-avr-rss2.a(list.o)
+                0x0000000000003252                list_remove
+ .text.list_add
+                0x0000000000003288       0x32 contiki-avr-rss2.a(list.o)
+                0x0000000000003288                list_add
+ .text.list_item_next
+                0x00000000000032ba       0x12 contiki-avr-rss2.a(list.o)
+                0x00000000000032ba                list_item_next
+ .text.sent_by_abc
+                0x00000000000032cc       0x18 contiki-avr-rss2.a(broadcast.o)
+ .text.recv_from_abc
+                0x00000000000032e4       0x4e contiki-avr-rss2.a(broadcast.o)
+ .text.broadcast_open
+                0x0000000000003332       0x36 contiki-avr-rss2.a(broadcast.o)
+                0x0000000000003332                broadcast_open
+ .text.broadcast_close
+                0x0000000000003368        0x4 contiki-avr-rss2.a(broadcast.o)
+                0x0000000000003368                broadcast_close
+ .text.broadcast_send
+                0x000000000000336c       0x1a contiki-avr-rss2.a(broadcast.o)
+                0x000000000000336c                broadcast_send
+ .text.channel_init
+                0x0000000000003386        0x8 contiki-avr-rss2.a(channel.o)
+                0x0000000000003386                channel_init
+ .text.channel_open
+                0x000000000000338e       0x10 contiki-avr-rss2.a(channel.o)
+                0x000000000000338e                channel_open
+ .text.channel_close
+                0x000000000000339e        0xa contiki-avr-rss2.a(channel.o)
+                0x000000000000339e                channel_close
+ .text.channel_lookup
+                0x00000000000033a8       0x2e contiki-avr-rss2.a(channel.o)
+                0x00000000000033a8                channel_lookup
+ .text.channel_set_attributes
+                0x00000000000033d6       0x2a contiki-avr-rss2.a(channel.o)
+                0x00000000000033d6                channel_set_attributes
+ .text.chameleon_init
+                0x0000000000003400        0x4 contiki-avr-rss2.a(chameleon.o)
+                0x0000000000003400                chameleon_init
+ .text.chameleon_parse
+                0x0000000000003404       0x26 contiki-avr-rss2.a(chameleon.o)
+                0x0000000000003404                chameleon_parse
+ .text.chameleon_create
+                0x000000000000342a       0x36 contiki-avr-rss2.a(chameleon.o)
+                0x000000000000342a                chameleon_create
+ .text.chameleon_hdrsize
+                0x0000000000003460        0xa contiki-avr-rss2.a(chameleon.o)
+                0x0000000000003460                chameleon_hdrsize
+ .text.packet_sent
+                0x000000000000346a       0x52 contiki-avr-rss2.a(rime.o)
+ .text.input    0x00000000000034bc       0x4c contiki-avr-rss2.a(rime.o)
+ .text.init     0x0000000000003508       0x4e contiki-avr-rss2.a(rime.o)
+ .text.rime_output
+                0x0000000000003556       0x2c contiki-avr-rss2.a(rime.o)
+                0x0000000000003556                rime_output
+ .text.abc_open
+                0x0000000000003582       0x32 contiki-avr-rss2.a(abc.o)
+                0x0000000000003582                abc_open
+ .text.abc_close
+                0x00000000000035b4        0x4 contiki-avr-rss2.a(abc.o)
+                0x00000000000035b4                abc_close
+ .text.abc_send
+                0x00000000000035b8        0x4 contiki-avr-rss2.a(abc.o)
+                0x00000000000035b8                abc_send
+ .text.abc_input
+                0x00000000000035bc       0x18 contiki-avr-rss2.a(abc.o)
+                0x00000000000035bc                abc_input
+ .text.abc_sent
+                0x00000000000035d4       0x18 contiki-avr-rss2.a(abc.o)
+                0x00000000000035d4                abc_sent
+ .text.send_packet
+                0x00000000000035ec        0xa contiki-avr-rss2.a(nullmac.o)
+ .text.packet_input
+                0x00000000000035f6        0xa contiki-avr-rss2.a(nullmac.o)
+ .text.on       0x0000000000003600        0xa contiki-avr-rss2.a(nullmac.o)
+ .text.off      0x000000000000360a        0xa contiki-avr-rss2.a(nullmac.o)
+ .text.channel_check_interval
+                0x0000000000003614        0x6 contiki-avr-rss2.a(nullmac.o)
+ .text.init     0x000000000000361a        0x2 contiki-avr-rss2.a(nullmac.o)
+ .text.on       0x000000000000361c        0xa contiki-avr-rss2.a(nullrdc.o)
+ .text.channel_check_interval
+                0x0000000000003626        0x6 contiki-avr-rss2.a(nullrdc.o)
+ .text.init     0x000000000000362c        0x4 contiki-avr-rss2.a(nullrdc.o)
+ .text.send_one_packet
+                0x0000000000003630       0x98 contiki-avr-rss2.a(nullrdc.o)
+ .text.send_list
+                0x00000000000036c8       0x40 contiki-avr-rss2.a(nullrdc.o)
+ .text.send_packet
+                0x0000000000003708        0x4 contiki-avr-rss2.a(nullrdc.o)
+ .text.off      0x000000000000370c       0x18 contiki-avr-rss2.a(nullrdc.o)
+ .text.packet_input
+                0x0000000000003724       0x34 contiki-avr-rss2.a(nullrdc.o)
+ .text.queuebuf_init
+                0x0000000000003758       0x10 contiki-avr-rss2.a(queuebuf.o)
+                0x0000000000003758                queuebuf_init
+ .text.queuebuf_to_packetbuf
+                0x0000000000003768       0x44 contiki-avr-rss2.a(queuebuf.o)
+                0x0000000000003768                queuebuf_to_packetbuf
+ .text.packetbuf_hdrreduce
+                0x00000000000037ac       0x3a contiki-avr-rss2.a(packetbuf.o)
+                0x00000000000037ac                packetbuf_hdrreduce
+ .text.packetbuf_set_datalen
+                0x00000000000037e6        0xa contiki-avr-rss2.a(packetbuf.o)
+                0x00000000000037e6                packetbuf_set_datalen
+ .text.packetbuf_hdrptr
+                0x00000000000037f0        0x6 contiki-avr-rss2.a(packetbuf.o)
+                0x00000000000037f0                packetbuf_hdrptr
+ .text.packetbuf_datalen
+                0x00000000000037f6        0xa contiki-avr-rss2.a(packetbuf.o)
+                0x00000000000037f6                packetbuf_datalen
+ .text.packetbuf_hdrlen
+                0x0000000000003800        0xc contiki-avr-rss2.a(packetbuf.o)
+                0x0000000000003800                packetbuf_hdrlen
+ .text.packetbuf_compact
+                0x000000000000380c       0x62 contiki-avr-rss2.a(packetbuf.o)
+                0x000000000000380c                packetbuf_compact
+ .text.packetbuf_dataptr
+                0x000000000000386e        0xc contiki-avr-rss2.a(packetbuf.o)
+                0x000000000000386e                packetbuf_dataptr
+ .text.packetbuf_totlen
+                0x000000000000387a       0x16 contiki-avr-rss2.a(packetbuf.o)
+                0x000000000000387a                packetbuf_totlen
+ .text.packetbuf_hdralloc
+                0x0000000000003890       0x4a contiki-avr-rss2.a(packetbuf.o)
+                0x0000000000003890                packetbuf_hdralloc
+ .text.packetbuf_attr_clear
+                0x00000000000038da       0x30 contiki-avr-rss2.a(packetbuf.o)
+                0x00000000000038da                packetbuf_attr_clear
+ .text.packetbuf_clear
+                0x000000000000390a       0x18 contiki-avr-rss2.a(packetbuf.o)
+                0x000000000000390a                packetbuf_clear
+ .text.packetbuf_copyfrom
+                0x0000000000003922       0x44 contiki-avr-rss2.a(packetbuf.o)
+                0x0000000000003922                packetbuf_copyfrom
+ .text.packetbuf_attr_copyfrom
+                0x0000000000003966       0x22 contiki-avr-rss2.a(packetbuf.o)
+                0x0000000000003966                packetbuf_attr_copyfrom
+ .text.packetbuf_set_attr
+                0x0000000000003988       0x16 contiki-avr-rss2.a(packetbuf.o)
+                0x0000000000003988                packetbuf_set_attr
+ .text.packetbuf_attr
+                0x000000000000399e       0x12 contiki-avr-rss2.a(packetbuf.o)
+                0x000000000000399e                packetbuf_attr
+ .text.packetbuf_set_addr
+                0x00000000000039b0       0x14 contiki-avr-rss2.a(packetbuf.o)
+                0x00000000000039b0                packetbuf_set_addr
+ .text.packetbuf_addr
+                0x00000000000039c4        0xc contiki-avr-rss2.a(packetbuf.o)
+                0x00000000000039c4                packetbuf_addr
+ .text.packetbuf_holds_broadcast
+                0x00000000000039d0        0xc contiki-avr-rss2.a(packetbuf.o)
+                0x00000000000039d0                packetbuf_holds_broadcast
+ .text.linkaddr_copy
+                0x00000000000039dc        0xe contiki-avr-rss2.a(linkaddr.o)
+                0x00000000000039dc                linkaddr_copy
+ .text.linkaddr_cmp
+                0x00000000000039ea       0x18 contiki-avr-rss2.a(linkaddr.o)
+                0x00000000000039ea                linkaddr_cmp
+ .text.linkaddr_set_node_addr
+                0x0000000000003a02        0xa contiki-avr-rss2.a(linkaddr.o)
+                0x0000000000003a02                linkaddr_set_node_addr
+ .text.init     0x0000000000003a0c        0x2 contiki-avr-rss2.a(nullsec.o)
+ .text.input    0x0000000000003a0e        0xa contiki-avr-rss2.a(nullsec.o)
+ .text.send     0x0000000000003a18       0x2c contiki-avr-rss2.a(nullsec.o)
+ .text.__vector_32
+                0x0000000000003a44       0xf0 contiki-avr-rss2.a(rtimer-arch.o)
+                0x0000000000003a44                __vector_32
+ .text.rtimer_arch_init
+                0x0000000000003b34       0x34 contiki-avr-rss2.a(rtimer-arch.o)
+                0x0000000000003b34                rtimer_arch_init
+ .text.rtimer_arch_schedule
+                0x0000000000003b68       0x22 contiki-avr-rss2.a(rtimer-arch.o)
+                0x0000000000003b68                rtimer_arch_schedule
+ .text.memb_init
+                0x0000000000003b8a       0x3c contiki-avr-rss2.a(memb.o)
+                0x0000000000003b8a                memb_init
+ .text.memb_inmemb
+                0x0000000000003bc6       0x3a contiki-avr-rss2.a(memb.o)
+                0x0000000000003bc6                memb_inmemb
+ .text.get_bits_in_byte
+                0x0000000000003c00       0x3c contiki-avr-rss2.a(chameleon-bitop)
+ .text.header_size
+                0x0000000000003c3c       0x18 contiki-avr-rss2.a(chameleon-bitop)
+ .text.get_bits
+                0x0000000000003c54       0xe6 contiki-avr-rss2.a(chameleon-bitop)
+                0x0000000000003c54                get_bits
+ .text.unpack_header
+                0x0000000000003d3a      0x110 contiki-avr-rss2.a(chameleon-bitop)
+ .text.set_bits
+                0x0000000000003e4a      0x13c contiki-avr-rss2.a(chameleon-bitop)
+                0x0000000000003e4a                set_bits
+ .text.pack_header
+                0x0000000000003f86       0xfe contiki-avr-rss2.a(chameleon-bitop)
+ .text.adv_packet_sent
+                0x0000000000004084        0x2 contiki-avr-rss2.a(broadcast-annou)
+ .text.set_timers
+                0x0000000000004086       0x54 contiki-avr-rss2.a(broadcast-annou)
+ .text.send_timer
+                0x00000000000040da       0x4a contiki-avr-rss2.a(broadcast-annou)
+ .text.send_adv
+                0x0000000000004124       0x8e contiki-avr-rss2.a(broadcast-annou)
+ .text.adv_packet_received
+                0x00000000000041b2       0x86 contiki-avr-rss2.a(broadcast-annou)
+ .text.new_announcement
+                0x0000000000004238       0x30 contiki-avr-rss2.a(broadcast-annou)
+ .text.broadcast_announcement_init
+                0x0000000000004268       0x72 contiki-avr-rss2.a(broadcast-annou)
+                0x0000000000004268                broadcast_announcement_init
+ .text.announcement_init
+                0x00000000000042da        0x8 contiki-avr-rss2.a(announcement.o)
+                0x00000000000042da                announcement_init
+ .text.announcement_register_observer_callback
+                0x00000000000042e2        0xa contiki-avr-rss2.a(announcement.o)
+                0x00000000000042e2                announcement_register_observer_callback
+ .text.announcement_list
+                0x00000000000042ec        0x8 contiki-avr-rss2.a(announcement.o)
+                0x00000000000042ec                announcement_list
+ .text.announcement_heard
+                0x00000000000042f4       0x62 contiki-avr-rss2.a(announcement.o)
+                0x00000000000042f4                announcement_heard
+ .text.parse    0x0000000000004356       0xda contiki-avr-rss2.a(framer-802154.o)
+ .text.create_frame.isra.0
+                0x0000000000004430      0x156 contiki-avr-rss2.a(framer-802154.o)
+ .text.create   0x0000000000004586        0x8 contiki-avr-rss2.a(framer-802154.o)
+ .text.hdr_length
+                0x000000000000458e        0x8 contiki-avr-rss2.a(framer-802154.o)
+ .text.frame802154_get_pan_id
+                0x0000000000004596        0xa contiki-avr-rss2.a(frame802154.o)
+                0x0000000000004596                frame802154_get_pan_id
+ .text.frame802154_has_panid
+                0x00000000000045a0       0xfc contiki-avr-rss2.a(frame802154.o)
+                0x00000000000045a0                frame802154_has_panid
+ .text.field_len
+                0x000000000000469c       0xd2 contiki-avr-rss2.a(frame802154.o)
+ .text.frame802154_is_broadcast_addr
+                0x000000000000476e       0x2a contiki-avr-rss2.a(frame802154.o)
+                0x000000000000476e                frame802154_is_broadcast_addr
+ .text.frame802154_hdrlen
+                0x0000000000004798       0x4c contiki-avr-rss2.a(frame802154.o)
+                0x0000000000004798                frame802154_hdrlen
+ .text.frame802154_create_fcf
+                0x00000000000047e4       0xaa contiki-avr-rss2.a(frame802154.o)
+                0x00000000000047e4                frame802154_create_fcf
+ .text.frame802154_create
+                0x000000000000488e       0xee contiki-avr-rss2.a(frame802154.o)
+                0x000000000000488e                frame802154_create
+ .text.frame802154_parse_fcf
+                0x000000000000497c       0x5c contiki-avr-rss2.a(frame802154.o)
+                0x000000000000497c                frame802154_parse_fcf
+ .text.frame802154_parse
+                0x00000000000049d8      0x1d6 contiki-avr-rss2.a(frame802154.o)
+                0x00000000000049d8                frame802154_parse
+ .text.mac_call_sent_callback
+                0x0000000000004bae       0x10 contiki-avr-rss2.a(mac.o)
+                0x0000000000004bae                mac_call_sent_callback
+ .text.avr-libc
+                0x0000000000004bbe      0x74c /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o)
+                0x0000000000004bbe                vfprintf
+ .text.avr-libc.fplib
+                0x000000000000530a        0xe /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(addsf3.o)
+                0x000000000000530a                __subsf3
+                0x000000000000530c                __addsf3
+ .text.avr-libc.fplib
+                0x0000000000005318       0xcc /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(addsf3x.o)
+                0x000000000000533a                __addsf3x
+ .text.avr-libc.fplib
+                0x00000000000053e4        0xa /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(cmpsf2.o)
+                0x00000000000053e4                __lesf2
+                0x00000000000053e4                __nesf2
+                0x00000000000053e4                __eqsf2
+                0x00000000000053e4                __cmpsf2
+                0x00000000000053e4                __ltsf2
+ .text.avr-libc.fplib
+                0x00000000000053ee        0x8 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(divsf3.o)
+                0x00000000000053ee                __divsf3
+ .text.avr-libc.fplib
+                0x00000000000053f6       0xdc /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(divsf3x.o)
+                0x0000000000005416                __divsf3x
+                0x000000000000541c                __divsf3_pse
+ .text.avr-libc.fplib
+                0x00000000000054d2        0xe /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fixsfsi.o)
+                0x00000000000054d2                __fixsfsi
+ .text.avr-libc.fplib
+                0x00000000000054e0       0x5e /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fixunssfsi.o)
+                0x00000000000054e0                __fixunssfsi
+ .text.avr-libc.fplib
+                0x000000000000553e       0x7a /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(floatsisf.o)
+                0x000000000000553e                __floatunsisf
+                0x0000000000005542                __floatsisf
+ .text.avr-libc.fplib
+                0x00000000000055b8       0x48 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fp_cmp.o)
+                0x00000000000055b8                __fp_cmp
+ .text.avr-libc.fplib
+                0x0000000000005600        0xc /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fp_inf.o)
+                0x0000000000005600                __fp_inf
+ .text.avr-libc.fplib
+                0x000000000000560c        0x6 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fp_nan.o)
+                0x000000000000560c                __fp_nan
+ .text.avr-libc.fplib
+                0x0000000000005612        0xe /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fp_pscA.o)
+                0x0000000000005612                __fp_pscA
+ .text.avr-libc.fplib
+                0x0000000000005620        0xe /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fp_pscB.o)
+                0x0000000000005620                __fp_pscB
+ .text.avr-libc.fplib
+                0x000000000000562e       0x22 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fp_round.o)
+                0x000000000000562e                __fp_round
+ .text.avr-libc.fplib
+                0x0000000000005650       0x44 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fp_split3.o)
+                0x0000000000005650                __fp_split3
+                0x0000000000005660                __fp_splitA
+ .text.avr-libc.fplib
+                0x0000000000005694        0xe /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(fp_zero.o)
+                0x0000000000005694                __fp_zero
+                0x0000000000005696                __fp_szero
+ .text.avr-libc.fplib
+                0x00000000000056a2        0x8 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(mulsf3.o)
+                0x00000000000056a2                __mulsf3
+ .text.avr-libc.fplib
+                0x00000000000056aa       0xd2 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libm.a(mulsf3x.o)
+                0x00000000000056c8                __mulsf3x
+                0x00000000000056ce                __mulsf3_pse
+ .text.libgcc.div
+                0x000000000000577c       0x28 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodhi4.o)
+                0x000000000000577c                __udivmodhi4
+ .text.libgcc.div
+                0x00000000000057a4       0x44 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_udivmodsi4.o)
+                0x00000000000057a4                __udivmodsi4
+ .text.libgcc.div
+                0x00000000000057e8       0x2e /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_divmodsi4.o)
+                0x00000000000057e8                __divmodsi4
+ .text.libgcc.div
+                0x0000000000005816       0x10 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_negsi2.o)
+                0x0000000000005816                __negsi2
+ .text.libgcc   0x0000000000005826       0x10 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_tablejump2.o)
+                0x0000000000005826                __tablejump2__
+ .text.avr-libc
+                0x0000000000005836       0xb4 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(rand.o)
+                0x00000000000058c8                rand_r
+                0x00000000000058cc                rand
+                0x00000000000058d4                srand
+ .text.avr-libc
+                0x00000000000058ea      0x1b0 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(ftoa_engine.o)
+                0x00000000000058ea                __ftoa_engine
+ .text.avr-libc
+                0x0000000000005a9a       0x16 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(strnlen_P.o)
+                0x0000000000005a9a                strnlen_P
+ .text.avr-libc
+                0x0000000000005ab0       0x1a /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(memcmp.o)
+                0x0000000000005ab0                memcmp
+ .text.avr-libc
+                0x0000000000005aca       0x12 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(memcpy.o)
+                0x0000000000005aca                memcpy
+ .text.avr-libc
+                0x0000000000005adc        0xe /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(memset.o)
+                0x0000000000005adc                memset
+ .text.avr-libc
+                0x0000000000005aea        0xe /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(strcpy.o)
+                0x0000000000005aea                strcpy
+ .text.avr-libc
+                0x0000000000005af8       0x16 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(strnlen.o)
+                0x0000000000005af8                strnlen
+ .text.avr-libc
+                0x0000000000005b0e       0x78 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(fputc.o)
+                0x0000000000005b0e                fputc
+ .text.avr-libc
+                0x0000000000005b86       0x28 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(printf.o)
+                0x0000000000005b86                printf
+ .text.avr-libc
+                0x0000000000005bae       0x50 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(printf_p.o)
+                0x0000000000005bae                printf_P
+ .text.avr-libc
+                0x0000000000005bfe        0xc /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(putchar.o)
+                0x0000000000005bfe                putchar
+ .text.avr-libc
+                0x0000000000005c0a       0x60 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(puts.o)
+                0x0000000000005c0a                puts
+ .text.avr-libc
+                0x0000000000005c6a       0x5e /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(sprintf.o)
+                0x0000000000005c6a                sprintf
+ .text.avr-libc
+                0x0000000000005cc8       0xbc /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(ultoa_invert.o)
+                0x0000000000005cc8                __ultoa_invert
+ .text.avr-libc
+                0x0000000000005d84       0x20 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libatmega256rfr2.a(eerd_block.o)
+                0x0000000000005d84                eeprom_read_block
+                0x0000000000005d88                eeprom_read_blraw
+ .text.avr-libc
+                0x0000000000005da4       0x10 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libatmega256rfr2.a(eerd_byte.o)
+                0x0000000000005da4                eeprom_read_byte
+ .text.avr-libc
+                0x0000000000005db4        0xc /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libatmega256rfr2.a(eerd_word.o)
+                0x0000000000005db4                eeprom_read_word
+ .text.avr-libc
+                0x0000000000005dc0       0x14 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libatmega256rfr2.a(eewr_block.o)
+                0x0000000000005dc0                eeprom_write_block
+ .text.avr-libc
+                0x0000000000005dd4       0x1c /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libatmega256rfr2.a(eewr_byte.o)
+                0x0000000000005dd4                eeprom_write_byte
+                0x0000000000005dd6                eeprom_write_r18
+ .text.avr-libc
+                0x0000000000005df0        0xa /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libatmega256rfr2.a(eewr_word.o)
+                0x0000000000005df0                eeprom_write_word
+ .text.libgcc.mul
+                0x0000000000005dfa       0x16 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_muluhisi3.o)
+                0x0000000000005dfa                __muluhisi3
+ .text.libgcc.mul
+                0x0000000000005e10       0x10 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_mulshisi3.o)
+                0x0000000000005e10                __mulshisi3
+                0x0000000000005e16                __mulohisi3
+ .text.libgcc.mul
+                0x0000000000005e20       0x1e /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_umulhisi3.o)
+                0x0000000000005e20                __umulhisi3
+                0x0000000000005e3e                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x0000000000005e3e        0x0 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_exit.o)
+                0x0000000000005e3e                exit
+                0x0000000000005e3e                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x0000000000005e3e        0x4 /usr/lib/gcc/avr/5.4.0/avr6/libgcc.a(_exit.o)
+ *(.fini0)
+                0x0000000000005e42                _etext = .
+
+.data           0x0000000000800200      0x2ba load address 0x0000000000005e42
+                0x0000000000800200                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x0000000000800200        0x4 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(rand.o)
+ *(.data*)
+ .data.sleep_process
+                0x0000000000800204        0xa gen3sink.co
+                0x0000000000800204                sleep_process
+ .data.radio_process
+                0x000000000080020e        0xa gen3sink.co
+                0x000000000080020e                radio_process
+ .data.init_process
+                0x0000000000800218        0xa gen3sink.co
+                0x0000000000800218                init_process
+ .data.rs232_stdout
+                0x0000000000800222        0xe contiki-avr-rss2.a(rs232.o)
+ .data.rpc      0x0000000000800230        0x1 contiki-avr-rss2.a(rf230bb.o)
+ .data.rf230_process
+                0x0000000000800231        0xa contiki-avr-rss2.a(rf230bb.o)
+                0x0000000000800231                rf230_process
+ .data.ctimer_process
+                0x000000000080023b        0xa contiki-avr-rss2.a(ctimer.o)
+                0x000000000080023b                ctimer_process
+ .data.etimer_process
+                0x0000000000800245        0xa contiki-avr-rss2.a(etimer.o)
+                0x0000000000800245                etimer_process
+ .data.serial_line_process
+                0x000000000080024f        0xa contiki-avr-rss2.a(serial-line.o)
+                0x000000000080024f                serial_line_process
+ .data.buframmem
+                0x0000000000800259        0x8 contiki-avr-rss2.a(queuebuf.o)
+ .data.bufmem   0x0000000000800261        0x8 contiki-avr-rss2.a(queuebuf.o)
+ .data.mac_pan_id
+                0x0000000000800269        0x2 contiki-avr-rss2.a(frame802154.o)
+ *(.gnu.linkonce.d*)
+ *(.rodata)
+ *(.rodata*)
+ .rodata.str1.1
+                0x000000000080026b       0xfc gen3sink.co
+ .rodata.broadcast_call
+                0x0000000000800367        0x4 gen3sink.co
+ .rodata.autostart_processes
+                0x000000000080036b        0x8 gen3sink.co
+                0x000000000080036b                autostart_processes
+ .rodata.str1.1
+                0x0000000000800373       0x79 contiki-avr-rss2.a(contiki-main.o)
+ .rodata.str1.1
+                0x00000000008003ec        0x5 contiki-avr-rss2.a(temp-sensor.o)
+ .rodata.temp_sensor
+                0x00000000008003f1        0x8 contiki-avr-rss2.a(temp-sensor.o)
+                0x00000000008003f1                temp_sensor
+ .rodata.str1.1
+                0x00000000008003f9        0xd contiki-avr-rss2.a(rf230bb.o)
+ .rodata.rf230_driver
+                0x0000000000800406       0x1c contiki-avr-rss2.a(rf230bb.o)
+                0x0000000000800406                rf230_driver
+ .rodata.str1.1
+                0x0000000000800422        0xf contiki-avr-rss2.a(ctimer.o)
+ .rodata.str1.1
+                0x0000000000800431        0xc contiki-avr-rss2.a(etimer.o)
+ .rodata.str1.1
+                0x000000000080043d        0xe contiki-avr-rss2.a(serial-line.o)
+ .rodata.broadcast
+                0x000000000080044b        0x4 contiki-avr-rss2.a(broadcast.o)
+ .rodata.attributes
+                0x000000000080044f        0x4 contiki-avr-rss2.a(broadcast.o)
+ .rodata.str1.1
+                0x0000000000800453        0x5 contiki-avr-rss2.a(rime.o)
+ .rodata.rime_driver
+                0x0000000000800458        0x6 contiki-avr-rss2.a(rime.o)
+                0x0000000000800458                rime_driver
+ .rodata.attributes
+                0x000000000080045e        0x2 contiki-avr-rss2.a(abc.o)
+ .rodata.str1.1
+                0x0000000000800460        0x8 contiki-avr-rss2.a(nullmac.o)
+ .rodata.nullmac_driver
+                0x0000000000800468        0xe contiki-avr-rss2.a(nullmac.o)
+                0x0000000000800468                nullmac_driver
+ .rodata.str1.1
+                0x0000000000800476        0x8 contiki-avr-rss2.a(nullrdc.o)
+ .rodata.nullrdc_driver
+                0x000000000080047e       0x10 contiki-avr-rss2.a(nullrdc.o)
+                0x000000000080047e                nullrdc_driver
+ .rodata.linkaddr_null
+                0x000000000080048e        0x2 contiki-avr-rss2.a(linkaddr.o)
+                0x000000000080048e                linkaddr_null
+ .rodata.str1.1
+                0x0000000000800490        0x8 contiki-avr-rss2.a(nullsec.o)
+ .rodata.nullsec_driver
+                0x0000000000800498        0x8 contiki-avr-rss2.a(nullsec.o)
+                0x0000000000800498                nullsec_driver
+ .rodata.chameleon_bitopt
+                0x00000000008004a0        0x6 contiki-avr-rss2.a(chameleon-bitop)
+                0x00000000008004a0                chameleon_bitopt
+ .rodata.bitmask
+                0x00000000008004a6        0x9 contiki-avr-rss2.a(chameleon-bitop)
+ .rodata.broadcast_callbacks
+                0x00000000008004af        0x4 contiki-avr-rss2.a(broadcast-annou)
+ .rodata.framer_802154
+                0x00000000008004b3        0x6 contiki-avr-rss2.a(framer-802154.o)
+                0x00000000008004b3                framer_802154
+ *(.gnu.linkonce.r*)
+                0x00000000008004ba                . = ALIGN (0x2)
+ *fill*         0x00000000008004b9        0x1 
+                0x00000000008004ba                _edata = .
+                0x00000000008004ba                PROVIDE (__data_end, .)
+
+.bss            0x00000000008004ba     0x116a
+                0x00000000008004ba                PROVIDE (__bss_start, .)
+ *(.bss)
+ *(.bss*)
+ .bss.et.3957   0x00000000008004ba        0xc gen3sink.co
+ .bss.et.3947   0x00000000008004c6        0xc gen3sink.co
+ .bss.broadcast
+                0x00000000008004d2        0xb gen3sink.co
+ .bss.up_time   0x00000000008004dd        0x4 gen3sink.co
+ .bss.ps        0x00000000008004e1        0x2 gen3sink.co
+ .bss.t         0x00000000008004e3        0x8 gen3sink.co
+ .bss.rep_count
+                0x00000000008004eb        0x4 gen3sink.co
+                0x00000000008004eb                rep_count
+ .bss.len       0x00000000008004ef        0x1 gen3sink.co
+                0x00000000008004ef                len
+ .bss.secs      0x00000000008004f0        0x1 gen3sink.co
+                0x00000000008004f0                secs
+ .bss.v_mcu     0x00000000008004f1        0x4 gen3sink.co
+                0x00000000008004f1                v_mcu
+ .bss.v_in      0x00000000008004f5        0x4 gen3sink.co
+                0x00000000008004f5                v_in
+ .bss.rcount    0x00000000008004f9        0x1 contiki-avr-rss2.a(clock.o)
+ .bss.count     0x00000000008004fa        0x4 contiki-avr-rss2.a(clock.o)
+ .bss.stdout_rs232_port
+                0x00000000008004fe        0x1 contiki-avr-rss2.a(rs232.o)
+ .bss.buffer    0x00000000008004ff       0x81 contiki-avr-rss2.a(rf230bb.o)
+ .bss.channel   0x0000000000800580        0x1 contiki-avr-rss2.a(rf230bb.o)
+ .bss.rf230_last_rx_packet_timestamp
+                0x0000000000800581        0x2 contiki-avr-rss2.a(rf230bb.o)
+ .bss.poll_mode
+                0x0000000000800583        0x1 contiki-avr-rss2.a(rf230bb.o)
+                0x0000000000800583                poll_mode
+ .bss.is_promiscuous
+                0x0000000000800584        0x1 contiki-avr-rss2.a(rf230bb.o)
+ .bss.initialized
+                0x0000000000800585        0x1 contiki-avr-rss2.a(ctimer.o)
+ .bss.ctimer_list_list
+                0x0000000000800586        0x2 contiki-avr-rss2.a(ctimer.o)
+ .bss.next_expiration
+                0x0000000000800588        0x4 contiki-avr-rss2.a(etimer.o)
+ .bss.timerlist
+                0x000000000080058c        0x2 contiki-avr-rss2.a(etimer.o)
+ .bss.poll_requested
+                0x000000000080058e        0x1 contiki-avr-rss2.a(process.o)
+ .bss.events    0x000000000080058f       0xa0 contiki-avr-rss2.a(process.o)
+ .bss.fevent    0x000000000080062f        0x1 contiki-avr-rss2.a(process.o)
+ .bss.nevents   0x0000000000800630        0x1 contiki-avr-rss2.a(process.o)
+ .bss.lastevent
+                0x0000000000800631        0x1 contiki-avr-rss2.a(process.o)
+ .bss.process_current
+                0x0000000000800632        0x2 contiki-avr-rss2.a(process.o)
+                0x0000000000800632                process_current
+ .bss.process_list
+                0x0000000000800634        0x2 contiki-avr-rss2.a(process.o)
+                0x0000000000800634                process_list
+ .bss.next_rtimer
+                0x0000000000800636        0x2 contiki-avr-rss2.a(rtimer.o)
+ .bss.overflow.2180
+                0x0000000000800638        0x1 contiki-avr-rss2.a(serial-line.o)
+ .bss.buf.2186  0x0000000000800639       0x80 contiki-avr-rss2.a(serial-line.o)
+ .bss.ptr.2187  0x00000000008006b9        0x2 contiki-avr-rss2.a(serial-line.o)
+ .bss.rxbuf_data
+                0x00000000008006bb       0x80 contiki-avr-rss2.a(serial-line.o)
+ .bss.rxbuf     0x000000000080073b        0x5 contiki-avr-rss2.a(serial-line.o)
+ .bss.channel_list_list
+                0x0000000000800740        0x2 contiki-avr-rss2.a(channel.o)
+ .bss.sniffers_list
+                0x0000000000800742        0x2 contiki-avr-rss2.a(rime.o)
+ .bss.buframmem_memb_mem
+                0x0000000000800744      0xb22 contiki-avr-rss2.a(queuebuf.o)
+ .bss.buframmem_memb_count
+                0x0000000000801266        0xf contiki-avr-rss2.a(queuebuf.o)
+ .bss.bufmem_memb_mem
+                0x0000000000801275       0x1e contiki-avr-rss2.a(queuebuf.o)
+ .bss.bufmem_memb_count
+                0x0000000000801293        0xf contiki-avr-rss2.a(queuebuf.o)
+ .bss.packetbuf_aligned
+                0x00000000008012a2       0x80 contiki-avr-rss2.a(packetbuf.o)
+ .bss.hdrlen    0x0000000000801322        0x1 contiki-avr-rss2.a(packetbuf.o)
+ .bss.bufptr    0x0000000000801323        0x2 contiki-avr-rss2.a(packetbuf.o)
+ .bss.buflen    0x0000000000801325        0x2 contiki-avr-rss2.a(packetbuf.o)
+ .bss.c         0x0000000000801327       0x45 contiki-avr-rss2.a(broadcast-annou)
+ .bss.observer_callback
+                0x000000000080136c        0x2 contiki-avr-rss2.a(announcement.o)
+ .bss.announcements_list
+                0x000000000080136e        0x2 contiki-avr-rss2.a(announcement.o)
+ .bss.initialized
+                0x0000000000801370        0x1 contiki-avr-rss2.a(framer-802154.o)
+ .bss.mac_dsn   0x0000000000801371        0x1 contiki-avr-rss2.a(framer-802154.o)
+ *(COMMON)
+ COMMON         0x0000000000801372      0x167 gen3sink.co
+                0x0000000000801372                datetime
+                0x0000000000801379                sinkrep
+                0x000000000080140f                rssi
+                0x0000000000801410                report
+                0x00000000008014d8                lqi
+ COMMON         0x00000000008014d9        0xc contiki-avr-rss2.a(contiki-main.o)
+                0x00000000008014d9                ledtimer_red
+                0x00000000008014db                node_id
+                0x00000000008014dd                ledtimer_yellow
+                0x00000000008014df                clocktime
+                0x00000000008014e3                i2c_probed
+ COMMON         0x00000000008014e5        0xc contiki-avr-rss2.a(clock.o)
+                0x00000000008014e5                radioontime
+                0x00000000008014e9                sleepseconds
+                0x00000000008014ed                seconds
+ COMMON         0x00000000008014f1        0x4 contiki-avr-rss2.a(rs232.o)
+                0x00000000008014f1                input_handler_1
+                0x00000000008014f3                input_handler_0
+ COMMON         0x00000000008014f5       0x94 contiki-avr-rss2.a(rf230bb.o)
+                0x00000000008014f5                rf230_last_correlation
+                0x00000000008014f6                rf230_last_rssi
+                0x00000000008014f7                RF230_receivefail
+                0x00000000008014f9                rf230_smallest_rssi
+                0x00000000008014fa                rf230_pending
+                0x00000000008014fb                rf230_ccawait
+                0x00000000008014fc                RF230_receivepackets
+                0x00000000008014fe                rf230_txendwait
+                0x00000000008014ff                rxframe_tail
+                0x0000000000801500                rxframe_head
+                0x0000000000801501                rxframe
+                0x0000000000801583                rf230_wakewait
+                0x0000000000801584                RF230_sendpackets
+                0x0000000000801586                RF230_sendfail
+                0x0000000000801588                RF230_receive_on
+ COMMON         0x0000000000801589       0x56 contiki-avr-rss2.a(energest.o)
+                0x0000000000801589                energest_total_time
+                0x00000000008015b9                energest_total_count
+                0x00000000008015bb                energest_current_mode
+                0x00000000008015c7                energest_current_time
+ COMMON         0x00000000008015df        0x1 contiki-avr-rss2.a(serial-line.o)
+                0x00000000008015df                serial_line_event_message
+ COMMON         0x00000000008015e0       0x3c contiki-avr-rss2.a(packetbuf.o)
+                0x00000000008015e0                packetbuf_addrs
+                0x00000000008015e8                packetbuf_attrs
+ COMMON         0x000000000080161c        0x2 contiki-avr-rss2.a(linkaddr.o)
+                0x000000000080161c                linkaddr_node_addr
+ COMMON         0x000000000080161e        0x6 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(iob.o)
+                0x000000000080161e                __iob
+                0x0000000000801624                PROVIDE (__bss_end, .)
+                0x0000000000005e42                __data_load_start = LOADADDR (.data)
+                0x00000000000060fc                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x0000000000801624        0x0
+                [!provide]                        PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                [!provide]                        PROVIDE (__noinit_end, .)
+                0x0000000000801624                _end = .
+                [!provide]                        PROVIDE (__heap_start, .)
+
+.eeprom         0x0000000000810000       0x29
+ *(.eeprom*)
+ .eeprom        0x0000000000810000       0x29 contiki-avr-rss2.a(params.o)
+                0x0000000000810000                eemem_txpower
+                0x0000000000810001                eemem_panaddr
+                0x0000000000810003                eemem_panid
+                0x0000000000810005                eemem_channel
+                0x0000000000810007                eemem_nodeid
+                0x0000000000810009                eemem_domain_name
+                0x0000000000810013                eemem_server_name
+                0x0000000000810021                eemem_mac_address
+                0x0000000000810029                __eeprom_end = .
+
+.fuse           0x0000000000820000        0x3
+ *(.fuse)
+ .fuse          0x0000000000820000        0x3 contiki-avr-rss2.a(contiki-main.o)
+                0x0000000000820000                __fuse
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature      0x0000000000840000        0x3
+ *(.signature*)
+ .signature     0x0000000000840000        0x3 contiki-avr-rss2.a(contiki-main.o)
+                0x0000000000840000                __signature
+
+.user_signatures
+ *(.user_signatures*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x41
+ *(.comment)
+ .comment       0x0000000000000000       0x30 gen3sink.co
+                                         0x31 (size before relaxing)
+ .comment       0x0000000000000030       0x11 contiki-avr-rss2.a(contiki-main.o)
+                                         0x12 (size before relaxing)
+ .comment       0x0000000000000041       0x12 contiki-avr-rss2.a(params.o)
+ .comment       0x0000000000000041       0x12 contiki-avr-rss2.a(i2c.o)
+ .comment       0x0000000000000041       0x12 contiki-avr-rss2.a(pwrpin.o)
+ .comment       0x0000000000000041       0x12 contiki-avr-rss2.a(leds.o)
+ .comment       0x0000000000000041       0x12 contiki-avr-rss2.a(adc.o)
+ .comment       0x0000000000000041       0x12 contiki-avr-rss2.a(temp-sensor.o)
+ .comment       0x0000000000000041       0x12 contiki-avr-rss2.a(ds3231.o)
+ .comment       0x0000000000000041       0x12 contiki-avr-rss2.a(clock.o)
+ .comment       0x0000000000000041       0x12 contiki-avr-rss2.a(rs232.o)
+ .comment       0x0000000000000041       0x12 contiki-avr-rss2.a(watchdog.o)
+ .comment       0x0000000000000041       0x12 contiki-avr-rss2.a(random.o)
+ .comment       0x0000000000000041       0x12 contiki-avr-rss2.a(rf230bb.o)
+ .comment       0x0000000000000041       0x12 contiki-avr-rss2.a(halbb.o)
+ .comment       0x0000000000000041       0x12 contiki-avr-rss2.a(autostart.o)
+ .comment       0x0000000000000041       0x12 contiki-avr-rss2.a(ctimer.o)
+ .comment       0x0000000000000041       0x12 contiki-avr-rss2.a(energest.o)
+ .comment       0x0000000000000041       0x12 contiki-avr-rss2.a(etimer.o)
+ .comment       0x0000000000000041       0x12 contiki-avr-rss2.a(process.o)
+ .comment       0x0000000000000041       0x12 contiki-avr-rss2.a(rtimer.o)
+ .comment       0x0000000000000041       0x12 contiki-avr-rss2.a(timer.o)
+ .comment       0x0000000000000041       0x12 contiki-avr-rss2.a(serial-line.o)
+ .comment       0x0000000000000041       0x12 contiki-avr-rss2.a(ringbuf.o)
+ .comment       0x0000000000000041       0x12 contiki-avr-rss2.a(list.o)
+ .comment       0x0000000000000041       0x12 contiki-avr-rss2.a(broadcast.o)
+ .comment       0x0000000000000041       0x12 contiki-avr-rss2.a(channel.o)
+ .comment       0x0000000000000041       0x12 contiki-avr-rss2.a(chameleon.o)
+ .comment       0x0000000000000041       0x12 contiki-avr-rss2.a(rime.o)
+ .comment       0x0000000000000041       0x12 contiki-avr-rss2.a(abc.o)
+ .comment       0x0000000000000041       0x12 contiki-avr-rss2.a(nullmac.o)
+ .comment       0x0000000000000041       0x12 contiki-avr-rss2.a(nullrdc.o)
+ .comment       0x0000000000000041       0x12 contiki-avr-rss2.a(queuebuf.o)
+ .comment       0x0000000000000041       0x12 contiki-avr-rss2.a(packetbuf.o)
+ .comment       0x0000000000000041       0x12 contiki-avr-rss2.a(linkaddr.o)
+ .comment       0x0000000000000041       0x12 contiki-avr-rss2.a(nullsec.o)
+ .comment       0x0000000000000041       0x12 contiki-avr-rss2.a(rtimer-arch.o)
+ .comment       0x0000000000000041       0x12 contiki-avr-rss2.a(memb.o)
+ .comment       0x0000000000000041       0x12 contiki-avr-rss2.a(chameleon-bitop)
+ .comment       0x0000000000000041       0x12 contiki-avr-rss2.a(broadcast-annou)
+ .comment       0x0000000000000041       0x12 contiki-avr-rss2.a(announcement.o)
+ .comment       0x0000000000000041       0x12 contiki-avr-rss2.a(framer-802154.o)
+ .comment       0x0000000000000041       0x12 contiki-avr-rss2.a(frame802154.o)
+ .comment       0x0000000000000041       0x12 contiki-avr-rss2.a(mac.o)
+ .comment       0x0000000000000041       0x12 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libprintf_flt.a(vfprintf_flt.o)
+ .comment       0x0000000000000041       0x12 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(rand.o)
+ .comment       0x0000000000000041       0x12 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(fputc.o)
+ .comment       0x0000000000000041       0x12 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(iob.o)
+ .comment       0x0000000000000041       0x12 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(printf.o)
+ .comment       0x0000000000000041       0x12 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(printf_p.o)
+ .comment       0x0000000000000041       0x12 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(putchar.o)
+ .comment       0x0000000000000041       0x12 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(puts.o)
+ .comment       0x0000000000000041       0x12 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/libc.a(sprintf.o)
+
+.note.gnu.avr.deviceinfo
+                0x0000000000000000       0x40
+ .note.gnu.avr.deviceinfo
+                0x0000000000000000       0x40 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/crtatmega256rfr2.o
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000      0xe98
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000       0x38 gen3sink.co
+ .debug_aranges
+                0x0000000000000038       0x40 contiki-avr-rss2.a(contiki-main.o)
+ .debug_aranges
+                0x0000000000000078       0x40 contiki-avr-rss2.a(params.o)
+ .debug_aranges
+                0x00000000000000b8       0x80 contiki-avr-rss2.a(i2c.o)
+ .debug_aranges
+                0x0000000000000138       0x30 contiki-avr-rss2.a(pwrpin.o)
+ .debug_aranges
+                0x0000000000000168       0x48 contiki-avr-rss2.a(leds.o)
+ .debug_aranges
+                0x00000000000001b0       0x40 contiki-avr-rss2.a(adc.o)
+ .debug_aranges
+                0x00000000000001f0       0x68 contiki-avr-rss2.a(temp-sensor.o)
+ .debug_aranges
+                0x0000000000000258       0x48 contiki-avr-rss2.a(ds3231.o)
+ .debug_aranges
+                0x00000000000002a0       0x60 contiki-avr-rss2.a(clock.o)
+ .debug_aranges
+                0x0000000000000300       0x60 contiki-avr-rss2.a(rs232.o)
+ .debug_aranges
+                0x0000000000000360       0x40 contiki-avr-rss2.a(watchdog.o)
+ .debug_aranges
+                0x00000000000003a0       0x28 contiki-avr-rss2.a(random.o)
+ .debug_aranges
+                0x00000000000003c8      0x158 contiki-avr-rss2.a(rf230bb.o)
+ .debug_aranges
+                0x0000000000000520       0x70 contiki-avr-rss2.a(halbb.o)
+ .debug_aranges
+                0x0000000000000590       0x28 contiki-avr-rss2.a(autostart.o)
+ .debug_aranges
+                0x00000000000005b8       0x58 contiki-avr-rss2.a(ctimer.o)
+ .debug_aranges
+                0x0000000000000610       0x40 contiki-avr-rss2.a(energest.o)
+ .debug_aranges
+                0x0000000000000650       0x90 contiki-avr-rss2.a(etimer.o)
+ .debug_aranges
+                0x00000000000006e0       0x88 contiki-avr-rss2.a(process.o)
+ .debug_aranges
+                0x0000000000000768       0x30 contiki-avr-rss2.a(rtimer.o)
+ .debug_aranges
+                0x0000000000000798       0x40 contiki-avr-rss2.a(timer.o)
+ .debug_aranges
+                0x00000000000007d8       0x30 contiki-avr-rss2.a(serial-line.o)
+ .debug_aranges
+                0x0000000000000808       0x40 contiki-avr-rss2.a(ringbuf.o)
+ .debug_aranges
+                0x0000000000000848       0x78 contiki-avr-rss2.a(list.o)
+ .debug_aranges
+                0x00000000000008c0       0x40 contiki-avr-rss2.a(broadcast.o)
+ .debug_aranges
+                0x0000000000000900       0x40 contiki-avr-rss2.a(channel.o)
+ .debug_aranges
+                0x0000000000000940       0x38 contiki-avr-rss2.a(chameleon.o)
+ .debug_aranges
+                0x0000000000000978       0x48 contiki-avr-rss2.a(rime.o)
+ .debug_aranges
+                0x00000000000009c0       0x40 contiki-avr-rss2.a(abc.o)
+ .debug_aranges
+                0x0000000000000a00       0x48 contiki-avr-rss2.a(nullmac.o)
+ .debug_aranges
+                0x0000000000000a48       0x58 contiki-avr-rss2.a(nullrdc.o)
+ .debug_aranges
+                0x0000000000000aa0       0x78 contiki-avr-rss2.a(queuebuf.o)
+ .debug_aranges
+                0x0000000000000b18       0xc0 contiki-avr-rss2.a(packetbuf.o)
+ .debug_aranges
+                0x0000000000000bd8       0x30 contiki-avr-rss2.a(linkaddr.o)
+ .debug_aranges
+                0x0000000000000c08       0x30 contiki-avr-rss2.a(nullsec.o)
+ .debug_aranges
+                0x0000000000000c38       0x38 contiki-avr-rss2.a(rtimer-arch.o)
+ .debug_aranges
+                0x0000000000000c70       0x40 contiki-avr-rss2.a(memb.o)
+ .debug_aranges
+                0x0000000000000cb0       0x48 contiki-avr-rss2.a(chameleon-bitop)
+ .debug_aranges
+                0x0000000000000cf8       0x60 contiki-avr-rss2.a(broadcast-annou)
+ .debug_aranges
+                0x0000000000000d58       0x70 contiki-avr-rss2.a(announcement.o)
+ .debug_aranges
+                0x0000000000000dc8       0x38 contiki-avr-rss2.a(framer-802154.o)
+ .debug_aranges
+                0x0000000000000e00       0x78 contiki-avr-rss2.a(frame802154.o)
+ .debug_aranges
+                0x0000000000000e78       0x20 contiki-avr-rss2.a(mac.o)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000    0x11a45
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x0000000000000000     0x13e6 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/crtatmega256rfr2.o
+ .debug_info    0x00000000000013e6      0xe64 gen3sink.co
+ .debug_info    0x000000000000224a      0xe90 contiki-avr-rss2.a(contiki-main.o)
+ .debug_info    0x00000000000030da      0x5e9 contiki-avr-rss2.a(params.o)
+ .debug_info    0x00000000000036c3      0x55d contiki-avr-rss2.a(i2c.o)
+ .debug_info    0x0000000000003c20       0xc8 contiki-avr-rss2.a(pwrpin.o)
+ .debug_info    0x0000000000003ce8      0x177 contiki-avr-rss2.a(leds.o)
+ .debug_info    0x0000000000003e5f      0x191 contiki-avr-rss2.a(adc.o)
+ .debug_info    0x0000000000003ff0      0x6c6 contiki-avr-rss2.a(temp-sensor.o)
+ .debug_info    0x00000000000046b6      0x44b contiki-avr-rss2.a(ds3231.o)
+ .debug_info    0x0000000000004b01      0x351 contiki-avr-rss2.a(clock.o)
+ .debug_info    0x0000000000004e52      0x4bb contiki-avr-rss2.a(rs232.o)
+ .debug_info    0x000000000000530d      0x1a1 contiki-avr-rss2.a(watchdog.o)
+ .debug_info    0x00000000000054ae       0xef contiki-avr-rss2.a(random.o)
+ .debug_info    0x000000000000559d     0x2204 contiki-avr-rss2.a(rf230bb.o)
+ .debug_info    0x00000000000077a1      0x3c4 contiki-avr-rss2.a(halbb.o)
+ .debug_info    0x0000000000007b65      0x1f4 contiki-avr-rss2.a(autostart.o)
+ .debug_info    0x0000000000007d59      0x7fb contiki-avr-rss2.a(ctimer.o)
+ .debug_info    0x0000000000008554      0x298 contiki-avr-rss2.a(energest.o)
+ .debug_info    0x00000000000087ec      0x710 contiki-avr-rss2.a(etimer.o)
+ .debug_info    0x0000000000008efc      0x785 contiki-avr-rss2.a(process.o)
+ .debug_info    0x0000000000009681      0x271 contiki-avr-rss2.a(rtimer.o)
+ .debug_info    0x00000000000098f2      0x1c2 contiki-avr-rss2.a(timer.o)
+ .debug_info    0x0000000000009ab4      0x4dc contiki-avr-rss2.a(serial-line.o)
+ .debug_info    0x0000000000009f90      0x1d5 contiki-avr-rss2.a(ringbuf.o)
+ .debug_info    0x000000000000a165      0x3de contiki-avr-rss2.a(list.o)
+ .debug_info    0x000000000000a543      0x67b contiki-avr-rss2.a(broadcast.o)
+ .debug_info    0x000000000000abbe      0x3b0 contiki-avr-rss2.a(channel.o)
+ .debug_info    0x000000000000af6e      0x37e contiki-avr-rss2.a(chameleon.o)
+ .debug_info    0x000000000000b2ec      0x6ba contiki-avr-rss2.a(rime.o)
+ .debug_info    0x000000000000b9a6      0x500 contiki-avr-rss2.a(abc.o)
+ .debug_info    0x000000000000bea6      0x430 contiki-avr-rss2.a(nullmac.o)
+ .debug_info    0x000000000000c2d6      0x9e6 contiki-avr-rss2.a(nullrdc.o)
+ .debug_info    0x000000000000ccbc      0x92b contiki-avr-rss2.a(queuebuf.o)
+ .debug_info    0x000000000000d5e7      0x805 contiki-avr-rss2.a(packetbuf.o)
+ .debug_info    0x000000000000ddec      0x1eb contiki-avr-rss2.a(linkaddr.o)
+ .debug_info    0x000000000000dfd7      0x3fc contiki-avr-rss2.a(nullsec.o)
+ .debug_info    0x000000000000e3d3      0x2f3 contiki-avr-rss2.a(rtimer-arch.o)
+ .debug_info    0x000000000000e6c6      0x23c contiki-avr-rss2.a(memb.o)
+ .debug_info    0x000000000000e902      0xb9c contiki-avr-rss2.a(chameleon-bitop)
+ .debug_info    0x000000000000f49e      0xb13 contiki-avr-rss2.a(broadcast-annou)
+ .debug_info    0x000000000000ffb1      0x5a7 contiki-avr-rss2.a(announcement.o)
+ .debug_info    0x0000000000010558      0x942 contiki-avr-rss2.a(framer-802154.o)
+ .debug_info    0x0000000000010e9a      0xa58 contiki-avr-rss2.a(frame802154.o)
+ .debug_info    0x00000000000118f2      0x153 contiki-avr-rss2.a(mac.o)
+
+.debug_abbrev   0x0000000000000000     0x6819
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000     0x12d6 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/crtatmega256rfr2.o
+ .debug_abbrev  0x00000000000012d6      0x2e9 gen3sink.co
+ .debug_abbrev  0x00000000000015bf      0x2e5 contiki-avr-rss2.a(contiki-main.o)
+ .debug_abbrev  0x00000000000018a4      0x173 contiki-avr-rss2.a(params.o)
+ .debug_abbrev  0x0000000000001a17      0x23a contiki-avr-rss2.a(i2c.o)
+ .debug_abbrev  0x0000000000001c51       0x77 contiki-avr-rss2.a(pwrpin.o)
+ .debug_abbrev  0x0000000000001cc8       0xf2 contiki-avr-rss2.a(leds.o)
+ .debug_abbrev  0x0000000000001dba       0xcf contiki-avr-rss2.a(adc.o)
+ .debug_abbrev  0x0000000000001e89      0x2b6 contiki-avr-rss2.a(temp-sensor.o)
+ .debug_abbrev  0x000000000000213f      0x154 contiki-avr-rss2.a(ds3231.o)
+ .debug_abbrev  0x0000000000002293      0x20a contiki-avr-rss2.a(clock.o)
+ .debug_abbrev  0x000000000000249d      0x26a contiki-avr-rss2.a(rs232.o)
+ .debug_abbrev  0x0000000000002707       0xee contiki-avr-rss2.a(watchdog.o)
+ .debug_abbrev  0x00000000000027f5       0xab contiki-avr-rss2.a(random.o)
+ .debug_abbrev  0x00000000000028a0      0x58a contiki-avr-rss2.a(rf230bb.o)
+ .debug_abbrev  0x0000000000002e2a      0x1a9 contiki-avr-rss2.a(halbb.o)
+ .debug_abbrev  0x0000000000002fd3      0x117 contiki-avr-rss2.a(autostart.o)
+ .debug_abbrev  0x00000000000030ea      0x23f contiki-avr-rss2.a(ctimer.o)
+ .debug_abbrev  0x0000000000003329      0x143 contiki-avr-rss2.a(energest.o)
+ .debug_abbrev  0x000000000000346c      0x300 contiki-avr-rss2.a(etimer.o)
+ .debug_abbrev  0x000000000000376c      0x393 contiki-avr-rss2.a(process.o)
+ .debug_abbrev  0x0000000000003aff      0x181 contiki-avr-rss2.a(rtimer.o)
+ .debug_abbrev  0x0000000000003c80       0xfa contiki-avr-rss2.a(timer.o)
+ .debug_abbrev  0x0000000000003d7a      0x236 contiki-avr-rss2.a(serial-line.o)
+ .debug_abbrev  0x0000000000003fb0       0xfb contiki-avr-rss2.a(ringbuf.o)
+ .debug_abbrev  0x00000000000040ab      0x1a6 contiki-avr-rss2.a(list.o)
+ .debug_abbrev  0x0000000000004251      0x235 contiki-avr-rss2.a(broadcast.o)
+ .debug_abbrev  0x0000000000004486      0x190 contiki-avr-rss2.a(channel.o)
+ .debug_abbrev  0x0000000000004616      0x1c0 contiki-avr-rss2.a(chameleon.o)
+ .debug_abbrev  0x00000000000047d6      0x210 contiki-avr-rss2.a(rime.o)
+ .debug_abbrev  0x00000000000049e6      0x1bf contiki-avr-rss2.a(abc.o)
+ .debug_abbrev  0x0000000000004ba5      0x18f contiki-avr-rss2.a(nullmac.o)
+ .debug_abbrev  0x0000000000004d34      0x337 contiki-avr-rss2.a(nullrdc.o)
+ .debug_abbrev  0x000000000000506b      0x268 contiki-avr-rss2.a(queuebuf.o)
+ .debug_abbrev  0x00000000000052d3      0x267 contiki-avr-rss2.a(packetbuf.o)
+ .debug_abbrev  0x000000000000553a      0x12f contiki-avr-rss2.a(linkaddr.o)
+ .debug_abbrev  0x0000000000005669      0x19a contiki-avr-rss2.a(nullsec.o)
+ .debug_abbrev  0x0000000000005803      0x13e contiki-avr-rss2.a(rtimer-arch.o)
+ .debug_abbrev  0x0000000000005941      0x110 contiki-avr-rss2.a(memb.o)
+ .debug_abbrev  0x0000000000005a51      0x353 contiki-avr-rss2.a(chameleon-bitop)
+ .debug_abbrev  0x0000000000005da4      0x2e2 contiki-avr-rss2.a(broadcast-annou)
+ .debug_abbrev  0x0000000000006086      0x1e2 contiki-avr-rss2.a(announcement.o)
+ .debug_abbrev  0x0000000000006268      0x214 contiki-avr-rss2.a(framer-802154.o)
+ .debug_abbrev  0x000000000000647c      0x2db contiki-avr-rss2.a(frame802154.o)
+ .debug_abbrev  0x0000000000006757       0xc2 contiki-avr-rss2.a(mac.o)
+
+.debug_line     0x0000000000000000     0x6c2f
+ *(.debug_line .debug_line.* .debug_line_end)
+ .debug_line    0x0000000000000000       0x1a /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/crtatmega256rfr2.o
+ .debug_line    0x000000000000001a      0x49e gen3sink.co
+ .debug_line    0x00000000000004b8      0x597 contiki-avr-rss2.a(contiki-main.o)
+ .debug_line    0x0000000000000a4f      0x1d5 contiki-avr-rss2.a(params.o)
+ .debug_line    0x0000000000000c24      0x3f5 contiki-avr-rss2.a(i2c.o)
+ .debug_line    0x0000000000001019       0xac contiki-avr-rss2.a(pwrpin.o)
+ .debug_line    0x00000000000010c5      0x122 contiki-avr-rss2.a(leds.o)
+ .debug_line    0x00000000000011e7      0x18c contiki-avr-rss2.a(adc.o)
+ .debug_line    0x0000000000001373      0x38f contiki-avr-rss2.a(temp-sensor.o)
+ .debug_line    0x0000000000001702      0x1c0 contiki-avr-rss2.a(ds3231.o)
+ .debug_line    0x00000000000018c2      0x24b contiki-avr-rss2.a(clock.o)
+ .debug_line    0x0000000000001b0d      0x243 contiki-avr-rss2.a(rs232.o)
+ .debug_line    0x0000000000001d50      0x109 contiki-avr-rss2.a(watchdog.o)
+ .debug_line    0x0000000000001e59       0x85 contiki-avr-rss2.a(random.o)
+ .debug_line    0x0000000000001ede      0xd08 contiki-avr-rss2.a(rf230bb.o)
+ .debug_line    0x0000000000002be6      0x257 contiki-avr-rss2.a(halbb.o)
+ .debug_line    0x0000000000002e3d       0xb3 contiki-avr-rss2.a(autostart.o)
+ .debug_line    0x0000000000002ef0      0x311 contiki-avr-rss2.a(ctimer.o)
+ .debug_line    0x0000000000003201      0x151 contiki-avr-rss2.a(energest.o)
+ .debug_line    0x0000000000003352      0x3e5 contiki-avr-rss2.a(etimer.o)
+ .debug_line    0x0000000000003737      0x3d9 contiki-avr-rss2.a(process.o)
+ .debug_line    0x0000000000003b10       0xd8 contiki-avr-rss2.a(rtimer.o)
+ .debug_line    0x0000000000003be8      0x111 contiki-avr-rss2.a(timer.o)
+ .debug_line    0x0000000000003cf9      0x1ad contiki-avr-rss2.a(serial-line.o)
+ .debug_line    0x0000000000003ea6      0x132 contiki-avr-rss2.a(ringbuf.o)
+ .debug_line    0x0000000000003fd8      0x276 contiki-avr-rss2.a(list.o)
+ .debug_line    0x000000000000424e      0x189 contiki-avr-rss2.a(broadcast.o)
+ .debug_line    0x00000000000043d7      0x18f contiki-avr-rss2.a(channel.o)
+ .debug_line    0x0000000000004566      0x118 contiki-avr-rss2.a(chameleon.o)
+ .debug_line    0x000000000000467e      0x2ae contiki-avr-rss2.a(rime.o)
+ .debug_line    0x000000000000492c      0x153 contiki-avr-rss2.a(abc.o)
+ .debug_line    0x0000000000004a7f      0x133 contiki-avr-rss2.a(nullmac.o)
+ .debug_line    0x0000000000004bb2      0x27c contiki-avr-rss2.a(nullrdc.o)
+ .debug_line    0x0000000000004e2e      0x276 contiki-avr-rss2.a(queuebuf.o)
+ .debug_line    0x00000000000050a4      0x38e contiki-avr-rss2.a(packetbuf.o)
+ .debug_line    0x0000000000005432       0xbf contiki-avr-rss2.a(linkaddr.o)
+ .debug_line    0x00000000000054f1      0x107 contiki-avr-rss2.a(nullsec.o)
+ .debug_line    0x00000000000055f8      0x298 contiki-avr-rss2.a(rtimer-arch.o)
+ .debug_line    0x0000000000005890      0x18b contiki-avr-rss2.a(memb.o)
+ .debug_line    0x0000000000005a1b      0x37d contiki-avr-rss2.a(chameleon-bitop)
+ .debug_line    0x0000000000005d98      0x377 contiki-avr-rss2.a(broadcast-annou)
+ .debug_line    0x000000000000610f      0x24d contiki-avr-rss2.a(announcement.o)
+ .debug_line    0x000000000000635c      0x29e contiki-avr-rss2.a(framer-802154.o)
+ .debug_line    0x00000000000065fa      0x5d7 contiki-avr-rss2.a(frame802154.o)
+ .debug_line    0x0000000000006bd1       0x5e contiki-avr-rss2.a(mac.o)
+
+.debug_frame    0x0000000000000000     0x26dc
+ *(.debug_frame)
+ .debug_frame   0x0000000000000000      0x1a0 gen3sink.co
+ .debug_frame   0x00000000000001a0       0xe0 contiki-avr-rss2.a(contiki-main.o)
+ .debug_frame   0x0000000000000280       0x88 contiki-avr-rss2.a(params.o)
+ .debug_frame   0x0000000000000308      0x12c contiki-avr-rss2.a(i2c.o)
+ .debug_frame   0x0000000000000434       0x44 contiki-avr-rss2.a(pwrpin.o)
+ .debug_frame   0x0000000000000478       0x74 contiki-avr-rss2.a(leds.o)
+ .debug_frame   0x00000000000004ec       0x64 contiki-avr-rss2.a(adc.o)
+ .debug_frame   0x0000000000000550      0x130 contiki-avr-rss2.a(temp-sensor.o)
+ .debug_frame   0x0000000000000680       0xac contiki-avr-rss2.a(ds3231.o)
+ .debug_frame   0x000000000000072c      0x14c contiki-avr-rss2.a(clock.o)
+ .debug_frame   0x0000000000000878      0x14c contiki-avr-rss2.a(rs232.o)
+ .debug_frame   0x00000000000009c4       0x64 contiki-avr-rss2.a(watchdog.o)
+ .debug_frame   0x0000000000000a28       0x34 contiki-avr-rss2.a(random.o)
+ .debug_frame   0x0000000000000a5c      0x364 contiki-avr-rss2.a(rf230bb.o)
+ .debug_frame   0x0000000000000dc0      0x1d8 contiki-avr-rss2.a(halbb.o)
+ .debug_frame   0x0000000000000f98       0x4c contiki-avr-rss2.a(autostart.o)
+ .debug_frame   0x0000000000000fe4      0x128 contiki-avr-rss2.a(ctimer.o)
+ .debug_frame   0x000000000000110c       0x88 contiki-avr-rss2.a(energest.o)
+ .debug_frame   0x0000000000001194      0x1ac contiki-avr-rss2.a(etimer.o)
+ .debug_frame   0x0000000000001340      0x164 contiki-avr-rss2.a(process.o)
+ .debug_frame   0x00000000000014a4       0x50 contiki-avr-rss2.a(rtimer.o)
+ .debug_frame   0x00000000000014f4       0xb0 contiki-avr-rss2.a(timer.o)
+ .debug_frame   0x00000000000015a4       0x50 contiki-avr-rss2.a(serial-line.o)
+ .debug_frame   0x00000000000015f4       0x64 contiki-avr-rss2.a(ringbuf.o)
+ .debug_frame   0x0000000000001658       0xfc contiki-avr-rss2.a(list.o)
+ .debug_frame   0x0000000000001754       0xac contiki-avr-rss2.a(broadcast.o)
+ .debug_frame   0x0000000000001800       0x84 contiki-avr-rss2.a(channel.o)
+ .debug_frame   0x0000000000001884       0x74 contiki-avr-rss2.a(chameleon.o)
+ .debug_frame   0x00000000000018f8       0xdc contiki-avr-rss2.a(rime.o)
+ .debug_frame   0x00000000000019d4       0x84 contiki-avr-rss2.a(abc.o)
+ .debug_frame   0x0000000000001a58       0x74 contiki-avr-rss2.a(nullmac.o)
+ .debug_frame   0x0000000000001acc       0xdc contiki-avr-rss2.a(nullrdc.o)
+ .debug_frame   0x0000000000001ba8      0x118 contiki-avr-rss2.a(queuebuf.o)
+ .debug_frame   0x0000000000001cc0      0x1e4 contiki-avr-rss2.a(packetbuf.o)
+ .debug_frame   0x0000000000001ea4       0x44 contiki-avr-rss2.a(linkaddr.o)
+ .debug_frame   0x0000000000001ee8       0x58 contiki-avr-rss2.a(nullsec.o)
+ .debug_frame   0x0000000000001f40       0xd0 contiki-avr-rss2.a(rtimer-arch.o)
+ .debug_frame   0x0000000000002010       0x70 contiki-avr-rss2.a(memb.o)
+ .debug_frame   0x0000000000002080      0x170 contiki-avr-rss2.a(chameleon-bitop)
+ .debug_frame   0x00000000000021f0      0x14c contiki-avr-rss2.a(broadcast-annou)
+ .debug_frame   0x000000000000233c      0x10c contiki-avr-rss2.a(announcement.o)
+ .debug_frame   0x0000000000002448       0xa8 contiki-avr-rss2.a(framer-802154.o)
+ .debug_frame   0x00000000000024f0      0x1c8 contiki-avr-rss2.a(frame802154.o)
+ .debug_frame   0x00000000000026b8       0x24 contiki-avr-rss2.a(mac.o)
+
+.debug_str      0x0000000000000000     0x3c74
+ *(.debug_str)
+ .debug_str     0x0000000000000000      0x7f7 /usr/lib/gcc/avr/5.4.0/../../../avr/lib/avr6/crtatmega256rfr2.o
+ .debug_str     0x00000000000007f7      0x90e gen3sink.co
+                                        0xa4e (size before relaxing)
+ .debug_str     0x0000000000001105      0x583 contiki-avr-rss2.a(contiki-main.o)
+                                        0x7f8 (size before relaxing)
+ .debug_str     0x0000000000001688      0x169 contiki-avr-rss2.a(params.o)
+                                        0x439 (size before relaxing)
+ .debug_str     0x00000000000017f1       0xb0 contiki-avr-rss2.a(i2c.o)
+                                        0x240 (size before relaxing)
+ .debug_str     0x00000000000018a1       0x3f contiki-avr-rss2.a(pwrpin.o)
+                                        0x177 (size before relaxing)
+ .debug_str     0x00000000000018e0       0x4c contiki-avr-rss2.a(leds.o)
+                                        0x17a (size before relaxing)
+ .debug_str     0x000000000000192c       0x68 contiki-avr-rss2.a(adc.o)
+                                        0x1af (size before relaxing)
+ .debug_str     0x0000000000001994       0xc0 contiki-avr-rss2.a(temp-sensor.o)
+                                        0x38d (size before relaxing)
+ .debug_str     0x0000000000001a54       0x7c contiki-avr-rss2.a(ds3231.o)
+                                        0x225 (size before relaxing)
+ .debug_str     0x0000000000001ad0       0xe1 contiki-avr-rss2.a(clock.o)
+                                        0x278 (size before relaxing)
+ .debug_str     0x0000000000001bb1       0xe1 contiki-avr-rss2.a(rs232.o)
+                                        0x36e (size before relaxing)
+ .debug_str     0x0000000000001c92       0x5c contiki-avr-rss2.a(watchdog.o)
+                                        0x1ad (size before relaxing)
+ .debug_str     0x0000000000001cee       0x32 contiki-avr-rss2.a(random.o)
+                                        0x161 (size before relaxing)
+ .debug_str     0x0000000000001d20      0x7c7 contiki-avr-rss2.a(rf230bb.o)
+                                       0x124f (size before relaxing)
+ .debug_str     0x00000000000024e7       0xd5 contiki-avr-rss2.a(halbb.o)
+                                        0x315 (size before relaxing)
+ .debug_str     0x00000000000025bc       0x3a contiki-avr-rss2.a(autostart.o)
+                                        0x1d2 (size before relaxing)
+ .debug_str     0x00000000000025f6      0x11a contiki-avr-rss2.a(ctimer.o)
+                                        0x458 (size before relaxing)
+ .debug_str     0x0000000000002710       0x90 contiki-avr-rss2.a(energest.o)
+                                        0x35c (size before relaxing)
+ .debug_str     0x00000000000027a0       0xf0 contiki-avr-rss2.a(etimer.o)
+                                        0x382 (size before relaxing)
+ .debug_str     0x0000000000002890      0x10b contiki-avr-rss2.a(process.o)
+                                        0x2f6 (size before relaxing)
+ .debug_str     0x000000000000299b       0xd5 contiki-avr-rss2.a(rtimer.o)
+                                        0x346 (size before relaxing)
+ .debug_str     0x0000000000002a70       0x2a contiki-avr-rss2.a(timer.o)
+                                        0x1ac (size before relaxing)
+ .debug_str     0x0000000000002a9a       0xcb contiki-avr-rss2.a(serial-line.o)
+                                        0x407 (size before relaxing)
+ .debug_str     0x0000000000002b65       0x3a contiki-avr-rss2.a(ringbuf.o)
+                                        0x1b4 (size before relaxing)
+ .debug_str     0x0000000000002b9f       0x82 contiki-avr-rss2.a(list.o)
+                                        0x16a (size before relaxing)
+ .debug_str     0x0000000000002c21       0xd0 contiki-avr-rss2.a(broadcast.o)
+                                        0x716 (size before relaxing)
+ .debug_str     0x0000000000002cf1       0x89 contiki-avr-rss2.a(channel.o)
+                                        0x38f (size before relaxing)
+ .debug_str     0x0000000000002d7a       0x75 contiki-avr-rss2.a(chameleon.o)
+                                        0x549 (size before relaxing)
+ .debug_str     0x0000000000002def      0x136 contiki-avr-rss2.a(rime.o)
+                                        0x4e1 (size before relaxing)
+ .debug_str     0x0000000000002f25       0x1d contiki-avr-rss2.a(abc.o)
+                                        0x68a (size before relaxing)
+ .debug_str     0x0000000000002f42       0x47 contiki-avr-rss2.a(nullmac.o)
+                                        0x35b (size before relaxing)
+ .debug_str     0x0000000000002f89       0xd2 contiki-avr-rss2.a(nullrdc.o)
+                                        0x905 (size before relaxing)
+ .debug_str     0x000000000000305b      0x219 contiki-avr-rss2.a(queuebuf.o)
+                                        0x816 (size before relaxing)
+ .debug_str     0x0000000000003274       0xe2 contiki-avr-rss2.a(packetbuf.o)
+                                        0x7fa (size before relaxing)
+ .debug_str     0x0000000000003356       0x30 contiki-avr-rss2.a(linkaddr.o)
+                                        0x1c3 (size before relaxing)
+ .debug_str     0x0000000000003386       0x22 contiki-avr-rss2.a(nullsec.o)
+                                        0x631 (size before relaxing)
+ .debug_str     0x00000000000033a8       0x79 contiki-avr-rss2.a(rtimer-arch.o)
+                                        0x3eb (size before relaxing)
+ .debug_str     0x0000000000003421       0x2e contiki-avr-rss2.a(memb.o)
+                                        0x199 (size before relaxing)
+ .debug_str     0x000000000000344f       0xdc contiki-avr-rss2.a(chameleon-bitop)
+                                        0x7b5 (size before relaxing)
+ .debug_str     0x000000000000352b      0x203 contiki-avr-rss2.a(broadcast-annou)
+                                        0x679 (size before relaxing)
+ .debug_str     0x000000000000372e      0x10d contiki-avr-rss2.a(announcement.o)
+                                        0x383 (size before relaxing)
+ .debug_str     0x000000000000383b      0x29a contiki-avr-rss2.a(framer-802154.o)
+                                        0x946 (size before relaxing)
+ .debug_str     0x0000000000003ad5      0x183 contiki-avr-rss2.a(frame802154.o)
+                                        0x6a7 (size before relaxing)
+ .debug_str     0x0000000000003c58       0x1c contiki-avr-rss2.a(mac.o)
+                                        0x1d8 (size before relaxing)
+
+.debug_loc      0x0000000000000000     0xa163
+ *(.debug_loc)
+ .debug_loc     0x0000000000000000      0x83a gen3sink.co
+ .debug_loc     0x000000000000083a      0x301 contiki-avr-rss2.a(contiki-main.o)
+ .debug_loc     0x0000000000000b3b      0x226 contiki-avr-rss2.a(params.o)
+ .debug_loc     0x0000000000000d61      0x538 contiki-avr-rss2.a(i2c.o)
+ .debug_loc     0x0000000000001299       0x34 contiki-avr-rss2.a(leds.o)
+ .debug_loc     0x00000000000012cd       0xd5 contiki-avr-rss2.a(adc.o)
+ .debug_loc     0x00000000000013a2      0x5a6 contiki-avr-rss2.a(temp-sensor.o)
+ .debug_loc     0x0000000000001948      0x1ab contiki-avr-rss2.a(ds3231.o)
+ .debug_loc     0x0000000000001af3      0x33e contiki-avr-rss2.a(clock.o)
+ .debug_loc     0x0000000000001e31      0x3fc contiki-avr-rss2.a(rs232.o)
+ .debug_loc     0x000000000000222d       0x14 contiki-avr-rss2.a(watchdog.o)
+ .debug_loc     0x0000000000002241       0x26 contiki-avr-rss2.a(random.o)
+ .debug_loc     0x0000000000002267     0x113d contiki-avr-rss2.a(rf230bb.o)
+ .debug_loc     0x00000000000033a4      0x4b0 contiki-avr-rss2.a(halbb.o)
+ .debug_loc     0x0000000000003854       0xaa contiki-avr-rss2.a(autostart.o)
+ .debug_loc     0x00000000000038fe      0x6f8 contiki-avr-rss2.a(ctimer.o)
+ .debug_loc     0x0000000000003ff6      0x191 contiki-avr-rss2.a(energest.o)
+ .debug_loc     0x0000000000004187      0x764 contiki-avr-rss2.a(etimer.o)
+ .debug_loc     0x00000000000048eb      0x707 contiki-avr-rss2.a(process.o)
+ .debug_loc     0x0000000000004ff2      0x149 contiki-avr-rss2.a(rtimer.o)
+ .debug_loc     0x000000000000513b      0x28e contiki-avr-rss2.a(timer.o)
+ .debug_loc     0x00000000000053c9      0x1ad contiki-avr-rss2.a(serial-line.o)
+ .debug_loc     0x0000000000005576       0xd3 contiki-avr-rss2.a(ringbuf.o)
+ .debug_loc     0x0000000000005649      0x472 contiki-avr-rss2.a(list.o)
+ .debug_loc     0x0000000000005abb      0x372 contiki-avr-rss2.a(broadcast.o)
+ .debug_loc     0x0000000000005e2d      0x204 contiki-avr-rss2.a(channel.o)
+ .debug_loc     0x0000000000006031      0x130 contiki-avr-rss2.a(chameleon.o)
+ .debug_loc     0x0000000000006161      0x3ea contiki-avr-rss2.a(rime.o)
+ .debug_loc     0x000000000000654b      0x2c1 contiki-avr-rss2.a(abc.o)
+ .debug_loc     0x000000000000680c       0x72 contiki-avr-rss2.a(nullmac.o)
+ .debug_loc     0x000000000000687e      0x306 contiki-avr-rss2.a(nullrdc.o)
+ .debug_loc     0x0000000000006b84      0x3be contiki-avr-rss2.a(queuebuf.o)
+ .debug_loc     0x0000000000006f42      0x45b contiki-avr-rss2.a(packetbuf.o)
+ .debug_loc     0x000000000000739d       0x82 contiki-avr-rss2.a(linkaddr.o)
+ .debug_loc     0x000000000000741f       0xd5 contiki-avr-rss2.a(nullsec.o)
+ .debug_loc     0x00000000000074f4      0x271 contiki-avr-rss2.a(rtimer-arch.o)
+ .debug_loc     0x0000000000007765      0x1fb contiki-avr-rss2.a(memb.o)
+ .debug_loc     0x0000000000007960      0xc7a contiki-avr-rss2.a(chameleon-bitop)
+ .debug_loc     0x00000000000085da      0x6c5 contiki-avr-rss2.a(broadcast-annou)
+ .debug_loc     0x0000000000008c9f      0x46f contiki-avr-rss2.a(announcement.o)
+ .debug_loc     0x000000000000910e      0x177 contiki-avr-rss2.a(framer-802154.o)
+ .debug_loc     0x0000000000009285      0xdd6 contiki-avr-rss2.a(frame802154.o)
+ .debug_loc     0x000000000000a05b      0x108 contiki-avr-rss2.a(mac.o)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x0000000000000000      0xcc8
+ *(.debug_ranges)
+ .debug_ranges  0x0000000000000000       0x28 gen3sink.co
+ .debug_ranges  0x0000000000000028       0x48 contiki-avr-rss2.a(contiki-main.o)
+ .debug_ranges  0x0000000000000070       0x30 contiki-avr-rss2.a(params.o)
+ .debug_ranges  0x00000000000000a0       0x70 contiki-avr-rss2.a(i2c.o)
+ .debug_ranges  0x0000000000000110       0x20 contiki-avr-rss2.a(pwrpin.o)
+ .debug_ranges  0x0000000000000130       0x38 contiki-avr-rss2.a(leds.o)
+ .debug_ranges  0x0000000000000168       0x30 contiki-avr-rss2.a(adc.o)
+ .debug_ranges  0x0000000000000198       0x58 contiki-avr-rss2.a(temp-sensor.o)
+ .debug_ranges  0x00000000000001f0       0x38 contiki-avr-rss2.a(ds3231.o)
+ .debug_ranges  0x0000000000000228       0x68 contiki-avr-rss2.a(clock.o)
+ .debug_ranges  0x0000000000000290       0x50 contiki-avr-rss2.a(rs232.o)
+ .debug_ranges  0x00000000000002e0       0x30 contiki-avr-rss2.a(watchdog.o)
+ .debug_ranges  0x0000000000000310       0x18 contiki-avr-rss2.a(random.o)
+ .debug_ranges  0x0000000000000328      0x178 contiki-avr-rss2.a(rf230bb.o)
+ .debug_ranges  0x00000000000004a0       0x60 contiki-avr-rss2.a(halbb.o)
+ .debug_ranges  0x0000000000000500       0x18 contiki-avr-rss2.a(autostart.o)
+ .debug_ranges  0x0000000000000518       0x48 contiki-avr-rss2.a(ctimer.o)
+ .debug_ranges  0x0000000000000560       0x30 contiki-avr-rss2.a(energest.o)
+ .debug_ranges  0x0000000000000590       0xb0 contiki-avr-rss2.a(etimer.o)
+ .debug_ranges  0x0000000000000640       0x78 contiki-avr-rss2.a(process.o)
+ .debug_ranges  0x00000000000006b8       0x20 contiki-avr-rss2.a(rtimer.o)
+ .debug_ranges  0x00000000000006d8       0x30 contiki-avr-rss2.a(timer.o)
+ .debug_ranges  0x0000000000000708       0x38 contiki-avr-rss2.a(serial-line.o)
+ .debug_ranges  0x0000000000000740       0x30 contiki-avr-rss2.a(ringbuf.o)
+ .debug_ranges  0x0000000000000770       0x68 contiki-avr-rss2.a(list.o)
+ .debug_ranges  0x00000000000007d8       0x30 contiki-avr-rss2.a(broadcast.o)
+ .debug_ranges  0x0000000000000808       0x30 contiki-avr-rss2.a(channel.o)
+ .debug_ranges  0x0000000000000838       0x28 contiki-avr-rss2.a(chameleon.o)
+ .debug_ranges  0x0000000000000860       0x38 contiki-avr-rss2.a(rime.o)
+ .debug_ranges  0x0000000000000898       0x30 contiki-avr-rss2.a(abc.o)
+ .debug_ranges  0x00000000000008c8       0x38 contiki-avr-rss2.a(nullmac.o)
+ .debug_ranges  0x0000000000000900       0x48 contiki-avr-rss2.a(nullrdc.o)
+ .debug_ranges  0x0000000000000948       0x80 contiki-avr-rss2.a(queuebuf.o)
+ .debug_ranges  0x00000000000009c8       0xb0 contiki-avr-rss2.a(packetbuf.o)
+ .debug_ranges  0x0000000000000a78       0x20 contiki-avr-rss2.a(linkaddr.o)
+ .debug_ranges  0x0000000000000a98       0x20 contiki-avr-rss2.a(nullsec.o)
+ .debug_ranges  0x0000000000000ab8       0x28 contiki-avr-rss2.a(rtimer-arch.o)
+ .debug_ranges  0x0000000000000ae0       0x30 contiki-avr-rss2.a(memb.o)
+ .debug_ranges  0x0000000000000b10       0x50 contiki-avr-rss2.a(chameleon-bitop)
+ .debug_ranges  0x0000000000000b60       0x68 contiki-avr-rss2.a(broadcast-annou)
+ .debug_ranges  0x0000000000000bc8       0x60 contiki-avr-rss2.a(announcement.o)
+ .debug_ranges  0x0000000000000c28       0x28 contiki-avr-rss2.a(framer-802154.o)
+ .debug_ranges  0x0000000000000c50       0x68 contiki-avr-rss2.a(frame802154.o)
+ .debug_ranges  0x0000000000000cb8       0x10 contiki-avr-rss2.a(mac.o)
+
+.debug_macro
+ *(.debug_macro)
+OUTPUT(gen3sink.avr-rss2 elf32-avr)
+LOAD linker stubs
+
+.bootloader     0x000000000003e000        0x0
