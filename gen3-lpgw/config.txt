@@ -1,0 +1,7 @@
+APN:internet
+USERNAME:
+PASS:
+UPLOADCOUNT:500
+SERVER:wimea.mak.ac.ug
+PORT:10024
+DUMMY: data
