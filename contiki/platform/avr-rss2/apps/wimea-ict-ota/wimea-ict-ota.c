@@ -75,8 +75,22 @@ static int error_status = 0;
 static struct timer t;
 
 static char default_sensors[50] = " T_MCU V_MCU V_IN V_A1 V_A2 ";
-static char feedback_success[33] = "FB-Success, Operation Successful";
-static char feedback_error[27] = "FB-Error, Operation Failed";
+
+static char current_interval[TAGMASK_LENGTH];
+static char current_name[TAGMASK_LENGTH];
+static char current_mask[TAGMASK_LENGTH];
+
+static char new_node_name[TAGMASK_LENGTH];
+static char new_interval[TAGMASK_LENGTH];
+static char new_mask_added[TAGMASK_LENGTH];
+static char new_mask_removed[TAGMASK_LENGTH];
+
+static char error_invalid_operator[TAGMASK_LENGTH];
+static char error_no_parameter[TAGMASK_LENGTH];
+static char error_invalid_name[TAGMASK_LENGTH];
+static char error_interval_command[TAGMASK_LENGTH];
+static char error_unknown_command[TAGMASK_LENGTH];
+static char error_incomplete_mask_command[TAGMASK_LENGTH];
 
 static int I2C_SHT25_flag = 0;
 static int pulses = 0;
@@ -158,6 +172,11 @@ broadcast_recv(struct broadcast_conn *c, const linkaddr_t *from)
 	char *parameter;
 	char *operator_value;
 	char *node_name;
+	char *received_mac_address;
+	char mac_address[17];
+	uint8_t name[NAME_LENGTH];
+	uint8_t report_mask[TAGMASK_LENGTH];
+	uint16_t interval;
 	char delimiter[] = " ";
 
 	msg = packetbuf_dataptr();
@@ -170,80 +189,129 @@ broadcast_recv(struct broadcast_conn *c, const linkaddr_t *from)
 
 	leds_on(LEDS_YELLOW);
 	leds_on(LEDS_RED);
-	_delay_ms(200);
+	_delay_ms(100);
 
-	report_command = (char *) malloc(MAX_BCAST_SIZE);
 	message_token = strtok(msg->buf, (const char*)delimiter);
-	strlcpy(report_command, message_token+42, strlen(message_token)+1); // Extract the exact Command that was sent.
-	if (!strncmp(report_command, "ri", 2)) {
-		if(strlen(report_command) == 2) {
-			display_reporting_interval();
-		}
-		else if(strlen(report_command+3) > 0) {
-			report_interval = (char *) malloc(4);
-			strlcpy(report_interval, report_command+3, 4);
-			change_reporting_interval(report_interval);
-			free(report_interval);
-			process_post_synch(&broadcast_data_process, PROCESS_EVENT_CONTINUE, feedback_success);
-		}
-		else {
-			printf("Change report interval command is incomplete, terminating the process...\n");
-			process_post_synch(&broadcast_data_process, PROCESS_EVENT_CONTINUE, feedback_error);
-		}
+
+	for(int i = 0, u = 0; i < sizeof(eui64_addr); i++) {
+		u += snprintf(mac_address+u, sizeof(mac_address)-u, "%02x", eui64_addr[i]);
 	}
-	else if (!strncmp(report_command, "re", 2)) {
-		if(strlen(report_command) == 2) {
-			display_tagmask();
-		}
-		else {
-			operator_value = (char*) malloc(2);
-			strlcpy(operator_value, report_command+3, 2);
 
-			if (!strncmp(operator_value, "+", 1) || !strncmp(operator_value, "-", 1)) {
-				parameter = (char*) malloc(TAGMASK_LENGTH);
-				strlcpy(parameter, report_command+5, TAGMASK_LENGTH);
+	received_mac_address = (char *) malloc(17);
+	strlcpy(received_mac_address, message_token+16, 17);
 
-				if (!strncmp(operator_value, "+", 1)) {
-					add_to_report_mask(parameter);
-					process_post_synch(&broadcast_data_process, PROCESS_EVENT_CONTINUE, feedback_success);
-				}
-				else if(!strncmp(operator_value, "-", 1)) {
-					remove_from_report_mask(parameter);
-					process_post_synch(&broadcast_data_process, PROCESS_EVENT_CONTINUE, feedback_success);
-				}
-				else {
-					printf("Error, Unknown Operator Try: re + V_IN P.....\n");
-					process_post_synch(&broadcast_data_process, PROCESS_EVENT_CONTINUE, feedback_error);
-				}
-				free(parameter);
+	// if(!strncmp(mac_address, received_mac_address, 17)) {
+		cli();
+		eeprom_read_block((void*)&name, (const void*)&eemem_node_name, NAME_LENGTH);
+		eeprom_read_block((void*)&report_mask, (const void*)&eemem_report_0, TAGMASK_LENGTH);
+		interval = eeprom_read_word(&eemem_report_0_transmission_interval);
+		sei();
+		
+		report_command = (char *) malloc(MAX_BCAST_SIZE);
+		strlcpy(report_command, message_token+42, strlen(message_token)+1); // Extract the exact Command that was sent.
+
+		if (!strncmp(report_command, "ri", 2)) {
+			if(strlen(report_command) == 2) {
+				display_reporting_interval();
+			}
+			else if((strlen(report_command+3) > 0) && (!strncmp(report_command+3, "1", 1) || !strncmp(report_command+3, "2", 1) || !strncmp(report_command+3, "3", 1) || !strncmp(report_command+3, "4", 1) || !strncmp(report_command+3, "5", 1) || !strncmp(report_command+3, "6", 1))) {
+				report_interval = (char *) malloc(4);
+				strlcpy(report_interval, report_command+3, 4);
+				change_reporting_interval(report_interval);
+
+				snprintf(new_interval, 100, "FB-Report Interval Changed to: *%s*", report_interval);
+				free(report_interval);
+
+				process_post_synch(&broadcast_data_process, PROCESS_EVENT_CONTINUE, new_interval);
+			}
+			else if((strlen(report_command+3) > 0) && (!strncmp(report_command+3, "current", 7))) {
+				snprintf(current_interval, 255, "FB-Current Reporting Interval is *%d*", interval);
+				process_post_synch(&broadcast_data_process, PROCESS_EVENT_CONTINUE, current_interval);
 			}
 			else {
-				printf("Invalid Operator Specified, please try again.....\n");
-				process_post_synch(&broadcast_data_process, PROCESS_EVENT_CONTINUE, feedback_error);
+				printf("Incorrect Command *%s*, Try *ri <interval>*, to change the interval e.g. ri 10\n", report_command);
+				snprintf(error_interval_command, 255, "FB-Incorrect Command *%s*, Try *ri <interval>* e.g. ri 10", report_command);
+				process_post_synch(&broadcast_data_process, PROCESS_EVENT_CONTINUE, error_interval_command);
 			}
-			free(operator_value);
 		}
-	}
-	else if(!strncmp(report_command, "name", 4)) {
-		if(strlen(report_command) == 4) {
-			display_node_name();
+		else if (!strncmp(report_command, "re", 2)) {
+			if(strlen(report_command) == 2) {
+				display_tagmask();
+			}
+			else if ((strlen(report_command+3) > 0) && (!strncmp(report_command+3, "current", 7))) {
+				snprintf(current_mask, sizeof(current_mask), "FB-Current Report Mask: *%s*", report_mask);
+				process_post_synch(&broadcast_data_process, PROCESS_EVENT_CONTINUE, current_mask);
+			}
+			else if((strlen(report_command+3) > 0)){
+				operator_value = (char*) malloc(2);
+				strlcpy(operator_value, report_command+3, 2);
+
+				if (strlen(report_command+5) > 0) {
+					parameter = (char*) malloc(TAGMASK_LENGTH);
+					strlcpy(parameter, report_command+5, TAGMASK_LENGTH);
+
+					if (!strncmp(operator_value, "+", 1)) {
+						add_to_report_mask(parameter);
+						snprintf(new_mask_added, sizeof(new_mask_added), "FB-Parameters *%s* added to Report Mask", parameter);
+						process_post_synch(&broadcast_data_process, PROCESS_EVENT_CONTINUE, new_mask_added);
+					}
+					else if(!strncmp(operator_value, "-", 1)) {
+						remove_from_report_mask(parameter);
+						snprintf(new_mask_removed, sizeof(new_mask_removed), "FB-Parameters *%s* removed from Report Mask", parameter);
+						process_post_synch(&broadcast_data_process, PROCESS_EVENT_CONTINUE, new_mask_removed);
+					}
+					else {
+						printf("Error, Invalid Operator in command: *%s*, Try *re + <parameter>* or *re - <parameter>*. e.g re + V_IN\n", report_command);
+						snprintf(error_invalid_operator, sizeof(error_invalid_operator), "FB-Invalid Operator in command: *%s*, Try *re + <parameter>*", report_command);
+						process_post_synch(&broadcast_data_process, PROCESS_EVENT_CONTINUE, error_invalid_operator);
+					}
+					free(parameter);
+				}
+				else {
+					printf("Error, No Parameter Specified in Command: *%s*, Try *re + <parameter>*. e.g re + T\n", report_command);
+					snprintf(error_no_parameter, sizeof(error_no_parameter), "FB-No Parameter Specified in Command: *%s*, Try *re + <parameter>*", report_command);
+					process_post_synch(&broadcast_data_process, PROCESS_EVENT_CONTINUE, error_no_parameter);
+				}
+				free(operator_value);
+			}
+			else {
+				printf("Invalid or Incomplete command: *%s*, Try *re + <parameter> to add Parameters, e.g re + P\n", report_command);
+				snprintf(error_incomplete_mask_command, sizeof(error_incomplete_mask_command), "FB-Invalid or Incomplete command: *%s*, Try *re + <parameter>. e.g re + P", report_command);
+				process_post_synch(&broadcast_data_process, PROCESS_EVENT_CONTINUE, error_incomplete_mask_command);
+			}
+		}
+		else if(!strncmp(report_command, "name", 4)) {
+			if(strlen(report_command) == 4) {
+				display_node_name();
+			}
+			else if((strlen(report_command+5) > 0) && (strncmp(report_command+5, "current", 7) != 0)) {
+				snprintf(current_name, sizeof(current_name), "FB-Current Node Name is: *%s*", name);
+				process_post_synch(&broadcast_data_process, PROCESS_EVENT_CONTINUE, current_name);
+			}
+			else if((strlen(report_command+5) > 0) && ((strncmp(report_command+5, "current", 7) != 0) || (strncmp(report_command+6, "urrent", 6) != 0))) {
+				node_name = (char*)malloc(7);
+				strlcpy(node_name, report_command+5, 7);
+				change_node_name(node_name);
+
+				snprintf(new_node_name, sizeof(new_node_name), "FB-Node Name Changed to: *%s*", node_name);
+				free(node_name);
+				process_post_synch(&broadcast_data_process, PROCESS_EVENT_CONTINUE, new_node_name);
+			}
+			else {
+				snprintf(error_invalid_name, sizeof(error_invalid_name), "FB-Invalid or No name specified in command: *%s*, Try *name <node-name>*", report_command);
+				process_post_synch(&broadcast_data_process, PROCESS_EVENT_CONTINUE, error_invalid_name);
+			}
+		}
+		else if(!strncmp(report_command, "boot", 4)) {
+			watchdog_reboot(); // Reboot the mote
 		}
 		else {
-			node_name = (char*)malloc(7);
-			strlcpy(node_name, report_command+5, 7);
-			change_node_name(node_name);
-			free(node_name);
-			process_post_synch(&broadcast_data_process, PROCESS_EVENT_CONTINUE, feedback_error);
+			printf("Sorry, Command **%s** is Not Recognized, or its not implemented...\n", report_command);
+			snprintf(error_unknown_command, sizeof(error_unknown_command), "Error, Unknown Command: *%s*", report_command);
+			process_post_synch(&broadcast_data_process, PROCESS_EVENT_CONTINUE, error_unknown_command);
 		}
-	}
-	else if(!strncmp(report_command, "boot", 4)) {
-		watchdog_reboot(); // Reboot the mote
-	}
-	else {
-		printf("Sorry, Command **%s** is Not Recognized, or its not implemented...\n", report_command);
-		process_post_synch(&broadcast_data_process, PROCESS_EVENT_CONTINUE, feedback_error);
-	}
-	free(report_command);
+		free(report_command);
+	// }
 
 	pwr_pin_on();
 	timer_set(&t, CLOCK_SECOND/100); //5ms pulse to wake up electron from sleep
@@ -360,7 +428,7 @@ PROCESS_THREAD(broadcast_data_process, ev, data)
 		PROCESS_WAIT_EVENT_UNTIL(ev == PROCESS_EVENT_CONTINUE);
 		
 		if(!strncmp((char*)data, "FB", 2)) {
-			i += snprintf(msg.buf+i, 33, "%s", (char*)data);
+			i += snprintf(msg.buf+i, strlen(data)+1, "%s", (char*)data);
 			msg.buf[i++] = '\0';
 			
 			packetbuf_clear();
@@ -390,16 +458,12 @@ PROCESS_THREAD(broadcast_data_process, ev, data)
 			msg.head |= ttl;
 			msg.seqno = seqno;
 
-			// etimer_set(&et3, CLOCK_SECOND * 2 + random_rand() % (CLOCK_SECOND * 2));
-			// PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&et3));
-
 			packetbuf_clear();
 			packetbuf_copyfrom(&msg, i+2);
 			broadcast_send(&broadcast);
 			seqno++;
 			i += snprintf(msg.buf+i, 2, "\n\r"); // Append new line before data is buffered
 		}
-		printf("After Message Broadcast: \n");
 	}
 	PROCESS_END();
 }
@@ -590,6 +654,27 @@ display_reporting_interval(void)
 	printf("Current Reporting Interval is := %d\n", report_interval);
 }
 
+
+/*
+*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*
+*@*                                                                                                   *@*
+*@*                                                                                                   *@*
+*@*      Function current_reporting_interval(): Takes in No Parameters                                *@*
+*@*             Returns the Reporting Interval of the Current Report.                                 *@*
+*@*                                                                                                   *@*
+*@*                                                                                                   *@*
+*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*
+*/
+uint16_t
+current_reporting_interval(void)
+{
+	uint16_t report_interval;
+	cli();
+	report_interval = eeprom_read_word(&eemem_report_0_transmission_interval);
+	sei();
+	
+	return report_interval;
+}
 
 /*
 *@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*@*
@@ -1283,6 +1368,7 @@ change_node_name(char *name)
 	char new_name[NAME_LENGTH];
 	uint8_t node_name[NAME_LENGTH];
 	strlcpy(new_name, name, NAME_LENGTH);
+
 	cli();
     eeprom_update_block((const void *)&new_name, (void *)&eemem_node_name, NAME_LENGTH);
     eeprom_update_word(&eemem_name_flag, name_flag);
@@ -1290,7 +1376,6 @@ change_node_name(char *name)
 
 	eeprom_read_block((void*)&node_name, (const void*)&eemem_node_name, NAME_LENGTH);
 	printf("Current Node name changed to: %s\n", node_name);
-
 }
 
 

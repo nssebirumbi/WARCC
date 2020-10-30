@@ -237,7 +237,7 @@ PROCESS_THREAD (serial_command, ev, data)
 {
 	PROCESS_BEGIN();
 
-	char delimiter[]= "-";
+	char delimiter[] = {'-', ' '};
 	char message[MAX_BCAST_SIZE];
 	char *command = NULL;
 	char *value;
@@ -329,6 +329,7 @@ PROCESS_THREAD(broadcast_data_process, ev, data)
 		msg.buf[i++] = '\0';//null terminate report.
 		printf("%s\n", msg.buf);
 
+		packetbuf_clear();
 		packetbuf_copyfrom(&msg, i+2);
 		broadcast_send(&broadcast);
 
