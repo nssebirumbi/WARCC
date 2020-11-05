@@ -280,22 +280,24 @@ broadcast_recv(struct broadcast_conn *c, const linkaddr_t *from)
 				process_post_synch(&broadcast_data_process, PROCESS_EVENT_CONTINUE, error_incomplete_mask_command);
 			}
 		}
-		else if(!strncmp(report_command, "name", 4)) {
-			if(strlen(report_command) == 4) {
+		else if(!strncmp(report_command, "n", 1)) {
+			if(strlen(report_command) == 1) {
 				display_node_name();
 			}
-			else if((strlen(report_command+5) > 0) && (strncmp(report_command+5, "current", 7) != 0)) {
-				snprintf(current_name, sizeof(current_name), "FB-Current Node Name is: *%s*", name);
-				process_post_synch(&broadcast_data_process, PROCESS_EVENT_CONTINUE, current_name);
-			}
-			else if((strlen(report_command+5) > 0) && ((strncmp(report_command+5, "current", 7) != 0) || (strncmp(report_command+6, "urrent", 6) != 0))) {
-				node_name = (char*)malloc(7);
-				strlcpy(node_name, report_command+5, 7);
-				change_node_name(node_name);
+			else if((strlen(report_command+2) > 0)) {
+				if (!strncmp(report_command+2, "current", 7)) {
+					snprintf(current_name, sizeof(current_name), "FB-Current Node Name is: *%s*", name);
+					process_post_synch(&broadcast_data_process, PROCESS_EVENT_CONTINUE, current_name);
+				}
+				else {
+					node_name = (char*)malloc(7);
+					strlcpy(node_name, report_command+2, 7);
+					change_node_name(node_name);
 
-				snprintf(new_node_name, sizeof(new_node_name), "FB-Node Name Changed to: *%s*", node_name);
-				free(node_name);
-				process_post_synch(&broadcast_data_process, PROCESS_EVENT_CONTINUE, new_node_name);
+					snprintf(new_node_name, sizeof(new_node_name), "FB-Node Name Changed to: *%s*", node_name);
+					free(node_name);
+					process_post_synch(&broadcast_data_process, PROCESS_EVENT_CONTINUE, new_node_name);
+				}
 			}
 			else {
 				snprintf(error_invalid_name, sizeof(error_invalid_name), "FB-Invalid or No name specified in command: *%s*, Try *name <node-name>*", report_command);
