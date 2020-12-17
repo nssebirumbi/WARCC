@@ -9,7 +9,7 @@ import programANodeIcon from "./images/progr.png";
 import syncGatewayIcon from "./images/synchronize.png";
 import reportIntervalIcon from "./images/intervall.png";
 import dateTimeIcon from "./images/date-time.png";
-import OnOffIcon from "./images/power-btn.png"; 
+import OnOffIcon from "./images/power.png"; 
 import stationIcon1 from "./images/weather-station2x.png";
 import stationIcon2 from "./images/weather-station3.png";
 import stationIcon3 from "./images/weather-station2.png";
@@ -24,7 +24,7 @@ import {useCurrentMsg, setCurrentMsg} from './components/globalFlags';
 import {useActiveTask, setActiveTask} from './components/globalFlags';
 import {useActiveNode, setActiveNode} from './components/globalFlags';
 import {useLogin, setLogin} from './components/globalFlags';
-import {Button, Navbar, Nav, NavDropdown, Container,Row,Col} from 'react-bootstrap';
+import {Button, Navbar, Nav, NavDropdown, Container,Row,Col,Alert,Heading} from 'react-bootstrap';
 // import { Multiselect } from 'multiselect-react-dropdown';
 import MultiSelect from "react-multi-select-component";
 //const localIpUrl = require('local-ip-url');
@@ -32,30 +32,30 @@ import Image from 'react-bootstrap/Image'
 
 const App = () => {
 	const data = [
-		{'label':'ADC_1','value':'ADC_1'},
-		{'label':'ADC_2','value':'ADC_2'},
-		{'label':'ADC_3','value':'ADC_3'},
-		{'label':'ADC_4','value':'ADC_4'},
-		{'label':'RH','value':'RH'},
-		{'label':'P','value':'P'},
-		{'label':'T','value':'T'},
-		{'label':'T1','value':'T1'},
-		{'label':'V_A1','value':'V_A1'},
-		{'label':'V_A2','value':'V_A2'},
-		{'label':'V_IN','value':'V_IN'},
-		{'label':'T_MCU','value':'T_MCU'},
-		{'label':'V_MCU','value':'V_MCU'},
-		{'label':'INTR','value':'INTR'},
-		{'label':'P0_LST','value':'P0_LST'},
-		{'label':'P0_LST60','value':'P0_LST60'},
-		{'label':'WDSPD','value':'WDSPD'},
-		{'label':'MAXWSD','value':'MAXWSD'}
+		{'label':'ADC_1','value':'#ADC_1'},
+		{'label':'ADC_2','value':'#ADC_2'},
+		{'label':'ADC_3','value':'#ADC_3'},
+		{'label':'ADC_4','value':'#ADC_4'},
+		{'label':'RH','value':'#RH'},
+		{'label':'P','value':'#P'},
+		{'label':'T','value':'#T'},
+		{'label':'T1','value':'#T1'},
+		{'label':'V_A1','value':'#V_A1'},
+		{'label':'V_A2','value':'#V_A2'},
+		{'label':'V_IN','value':'#V_IN'},
+		{'label':'T_MCU','value':'#T_MCU'},
+		{'label':'V_MCU','value':'#V_MCU'},
+		{'label':'INTR','value':'#INTR'},
+		{'label':'P0_LST','value':'#P0_LST'},
+		{'label':'P0_LST60','value':'#P0_LST60'},
+		{'label':'WDSPD','value':'#WDSPD'},
+		{'label':'MAXWSD','value':'#MAXWSD'}
 	];
 	const [options]=useState(data);
 	const [selected, setSelected] = useState([]);
 
 	
-	  let opts = useRef;
+	let opts = useRef;
   let shouldConnect = useShouldConnect(); 
   let shouldIntroduceSelf = useShouldIntroduceSelf();
   let currentMsg = useCurrentMsg();
@@ -68,7 +68,7 @@ const App = () => {
   
   let newIntervalRef = useRef(10);
   let newNodeNameRef = useRef(""); 
-  const [socketUrl, setSocketUrl] = useState('ws://localhost:10026/bridge'); //API that will echo messages sent to it back to the client
+  const [socketUrl, setSocketUrl] = useState('ws://wimea.mak.ac.ug:10026/bridge'); //API that will echo messages sent to it back to the client
   const [messageHistory, setMessageHistory] = useState([]);
   const [currentReportingInterval, setCurrentReportingInterval] = useState("");
   const [showFeedbackBox,setShowFeedbackBox] = useState(false);
@@ -81,9 +81,9 @@ const App = () => {
   const [reportMaskActiveAction,setReportMaskActiveAction] = useState("None"); //willbe set to 'Add param' or 'Remove param'
   const [sendMessage, lastMessage, readyState, getWebSocket] = useWebSocket(socketUrl);
  
-  const handleClickChangeSocketUrl = useCallback(() => setSocketUrl("ws://localhost:10026/echo"), []);
+  const handleClickChangeSocketUrl = useCallback(() => setSocketUrl("ws://wimea.mak.ac.ug:10026/echo"), []);
   //const handleClickSendMessage = useCallback((msg)=>{sendMessage(msg)}, [currentMsg]);
-  const handleClickSendDisconnect = useCallback(() => sendMessage("disconnect localhost:10026"),[]);
+  const handleClickSendDisconnect = useCallback(() => sendMessage("disconnect wimea.mak.ac.ug:10026"),[]);
    
   useEffect(() => {
     if (lastMessage !== null) { 
@@ -198,16 +198,166 @@ const App = () => {
 	
 	
 	let requestForCurrentReportingInterval = () => {
-	    sendMessage(stringMsgRef.current.value+'current');
-	    console.log("requestForCurrentReportingInterval("+stringMsgRef.current.value+'current'+")");
-	    let lastmsg = lastMessage?lastMessage.data.toString():"";
-	    if(lastMessage && lastmsg.includes("current-reporting-interval=")){
-	        let intervo = lastmsg.split("=")[1];
-	        return intervo;
-	    }else{
-	        return 15;
-	    }
-	}; 
+		if(activeNode!=""){
+			sendMessage(stringMsgRef.current.value+'current');
+			console.log("requestForCurrentReportingInterval("+stringMsgRef.current.value+'current'+")");
+			let lastmsg = lastMessage?lastMessage.data.toString():"";
+			if(lastMessage && lastmsg.includes("current-report-interval:")){
+				let intervo = lastmsg.split(":")[1];
+				intervo = intervo.split("*")[1];
+				return intervo;
+			}else{
+				return "";
+			}
+		}
+	    
+	};
+	
+	let reportingIntervalFeedback = () => {
+		console.log("requestForCurrentReportingInterval("+stringMsgRef.current.value+'current'+")");
+		let lastmsg = lastMessage?lastMessage.data.toString():"";
+		if(lastMessage && lastmsg.includes("change-report-interval-error:")){
+			let intervo = lastmsg.split(":")[1];
+			let resp = <Alert variant="danger">
+							<p>
+								{intervo}
+							</p>
+						</Alert>;
+			return resp;
+		}else if(lastMessage && lastmsg.includes("change-report-interval:")){
+			let intervo = lastmsg.split(":")[0];
+			intervo+=lastmsg.split("*")[1];
+			let resp = <Alert variant="success">
+							<p>
+								{intervo}
+							</p>
+						</Alert>;
+			return resp;
+		}else if(lastMessage && lastmsg.includes("invalid-command:")){
+			let resp = <Alert variant="danger">
+							<p>
+								{lastmsg}
+							</p>
+						</Alert>;
+			return resp;
+		}else{
+			return "";
+		}
+	    
+	};
+
+	let resetFeedback = () => {
+		console.log("requestForCurrentReportingInterval("+stringMsgRef.current.value+'current'+")");
+		let lastmsg = lastMessage?lastMessage.data.toString():"";
+		if(lastMessage && lastmsg.includes("reset-node:")){
+			let intervo = lastmsg.split(":")[1];
+			let resp = <Alert variant="success">
+							<p>
+								{intervo}
+							</p>
+						</Alert>;
+			return resp;
+		}else if(lastMessage && lastmsg.includes("invalid-command:")){
+			let resp = <Alert variant="danger">
+							<p>
+								{lastmsg}
+							</p>
+						</Alert>;
+			return resp;
+		}else{
+			return "";
+		}
+	    
+	};
+
+	let nodeNameFeedback = () => {
+		console.log("requestForCurrentReportingInterval("+stringMsgRef.current.value+'current'+")");
+		let lastmsg = lastMessage?lastMessage.data.toString():"";
+		if(lastMessage && lastmsg.includes("change-node-name-error:")){
+			let intervo = lastmsg.split(":")[1];
+			let resp = <Alert variant="danger">
+							<p>
+								{intervo}
+							</p>
+						</Alert>;
+			return resp;
+		}else if(lastMessage && lastmsg.includes("change-node-name:")){
+			let intervo = lastmsg.split(":")[0];
+			intervo+=lastmsg.split("*")[1];
+			let resp = <Alert variant="success">
+							<p>
+								{intervo}
+							</p>
+						</Alert>;
+			return resp;
+		}else if(lastMessage && lastmsg.includes("invalid-command:")){
+			let resp = <Alert variant="danger">
+							<p>
+								{lastmsg}
+							</p>
+						</Alert>;
+			return resp;
+		}else{
+			return "";
+		}
+	    
+	};
+
+	let reportMaskFeedback = () => {
+		console.log("requestForCurrentReportingInterval("+stringMsgRef.current.value+'current'+")");
+		let lastmsg = lastMessage?lastMessage.data.toString():"";
+		if(lastMessage && lastmsg.includes("add-remove-parameter-error:")){
+			let intervo = lastmsg.split(":")[1];
+			let resp = <Alert variant="danger">
+							<p>
+								{intervo}
+							</p>
+						</Alert>;
+			return resp;
+		}else if(lastMessage && lastmsg.includes("change-report-parameter-error:")){
+			let intervo = lastmsg.split(":")[0];
+			intervo+=lastmsg.split("*")[1];
+			let resp = <Alert variant="success">
+							<p>
+								{intervo}
+							</p>
+						</Alert>;
+			return resp;
+		}else if(lastMessage && lastmsg.includes("add-report-parameter:")){
+			let intervo = lastmsg.split(":")[0];
+			intervo+=lastmsg.split("*")[1];
+			intervo+=lastmsg.split("*")[2];
+			let resp = <Alert variant="success">
+							<p>
+								{intervo}
+							</p>
+						</Alert>;
+			return resp;
+		}
+		else if(lastMessage && lastmsg.includes("remove-report-parameter:")){
+			let intervo = lastmsg.split(":")[0];
+			intervo+=lastmsg.split("*")[1];
+			intervo+=lastmsg.split("*")[2];
+			let resp = <Alert variant="success">
+							<p>
+								{intervo}
+							</p>
+						</Alert>;
+			return resp;
+		}
+		else if(lastMessage && lastmsg.includes("invalid-command:")){
+			let resp = <Alert variant="danger">
+							<p>
+								{lastmsg}
+							</p>
+						</Alert>;
+			return resp;
+		}else{
+			return "";
+		}
+	    
+	};
+
 	let requestForCurrentReportMaskParams = () => {
 	    sendMessage(stringMsgRef.current.value+'current');
 	    console.log("requestForCurrentReportMaskParams("+stringMsgRef.current.value+'current'+")");
@@ -219,38 +369,42 @@ const App = () => {
 	        setReportMaskParams([...tmpArr]);
 	        return maskparams;
 	    }else{
-	        return "T, V_IN, V_A1 ";
+	        return "";
 	    }
 	}; 
 	
 	let requestForCurrentNodeName = () => {
-	    sendMessage(stringMsgRef.current.value+'current');
-	    console.log("requestForCurrentReportMaskParams("+stringMsgRef.current.value+'current'+")");
-	    let lastmsg = lastMessage?lastMessage.data.toString():"";
-	    // if(lastMessage && lastmsg.includes("current-report-mask=")){
-	    //     let maskparams = lastmsg.split("=")[1];
-	    //     //update reportMaskParams
-	    //     let tmpArr = maskparams.split(',');
-	    //     setReportMaskParams([...tmpArr]);
-	    //     return maskparams;
-	    // }else{
-	    //     return "T, V_IN, V_A1 ";
-	    // }
+	    if(activeNode!=""){
+			sendMessage(stringMsgRef.current.value+'current');
+			console.log("requestForCurrentReportingInterval("+stringMsgRef.current.value+'current'+")");
+			let lastmsg = lastMessage?lastMessage.data.toString():"";
+			if(lastMessage && lastmsg.includes("current-node-name:")){
+				let intervo = lastmsg.split(":")[1];
+				intervo = intervo.split("*")[1];
+				return intervo;
+			}else{
+				return "";
+			}
+		}
 	}; 
 
-	let requestToSwitchStation = () => {
-	    sendMessage(stringMsgRef.current.value+(stationSwitch[activeStation]?"#off":"#on"));
-	    console.log("requestToSwitchStation("+stringMsgRef.current.value+(stationSwitch[activeStation]?"#off":"#on")+")"); 
-	};
+	// let requestToSwitchStation = () => {
+	//     sendMessage(stringMsgRef.current.value+(stationSwitch[activeStation]?"#off":"#on"));
+	//     console.log("requestToSwitchStation("+stringMsgRef.current.value+(stationSwitch[activeStation]?"#off":"#on")+")"); 
+	// };
 	
 	let requestToChangeReportingInterval = () => {
-	    sendMessage(stringMsgRef.current.value+newIntervalRef.current.value);
+	    sendMessage(stringMsgRef.current.value+newIntervalRef.current.value+"\n");
 	    console.log("requestToChangeReportingInterval("+stringMsgRef.current.value+newIntervalRef.current.value+")"); 
 	    setCurrentReportingInterval(newIntervalRef.current.value);
 	};
 
+	let requestToRestNode= () =>{
+		sendMessage(stringMsgRef.current.value+"boot\n");
+	};
+
 	let requestToChangeNodeName = () => {
-	    sendMessage(stringMsgRef.current.value+newNodeNameRef.current.value);
+	    sendMessage(stringMsgRef.current.value+newNodeNameRef.current.value+"\n");
 	    console.log("requestToChangeNodeName("+stringMsgRef.current.value+newNodeNameRef.current.value+")"); 
 	    setCurrentReportingInterval(newNodeNameRef.current.value);
 	};
@@ -264,6 +418,7 @@ const App = () => {
 	    sendMessage(stringMsgRef.current.value+''+updatedparams);
 	    console.log("requestToChangeReportMask("+stringMsgRef.current.value+'#'+updatedparams+")");  
 	};
+
 	let addReportMaskParam = () => { 
 	    //  let newParam = paramsInputRef.current.value;
 	    //  let tempArr = reportMaskParams; 
@@ -271,20 +426,11 @@ const App = () => {
 	    //     tempArr.push(newParam); 
 		//  }
 		// let newParam = opts.current.getSelectedItems;
+		setReportMaskParams([]);
 		let newP="";
 		if (selected.length!=0) {
 			for(var i in selected){
-				if(selected.length===1){
-				   newP+=selected[i].value;
-				}else{
-				   if ((selected.length-3)===i) {
-					   newP+=selected[i].value;
-				   }else{
-					   newP+=selected[i].value;
-					   newP+="#";
-				   }
-				}
-				
+				newP+=selected[i].value;
 			}
 		   let tempArr = reportMaskParams; 
 		   tempArr.push(newP); 
@@ -292,7 +438,7 @@ const App = () => {
 		   
 		}
 		if (newP!="") {
-			sendMessage(stringMsgRef.current.value+'+#'+newP);
+			sendMessage(stringMsgRef.current.value+'#+'+newP+"\n");
 	    	console.log("requestToChangeReportMask("+stringMsgRef.current.value+'+#'+newP+")");
 		}
 			// newP="";
@@ -300,25 +446,11 @@ const App = () => {
 	     
 	};
 	let removeReportMaskParam = () => {
+		setReportMaskParams([]);
 		let newP="";
 		if (selected.length!=0) {
 			for(var i in selected){
-				if(selected.length===1){
-				   newP+=selected[i].value;
-				}else{
-				   if ((selected.length-1)===i) {
-					   newP+=selected[i].value;
-				   }else{
-					   if (selected[i].value===" ") {
-						   break;
-					   }else{
-						newP+=selected[i].value;
-						newP+="#";
-					   }
-					   
-				   }
-				}
-				
+				newP+=selected[i].value;
 			}
 		   let tempArr = reportMaskParams; 
 		   tempArr.push(newP); 
@@ -327,7 +459,7 @@ const App = () => {
 		}
 		if (newP!="") {
 			
-			sendMessage(stringMsgRef.current.value+'-#'+newP);
+			sendMessage(stringMsgRef.current.value+'#-'+newP+"\n");
 	    	console.log("requestToChangeReportMask("+stringMsgRef.current.value+'-#'+newP+")");
 		}
 	    //  let tempArr = reportMaskParams; 
@@ -349,50 +481,53 @@ const App = () => {
 				<Header socketStatus={connectionStatus}/>
 				
 				<div id="content-div">
-					<div id="sidebar-left">
-						<div id="usage-div">
-							<h2>Usage:</h2>
-							Start by signing in to go to the dashboard and use the control menu to: <br/>
-							<ul>
-								<li>Program a node </li>
-								<li>Set date / time </li>
-								<li>Change reporting interval </li>
-								<li>Synchronize the gateway </li> 
-								<li> Switch on / off a device </li>
-							</ul>
-							If you want to program a node, you should have the firmware already compiled into a .hex file which 
-							you will be required to upload, or if the .hex file is already uploaded to the gateway, then you will be required 
-							to send a command instructiong the gateway device on how to use that firmware file.
-						</div>
-					</div>
-					<div id="sidebar-right">
-						{activePage==="Register"?
-						<>
-						<div id="login-div">   
-							<br/>
-							<img src={loginIllustrationImg} width="25%" height="25%"  alt=""/> <br/> <br/>
-							<input type="text"  placeholder=" User name" id="username"/> <br/> <br/>
-							<input type="password" placeholder=" Password" id="password"/>  <br/> <br/> <br/>
-							<input type="password" placeholder="Re-type Password" id="password"/>  <br/> <br/> <br/>
-							<button id="login-btn" onClick={handleRegister}>Register</button>
-							<br/> <br/>
-						</div>
-						<div style={{marginLeft:"14px",display:"none"}} onClick={()=>setActivePage("Login")}>Have an account already ? <span style={{color:"blue",cursor:"pointer"}}>Sign in</span></div>
-						</>
-						:
-						<>
-						<div id="login-div">   
-							<br/>
-							<img src={loginIllustrationImg} width="25%" height="25%"  alt=""/> <br/> <br/>
-							<input type="text"  placeholder=" User name" id="username"/> <br/> <br/>
-							<input type="password" placeholder=" Password" id="password"/>  <br/> <br/> <br/>
-							<Button id="login-btn" onClick={handleLogin}>Login</Button>
-							<br/> <br/>
-						</div>
-						<div style={{marginLeft:"14px",display:"none"}} onClick={()=>setActivePage("Register")}>Have no account ? <span style={{color:"blue",cursor:"pointer"}}>Register</span></div>
-						</>
-						}
-					</div>
+					<Container>
+						<Row>
+							<Col>
+								<div id="usage-div">
+									<h2>Usage:</h2>
+									Start by signing in to go to the dashboard and use the control menu to: <br/>
+									<ul>
+										<li>Program a node </li>
+										<li>Set date / time </li>
+										<li>Change reporting interval </li>
+										<li>Synchronize the gateway </li> 
+										<li> Switch on / off a device </li>
+									</ul>
+									If you want to program a node, you should have the firmware already compiled into a .hex file which 
+									you will be required to upload, or if the .hex file is already uploaded to the gateway, then you will be required 
+									to send a command instructiong the gateway device on how to use that firmware file.
+								</div>
+							</Col>
+							<Col>{activePage==="Register"?
+								<>
+								<div >   
+									<br/>
+									<img src={loginIllustrationImg} width="25%" height="25%"  alt=""/> <br/> <br/>
+									<input type="text"  placeholder=" User name" id="username"/> <br/> <br/>
+									<input type="password" placeholder=" Password" id="password"/>  <br/> <br/> <br/>
+									<input type="password" placeholder="Re-type Password" id="password"/>  <br/> <br/> <br/>
+									<button id="login-btn" onClick={handleRegister}>Register</button>
+									<br/> <br/>
+								</div>
+								<div style={{marginLeft:"14px",display:"none"}} onClick={()=>setActivePage("Login")}>Have an account already ? <span style={{color:"blue",cursor:"pointer"}}>Sign in</span></div>
+								</>
+								:
+								<>
+								<div id="login-div">   
+									<br/>
+									<img src={loginIllustrationImg} width="25%" height="25%"  alt=""/> <br/> <br/>
+									<input type="text"  placeholder=" User name" id="username" /> <br/> <br/>
+									<input type="password" placeholder=" Password" id="password"/>  <br/> <br/> <br/>
+									<Button id="login-btn" onClick={handleLogin}>Login</Button>
+									<br/> <br/>
+								</div>
+								<div style={{marginLeft:"14px",display:"none"}} onClick={()=>setActivePage("Register")}>Have no account ? <span style={{color:"blue",cursor:"pointer"}}>Register</span></div>
+								</>
+								}
+						</Col>
+						</Row>
+					</Container>
 				</div>
 				
 			</div>
@@ -490,8 +625,8 @@ const App = () => {
 							</div> 
 						</div>
 						
-							<input  ref={stringMsgRef} type="text" value={activeTask=="reportMask"?"To "+activeStation+" report#"+activeNode+"#re#"
-							:activeTask=="nodeName"?"To "+activeStation+" report#"+activeNode+"#n#":activeTask=="reportInterval"?"To "+activeStation+" report#"+activeNode+"#ri#":activeTask=="onOff"?"To "+activeStation+" report#boot":null} style={{width:"80%", margin:"60px 0 0 0",display:"none"}} />
+							<input  ref={stringMsgRef} type="text" value={activeTask=="reportMask"?"To "+activeStation+" report#"+activeNode+"#re"
+							:activeTask=="nodeName"?"To "+activeStation+" report#"+activeNode+"#n#":activeTask=="reportInterval"?"To "+activeStation+" report#"+activeNode+"#ri#":activeTask=="onOff"?"To "+activeStation+" report#"+activeNode+"#":null} style={{width:"80%", margin:"60px 0 0 0",display:"none"}} />
 						    
 							<button onClick={()=>sendMessage(stringMsgRef.current.value) } style={{postion:"absolute", bottom:"0", right:"2%",display:"none"}}>
 						        {activeTask}
@@ -499,6 +634,7 @@ const App = () => {
 							
 						    {activeTask=="reportInterval"?
 						    <div id="feeback" style={{border:"2px solid limegreen", padding:"4px", marginTop:"20px"}}>
+								{reportingIntervalFeedback()}
 						        <h4> Reporting  interval </h4>
 						        <table width="70%">
 						            <thead>
@@ -527,7 +663,7 @@ const App = () => {
 							:activeTask=="reportMask"?
 						    ///////////////////
 						    <div id="feeback" style={{border:"2px solid limegreen", padding:"4px" }}> 
-						        
+						        {reportMaskFeedback()}
 						        <h4> Report Mask </h4>
 								<div>Current report mask parameters:: {requestForCurrentReportMaskParams()}</div>
 								{/* <Multiselect options={options} value={selected} onChange={setSelected} displayValue="mask" selectionLimit="8" /> */}
@@ -560,7 +696,7 @@ const App = () => {
 							:activeTask=="nodeName"?
 						    ///////////////////
 						    <div id="feeback" style={{border:"2px solid limegreen", padding:"4px" }}> 
-						        
+						        {nodeNameFeedback()}
 						        <h4> Change Node Name </h4>
 								<table width="70%">
 						            <thead>
@@ -590,17 +726,16 @@ const App = () => {
 
 							:activeTask=="onOff"?
 						    <div id="feeback" style={{border:"2px solid limegreen", padding:"4px" }}> 
-						        time Date
+								{resetFeedback()}
+						        Reset Node
 								<Container>
 									<Row>
 										<Col xs={6} md={4}>
-										<Image src="holder.js/171x180" rounded />
 										</Col>
 										<Col xs={6} md={4}>
-										<Image src="holder.js/171x180" roundedCircle />
+										<img src={OnOffIcon} width="100px" alt="On / Off" onClick={requestToRestNode}/>
 										</Col>
 										<Col xs={6} md={4}>
-										<Image src="holder.js/171x180" thumbnail />
 										</Col>
 									</Row>
 								</Container>

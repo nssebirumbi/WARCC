@@ -36,7 +36,7 @@ const Header = props => {
 						<img src="https://www.mak.ac.ug/sites/default/files/mak-logo-sm.png" alt=""/>
 					</div>
 				</div>
-				<div >
+				<div id="expl">
 					<br/>
 					Controlling weather stations remotely over cellular network using technologies like websockets,
 					RPC, TCP, React, Golang and more. 

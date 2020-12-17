@@ -3,7 +3,7 @@ import { singletonHook } from './react-singleton-hook/src/index';
 
 const initShouldConnect = true;  
 const initShouldIntroduceSelf = true;  
-const initCurrentMsg = "connect localhost:10028";  
+const initCurrentMsg = "connect wimea.mak.ac.ug:10028";  
 //const initActiveTask = "reportMask"; 
 const initActiveTask = "reportInterval";
 const initActiveNode = "";
