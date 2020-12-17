@@ -53,6 +53,7 @@ const App = () => {
 	];
 	const [options]=useState(data);
 	const [selected, setSelected] = useState([]);
+	const [show, setShow] = useState(true);
 
 	
 	let opts = useRef;
@@ -68,7 +69,7 @@ const App = () => {
   
   let newIntervalRef = useRef(10);
   let newNodeNameRef = useRef(""); 
-  const [socketUrl, setSocketUrl] = useState('ws://wimea.mak.ac.ug:10026/bridge'); //API that will echo messages sent to it back to the client
+  const [socketUrl, setSocketUrl] = useState('ws://localhost:10026/bridge'); //API that will echo messages sent to it back to the client
   const [messageHistory, setMessageHistory] = useState([]);
   const [currentReportingInterval, setCurrentReportingInterval] = useState("");
   const [showFeedbackBox,setShowFeedbackBox] = useState(false);
@@ -81,9 +82,9 @@ const App = () => {
   const [reportMaskActiveAction,setReportMaskActiveAction] = useState("None"); //willbe set to 'Add param' or 'Remove param'
   const [sendMessage, lastMessage, readyState, getWebSocket] = useWebSocket(socketUrl);
  
-  const handleClickChangeSocketUrl = useCallback(() => setSocketUrl("ws://wimea.mak.ac.ug:10026/echo"), []);
+  const handleClickChangeSocketUrl = useCallback(() => setSocketUrl("ws://localhost:10026/echo"), []);
   //const handleClickSendMessage = useCallback((msg)=>{sendMessage(msg)}, [currentMsg]);
-  const handleClickSendDisconnect = useCallback(() => sendMessage("disconnect wimea.mak.ac.ug:10026"),[]);
+  const handleClickSendDisconnect = useCallback(() => sendMessage("disconnect localhost:10026"),[]);
    
   useEffect(() => {
     if (lastMessage !== null) { 
@@ -196,6 +197,30 @@ const App = () => {
 	    sendMessage(params.msg);
 	};
 	
+	function AlertDismissible(msg,status) {
+		
+		if (show) {
+			if(msg!="" && status==="error"){
+				return (
+					<Alert variant="danger" onClose={() => setShow(false)} dismissible>
+					  <p>
+						{msg}
+					  </p>
+					</Alert>
+				);
+			}else if (msg!="" && status==="success") {
+				return (
+					<Alert variant="success" onClose={() => setShow(false)} dismissible>
+					  <p>
+						{msg}
+						{setShow(false)}
+					  </p>
+					</Alert>
+				);
+			}
+		  
+		}
+	  }
 	
 	let requestForCurrentReportingInterval = () => {
 		if(activeNode!=""){
@@ -215,31 +240,17 @@ const App = () => {
 	
 	let reportingIntervalFeedback = () => {
 		console.log("requestForCurrentReportingInterval("+stringMsgRef.current.value+'current'+")");
-		let lastmsg = lastMessage?lastMessage.data.toString():"";
-		if(lastMessage && lastmsg.includes("change-report-interval-error:")){
+		// let lastmsg = lastMessage?lastMessage.data.toString():"";
+		let lastmsg = "change-report-interval-error: failed to change the interval";
+		if(lastmsg.includes("change-report-interval-error:")){
 			let intervo = lastmsg.split(":")[1];
-			let resp = <Alert variant="danger">
-							<p>
-								{intervo}
-							</p>
-						</Alert>;
-			return resp;
-		}else if(lastMessage && lastmsg.includes("change-report-interval:")){
+			return AlertDismissible(intervo,"error");
+		}else if(lastmsg.includes("change-report-interval:")){
 			let intervo = lastmsg.split(":")[0];
 			intervo+=lastmsg.split("*")[1];
-			let resp = <Alert variant="success">
-							<p>
-								{intervo}
-							</p>
-						</Alert>;
-			return resp;
-		}else if(lastMessage && lastmsg.includes("invalid-command:")){
-			let resp = <Alert variant="danger">
-							<p>
-								{lastmsg}
-							</p>
-						</Alert>;
-			return resp;
+			return AlertDismissible(intervo,"success");
+		}else if(lastmsg.includes("invalid-command:")){
+			return AlertDismissible(lastmsg,"error");
 		}else{
 			return "";
 		}
@@ -251,19 +262,9 @@ const App = () => {
 		let lastmsg = lastMessage?lastMessage.data.toString():"";
 		if(lastMessage && lastmsg.includes("reset-node:")){
 			let intervo = lastmsg.split(":")[1];
-			let resp = <Alert variant="success">
-							<p>
-								{intervo}
-							</p>
-						</Alert>;
-			return resp;
+			return AlertDismissible(intervo,"success");
 		}else if(lastMessage && lastmsg.includes("invalid-command:")){
-			let resp = <Alert variant="danger">
-							<p>
-								{lastmsg}
-							</p>
-						</Alert>;
-			return resp;
+			return AlertDismissible(lastmsg,"error");
 		}else{
 			return "";
 		}
@@ -275,28 +276,13 @@ const App = () => {
 		let lastmsg = lastMessage?lastMessage.data.toString():"";
 		if(lastMessage && lastmsg.includes("change-node-name-error:")){
 			let intervo = lastmsg.split(":")[1];
-			let resp = <Alert variant="danger">
-							<p>
-								{intervo}
-							</p>
-						</Alert>;
-			return resp;
+			return AlertDismissible(intervo,"error");
 		}else if(lastMessage && lastmsg.includes("change-node-name:")){
 			let intervo = lastmsg.split(":")[0];
 			intervo+=lastmsg.split("*")[1];
-			let resp = <Alert variant="success">
-							<p>
-								{intervo}
-							</p>
-						</Alert>;
-			return resp;
+			return AlertDismissible(intervo,"success");
 		}else if(lastMessage && lastmsg.includes("invalid-command:")){
-			let resp = <Alert variant="danger">
-							<p>
-								{lastmsg}
-							</p>
-						</Alert>;
-			return resp;
+			return AlertDismissible(lastmsg,"error");
 		}else{
 			return "";
 		}
@@ -308,50 +294,25 @@ const App = () => {
 		let lastmsg = lastMessage?lastMessage.data.toString():"";
 		if(lastMessage && lastmsg.includes("add-remove-parameter-error:")){
 			let intervo = lastmsg.split(":")[1];
-			let resp = <Alert variant="danger">
-							<p>
-								{intervo}
-							</p>
-						</Alert>;
-			return resp;
+			return AlertDismissible(intervo,"error");
 		}else if(lastMessage && lastmsg.includes("change-report-parameter-error:")){
 			let intervo = lastmsg.split(":")[0];
 			intervo+=lastmsg.split("*")[1];
-			let resp = <Alert variant="success">
-							<p>
-								{intervo}
-							</p>
-						</Alert>;
-			return resp;
+			return AlertDismissible(intervo,"success");
 		}else if(lastMessage && lastmsg.includes("add-report-parameter:")){
 			let intervo = lastmsg.split(":")[0];
 			intervo+=lastmsg.split("*")[1];
 			intervo+=lastmsg.split("*")[2];
-			let resp = <Alert variant="success">
-							<p>
-								{intervo}
-							</p>
-						</Alert>;
-			return resp;
+			return AlertDismissible(intervo,"success");
 		}
 		else if(lastMessage && lastmsg.includes("remove-report-parameter:")){
 			let intervo = lastmsg.split(":")[0];
 			intervo+=lastmsg.split("*")[1];
 			intervo+=lastmsg.split("*")[2];
-			let resp = <Alert variant="success">
-							<p>
-								{intervo}
-							</p>
-						</Alert>;
-			return resp;
+			return AlertDismissible(intervo,"success");
 		}
 		else if(lastMessage && lastmsg.includes("invalid-command:")){
-			let resp = <Alert variant="danger">
-							<p>
-								{lastmsg}
-							</p>
-						</Alert>;
-			return resp;
+			return AlertDismissible(lastmsg,"error");
 		}else{
 			return "";
 		}
@@ -359,7 +320,7 @@ const App = () => {
 	};
 
 	let requestForCurrentReportMaskParams = () => {
-	    sendMessage(stringMsgRef.current.value+'current');
+	    sendMessage(stringMsgRef.current.value+'#current');
 	    console.log("requestForCurrentReportMaskParams("+stringMsgRef.current.value+'current'+")");
 	    let lastmsg = lastMessage?lastMessage.data.toString():"";
 	    if(lastMessage && lastmsg.includes("current-report-mask=")){
