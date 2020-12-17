@@ -1,0 +1,45 @@
+{
+  "homepage": ".",
+  "name": "remoteAWSaccess",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.6.1",
+    "axios": "^0.19.0",
+    "bootstrap": "^4.5.3",
+    "express": "^4.17.1",
+    "express-favicon": "^2.0.1",
+    "jquery": "^3.4.1",
+    "local-storage": "^2.0.0",
+    "multiselect-react-dropdown": "^1.6.2",
+    "path": "^0.12.7",
+    "react": "^16.10.1",
+    "react-bootstrap": "^1.4.0",
+    "react-dom": "^16.10.1",
+    "react-multi-select-component": "^3.0.7",
+    "react-scripts": "3.1.2",
+    "react-use-websocket": "^1.2.1"
+  },
+  "proxy": "http://localhost:9000",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

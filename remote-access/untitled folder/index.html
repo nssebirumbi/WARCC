@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<title>Remote firmware controll system</title> 
+<style>
+	#root-div{ min-height:400px; position:relative; background:white; }
+	#header-div{ min-height:100px; position:relative; background:palegreen;}
+	#content-div{ min-height:300px; position:relative; }
+	#sidebar-left{ min-height:400px; width:55%; position:absolute; }
+	#sidebar-right{ min-height:400px;  width:35%; position:absolute; left:55%; }
+	#top-title-div{ min-height:20px;  width:100%; position:relative; background:black; color:white; text-align:right; }
+	#head{ position:relative; min-height:50px;}
+	#syste-title-div{ width:70%; position:absolute; left:0; font-size:250%; font-weight:700; font-family: "Cambria"; margin-top:1%;}
+	#wimea-logo-div{ width:20%;  position:absolute; left:70%;  min-height:50px; }
+	#wimea-logo-div img{  width:90%; margin-top:5%; }
+	#mak-logo-div{ width:10%;  position:absolute; left:90%;   min-height:50px;}
+	#mak-logo-div img{ width:60%; margin-top:5%; margin-left:15%; }
+	#small1{font-size:10px; position:absolute; left:83%; margin-top:5px; font-weight:500; }
+	#small2{font-size:10px; position:absolute; left:91%; margin-top:5px; font-weight:500; }
+	#usage-div{ min-height:300px; width:70%; margin:2%; margin:2%; margin-left:30%; }
+	#login-div{ min-height:200px; width:70%; margin:2%; border:5px solid palegreen; border-radius:10px; text-align:center; }
+	#slogan-headline-div{ position:relative; }
+	#login-btn{ min-width:20%; }
+	.oof{ display:none; }
+	.oon{ display:block; }
+</style> 
+
+<div id="root-div">
+
+	<div id="header-div">
+		<div  id="top-title-div"> 
+			<small id="small1">+256 757 734717 SCIT,</small>   <small id="small2">7062 Kampala Uganda</small>
+		</div>
+		<div id="head">
+			<div id="syste-title-div">
+				REMOTE FIRMWARE CONTROL SYSTEM
+			</div>
+			<div id="wimea-logo-div"> 
+				<img src="http://wimea.mak.ac.ug/wp-content/themes/masterstudy/assets/img/tmp/logo_transparent.png">
+			</div>
+			<div id="mak-logo-div"> 
+				<img src="https://www.mak.ac.ug/sites/default/files/mak-logo-sm.png">
+			</div>
+		</div>
+		<div id="slogan-headline-div">
+			<p>Controlling weather stations remotely over cellular network using technologies like websockets,
+			RPC, TCP, React, Golang and more. <br/><br/>
+			</p>
+		</div>
+	</div>
+	
+	<div id="content-div">
+		<div id="sidebar-left">
+			<div id="usage-div">
+				<h2>Usage:</h2>
+				Start by signing in to go to the dashboard and use the control menu to: <br/>
+				<ul>
+					<li>Program a node </li>
+					<li>Set date / time </li>
+					<li>Change reporting interval </li>
+					<li>Synchronize the gateway </li> 
+					<li> Switch on / off a device </li>
+				</ul>
+				If you want to program a node, you should have the firmware already compiled into a .hex file which 
+				you will be required to upload, or if the .hex file is already uploaded to the gateway, then you will be required 
+				to send a command instructiong the gateway device on how to use that firmware file.
+			</div>
+		</div>
+		<div id="sidebar-right">
+			<div id="login-div">   
+				<br/>
+				<img src="Login.PNG" width="25%" height="25%"/> <br/> <br/>
+				<input type="text"  placeholder=" User name" id="username"/> <br/> <br/>
+				<input type="password" placeholder=" Password" id="password"/>  <br/> <br/> <br/>
+				<button id="login-btn">Login</button>
+				<br/> <br/>
+			</div>
+		</div>
+	</div>
+	
+</div>
+<div id="feeback" ></div> 
+
+<script>
+//checking for websockeet support in a browser
+if (window.WebSocket){ 
+	console.log("This browser supports WebSocket!");
+} else {
+	console.log("This browser does not support WebSocket.");
+}
+ 
+var print = function(message) {
+				var d = document.createElement("div");
+				d.innerHTML = message;
+				feeback.appendChild(d);
+		   };
+// Initialize WebSocket connection and event handlers
+function setup() {
+	var feeback = document.getElementById("feeback");  
+	
+	ws = new WebSocket("ws://wimea.mak.ac.ug:10026/bridge"); 
+	// Listen for the connection open event then call the sendMessage function
+	ws.onopen = function(e) {
+		console.log("Connected");
+		sendMessage("connect wimea.mak.ac.ug:10028");
+		sendMessage("identity webclient2");
+	}
+	// Listen for the close connection event
+	ws.onclose = function(e) {
+		console.log("Disconnected: " + e.reason);
+	}
+	// Listen for connection errors
+	ws.onerror = function(e) {
+		console.log("Error ");
+	}
+	// Listen for new messages arriving at the client
+	ws.onmessage = function(e){
+		let msg = e.data.toString();
+		console.log("New message: " + e.data);
+		print(msg.replace(/[^a-zA-Z_0-9:. ]/g, ""));
+		// Close the socket once one message has arrived.
+		//ws.close();
+	}
+	
+	//------------- user events ---------------
+	document.getElementById("feeback").classList.add('oof');
+	document.getElementById("login-btn").addEventListener("click", function(){ 
+		var username = document.getElementById("username").value;
+		var password = document.getElementById("password").value;
+		if(username!="" && password!=""){
+			sendMessage("message username:"+username+" password:"+password+""); 
+			document.getElementById("username").value="";
+			document.getElementById("password").value="";
+			username="";
+			password="";
+			document.getElementById("feeback").classList.add('oon');
+			document.getElementById("feeback").classList.remove('oof');
+		}else{
+			alert("Password and username are required ");
+			document.getElementById("feeback").classList.add('oon');
+			document.getElementById("feeback").classList.remove('oof');
+		}
+		
+	});
+	
+}
+ 
+
+//===================================================
+// Send a message on the WebSocket.
+function sendMessage(msg){
+	ws.send(msg);
+	console.log("Message sent");
+}
+
+// Display logging information in the document.
+function log(s) {
+	var p = document.createElement("p");
+	p.style.wordWrap = "break-word";
+	p.textContent = s.replace(/[^a-zA-Z0-9:. ]/g,"");
+	output.appendChild(p);
+	// Also log information on the javascript console
+	console.log(s);
+}
+
+// Start running the example.
+setup();
+
+</script>
+
+
+
+

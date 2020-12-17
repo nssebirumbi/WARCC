@@ -1,0 +1,14 @@
+{
+    "Makerere":{
+        "station":"Makerere",
+        "ten":"fcc23d0000003023",
+        "two":"fcc23d000003033",
+        "gnd":"fcc23d000003043"
+    },
+    "Entebbe":{
+        "station":"Entebbe",
+        "ten":"fcc23d000003053",
+        "two":"fcc23d000003063",
+        "gnd":"fcc23d000003073"
+    }
+}
