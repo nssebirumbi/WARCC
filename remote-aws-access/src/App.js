@@ -53,7 +53,7 @@ const App = () => {
 	];
 	const [options]=useState(data);
 	const [selected, setSelected] = useState([]);
-	const [show, setShow] = useState(true);
+	const [show, setShow] = useState(false);
 
 	
 	let opts = useRef;
@@ -104,8 +104,8 @@ const App = () => {
 			setActiveNode(lastMessage.data);
 			console.log('received a message from server: ', lastMessage.data.toString());
 			// alert("!! Login failed");
-			
-        }
+		}
+		handleVisible();
     //   setMessageHistory((prev) => prev.concat(lastMessage));
     }
   }, [lastMessage]);
@@ -196,13 +196,21 @@ const App = () => {
 	    console.log("params.msg = "+params.msg); 
 	    sendMessage(params.msg);
 	};
+
+	const handleVisible = () => {
+		setShow(true)
+		setTimeout(() => {
+			setShow(false)
+		}, 2000);
+	} 
+	
 	
 	function AlertDismissible(msg,status) {
 		
 		if (show) {
 			if(msg!="" && status==="error"){
 				return (
-					<Alert variant="danger" onClose={() => setShow(false)} dismissible>
+					<Alert show={show} variant="danger" dismissible>
 					  <p>
 						{msg}
 					  </p>
@@ -210,10 +218,9 @@ const App = () => {
 				);
 			}else if (msg!="" && status==="success") {
 				return (
-					<Alert variant="success" onClose={() => setShow(false)} dismissible>
+					<Alert show={show} variant="success" dismissible>
 					  <p>
 						{msg}
-						{setShow(false)}
 					  </p>
 					</Alert>
 				);
@@ -241,15 +248,15 @@ const App = () => {
 	let reportingIntervalFeedback = () => {
 		console.log("requestForCurrentReportingInterval("+stringMsgRef.current.value+'current'+")");
 		// let lastmsg = lastMessage?lastMessage.data.toString():"";
-		let lastmsg = "change-report-interval-error: failed to change the interval";
-		if(lastmsg.includes("change-report-interval-error:")){
+		let lastmsg = lastMessage?lastMessage.data.toString():"";
+		if(lastMessage && lastmsg.includes("change-report-interval-error:")){
 			let intervo = lastmsg.split(":")[1];
 			return AlertDismissible(intervo,"error");
-		}else if(lastmsg.includes("change-report-interval:")){
-			let intervo = lastmsg.split(":")[0];
-			intervo+=lastmsg.split("*")[1];
+		}else if(lastMessage && lastmsg.includes("change-report-interval:")){
+			let intervo = lastmsg.split(":")[1];
+			// intervo+=lastmsg.split("*")[1];
 			return AlertDismissible(intervo,"success");
-		}else if(lastmsg.includes("invalid-command:")){
+		}else if(lastMessage && lastmsg.includes("invalid-command:")){
 			return AlertDismissible(lastmsg,"error");
 		}else{
 			return "";
@@ -529,6 +536,7 @@ const App = () => {
 								<Navbar.Toggle aria-controls="basic-navbar-nav" />
 								<Navbar.Collapse id="basic-navbar-nav">
 									<Nav className="mr-auto">
+									<Nav.Link onClick={ ()=>{ setActiveTask("home");}}>Station Status</Nav.Link>
 									<NavDropdown title="Report Interval" >
 										<NavDropdown.Item onClick={ ()=>{handleMACAddr("2m"); setActiveTask("reportInterval"); } }>2m</NavDropdown.Item>
 										<NavDropdown.Item onClick={ ()=>{handleMACAddr("10m"); setActiveTask("reportInterval"); } }>10m</NavDropdown.Item>
@@ -589,14 +597,16 @@ const App = () => {
 							<input  ref={stringMsgRef} type="text" value={activeTask=="reportMask"?"To "+activeStation+" report#"+activeNode+"#re"
 							:activeTask=="nodeName"?"To "+activeStation+" report#"+activeNode+"#n#":activeTask=="reportInterval"?"To "+activeStation+" report#"+activeNode+"#ri#":activeTask=="onOff"?"To "+activeStation+" report#"+activeNode+"#":null} style={{width:"80%", margin:"60px 0 0 0",display:"none"}} />
 						    
-							<button onClick={()=>sendMessage(stringMsgRef.current.value) } style={{postion:"absolute", bottom:"0", right:"2%",display:"none"}}>
+							{/* <button onClick={()=>sendMessage(stringMsgRef.current.value) } style={{postion:"absolute", bottom:"0", right:"2%",display:"none"}}>
 						        {activeTask}
-						    </button>  
+						    </button>   */}
 							
 						    {activeTask=="reportInterval"?
 						    <div id="feeback" style={{border:"2px solid limegreen", padding:"4px", marginTop:"20px"}}>
+								<h4 style={{marginTop:"10px",marginBottom:"10px"}}> Reporting  interval </h4>
 								{reportingIntervalFeedback()}
-						        <h4> Reporting  interval </h4>
+								<div style={{marginTop:"",marginBottom:"30px"}}></div>
+						        
 						        <table width="70%">
 						            <thead>
 						                <tr> <td style={{fontSize:"22px"}}>Current interval (in seconds)::</td> <td colspan="2" > {requestForCurrentReportingInterval()}</td> </tr>
@@ -657,8 +667,10 @@ const App = () => {
 							:activeTask=="nodeName"?
 						    ///////////////////
 						    <div id="feeback" style={{border:"2px solid limegreen", padding:"4px" }}> 
+								<h4 style={{marginTop:"20px",marginBottom:"10px"}}> Change Node Name </h4>
 						        {nodeNameFeedback()}
-						        <h4> Change Node Name </h4>
+								<div style={{marginTop:"",marginBottom:"30px"}}></div>
+						        
 								<table width="70%">
 						            <thead>
 						                <tr> <td style={{fontSize:"22px"}}>Current name </td> <td colspan="2">:: {requestForCurrentNodeName()}</td> </tr>
@@ -687,8 +699,10 @@ const App = () => {
 
 							:activeTask=="onOff"?
 						    <div id="feeback" style={{border:"2px solid limegreen", padding:"4px" }}> 
+								
+						        <h2 style={{marginTop:"20px",marginBottom:"10px"}}>Reset Node</h2>
 								{resetFeedback()}
-						        Reset Node
+								<div style={{marginTop:"",marginBottom:"30px"}}></div>
 								<Container>
 									<Row>
 										<Col xs={6} md={4}>
@@ -700,10 +714,32 @@ const App = () => {
 										</Col>
 									</Row>
 								</Container>
+								<div colspan="3" id="changeIntervalFeedback">
+									{
+									(lastMessage && lastMessage.data.toString().includes("changed-reporting-interval"))?
+									<><br/><hr/>{lastMessage.data.toString().split(':')[1]}</>:
+									//<><br/><hr/>{lastMessage.data.toString()}</>
+									<small><i><br/><hr/>changing node name to</i> {currentReportingInterval} ... </small>
+									}
+								</div>
 						    </div>:activeTask=="synchronize"?
 						    <div id="feeback" style={{border:"2px solid limegreen", padding:"4px" }}> 
 						        synchronize
-						    </div>:null
+							</div>:activeTask=="home"?
+						    <div id="feeback" style={{border:"2px solid limegreen", padding:"4px" }}> 
+								<Container height={23}>
+									<Row>
+										<Col xs={6} md={3}>
+										</Col>
+										<Col xs={6} md={6}>
+											<h1 style={{marginTop:"150px",marginBottom:"150px"}}>{activeStation} Station On</h1>
+										</Col>
+										<Col xs={6} md={3}>
+										</Col>
+									</Row>
+								</Container>
+						    </div>
+							:null
 						    }
 						    
 						</div> 

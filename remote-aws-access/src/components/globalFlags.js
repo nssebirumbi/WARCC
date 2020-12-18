@@ -5,7 +5,7 @@ const initShouldConnect = true;
 const initShouldIntroduceSelf = true;  
 const initCurrentMsg = "connect localhost:10028";  
 //const initActiveTask = "reportMask"; 
-const initActiveTask = "reportInterval";
+const initActiveTask = "home";
 const initActiveNode = "";
 const initLogin = {password:"admin1234",username:"admin"};
 
